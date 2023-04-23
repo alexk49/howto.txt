@@ -185,7 +185,7 @@ end of input $ +regex +character
 
 ## todo.txt
 
-### basic syntax
+### todo.txt basic syntax
 
 this is in order they should appear +order
 mark completion: x +todo +order
@@ -196,3 +196,20 @@ actual task text +todo +task
 sort by project: +project_tag +todo +project +order
 sort by @context_tag +todo +project +order
 due date format: due:yyyy-mm-dd due date +todo +date
+
+### todo.txt basic commands
+
+set up first time use: https://github.com/todotxt/todo.txt-cli/wiki/Quick-Start-Guide +todo.txt +setup
+set up first time use: https://github.com/todotxt/todo.txt-cli/wiki/Tips-and-Tricks +todo.txt +setup
+
+add new task: td add "task to add +project @context due:yyyy-mm-dd" +todo.txt +new +task
+
+append to a task td append ITEM# "text to append" +todo.txt +append +add 
+
+archive finished tasks / move tasks marked as complete to done.txt: td archive +todo.txt +archive +finish
+
+delete task on particular line number: td del ITEM# or td rm ITEM# +todo.txt +delete
+
+mark task as done / mark task as complete: td do ITEM# +todo.txt +complete +done
+
+list tasks that contain particular term: td list "search term" +todo.txt +list +search
