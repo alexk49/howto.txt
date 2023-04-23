@@ -22,6 +22,9 @@ unhighlight or clear highlighted search results :noh +search +vim
 esc is command mode +command +vim
 to exit :q! exits without saving +exit +vim
 save and exit :wq to exit and save +exit +save +vim
+quit all buffers / quit and close all open buffers :qall +exit +buffers +vim
+quit wll buffers without saving :qall! +exit +buffers +vim
+save and quit all buffers :wqall +exit +buffers +vim
 
 h goes left +movement +vim
 j goes down +movement +vim
@@ -44,6 +47,53 @@ change words inside quotes ci" will make "words words" become "" and enter inser
 
 delete words in tag dit will make "words words" become "" +delete +deleting +editing +quotes +vim
 
+### buffers
+see all buffers in vim :buffers +buffers +vim +all
+go to next buffer :bnext or bn +buffers +vim +next
+go to previous buffer :bprevious or bp +buffers +vim +previous
+go to specific buffer by name :buffer filename (can be autocompleted with tab) +buffers +vim +name
+go to specifc buffer by number: buffer number where number is the buffer number you want +buffers +vim +number
+jump to the older position in the jump list: Ctrl-o +buffers +vim +jumps +jump
+jump to newer position in buffer list: ctrl-i +buffers +jumps +jump +vim
+go to previously edited buffer with ctrl-^ +buffers +jump +jumps +vim
+delete a buffer from buffer list :bdelete or bd +delete +buffers +buffer +vim
+delete a specific buffer by number from buffer list :bdelete 3 (where 3 is number of buffer)
+delete a specifc buffer by filename from buffer list :bdelete filename +delete +buffers +name +buffer +vim
+
+### windows / split view
+get split view :split filename +split +view +vim 
+
+move the cursor to the left window ctrl-w h +windows +vim +split +view 
+move the cursor to the window below ctrl-w j +windows +vim +split +view
+move the cursor to the window upper ctrl-w k +windows +vim +split +view
+move the cursor to the right window ctrl w l +windows +vim +split +view
+
+close current window in split view Ctrl-W c +windows +vim +split +view
+close current window in split view :q / :quit
+
+open a new vertical split on current file: ctrl-w v +windows +vim +split +view
+open a new horizontal split on current file: ctrl-w s +windows +vim +split +view
+
+make current window only window on screen: ctrl-w o +windows +vim +view 
+
+split window vertically for specifc file vs filename or vsplit filename +split +view +vertical +vim
+open specific buffer in split view :vs buffernumber (for example :vs b3 would vertical split open buffer 3) 
+split window horizontally :split filename +split +view +horizontal +vim 
+create new window :new filename +windows +vim +view
+
+### tabs
+open file in a new tab :tabnew filename +tab +tabs +vim
+close the current tab :tabclose (or :q on tab) +tab +tabs +vim
+go to the next tab :tabnext +tab +tabs +vim
+go to the previous tab :tabprevious +tab +tabs +vim
+go to the last tab :tablast +tab +tabs +vim
+go to the first tab :tabfirst +tab +tabs +vim 
+
+go to next tab / get tab: gt +tab +tabs +vim
+go to previous tab: gT +tab +tabs +vim 
+go to specifc tab by number 3gt (where 3 is tab number) +tab +tabs +number +vim
+
+open multiple tabs in vim from start up: vim -p file1.txt file2.example file3 +tab +tabs +open +vim 
 
 ### surround plugin 
 
