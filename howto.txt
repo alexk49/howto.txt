@@ -184,12 +184,26 @@ Cancels current line in terminal Ctrl+C +linux +cancel
 
 if file already exists then it will modify the timestamp without changing the contents. If the file does not exist, it will create a blank file: touch file-name +touch +linux +terminal +newfile
 
+file - determine file type +file +linux +terminal
+
+### less
 view file less filetoview +view +less +linux +terminal
 exit file view from less: q +exit +less +linux +terminal
+page up or b to scroll back one page in less +less +linux +terminal +navigation
+page down or space to scroll forward one page +less +navigation +linux +terminal
+up arrow to scroll up one line +less +linux +terminal +navigation
+down arrow to scroll up one line +less +linux +terminal +navigation
+G // to move to end of text file +less +linux +terminal +navigation
+1G or g // move to beginning of file */ +less +linux +terminal +navigation
+/pattern /* search for occurence of pattern */ +less +linux +terminal +navigation
 
+
+
+### cat
 print contents of file to terminal: cat file-to-view ++at +print +linux +terminal
 print contents of file with indexing cat -n file-to-view +cat +print +linux +terminal
 
+### sed
 delete a line from the file by index value: sed -i 14d todo.txt (14d is index position and todo.txt is file) +cat +linux +sed +delete +terminal 
 add a string to the start of a line in a file (mark a todo.txt task as complete): sed -i '6s/^/x /' todo.txt (6s is index position and 'x ' makes sure a space appears) +cat +sed +add +linux +terminal
 
@@ -199,10 +213,14 @@ archive done tasks: grep "^x " todo.txt >> done.txt and then this deletes them: 
 
 ### list
 list current directory: ls +linux +list 
-list all files including hidden files / list hidden files: ls -al +linux +list
+list hidden files: ls -a +linux +list +hidden
+long list all files including hidden files / list hidden files: ls -al +linux +list
 long listing / list with details: ls -l +linux +list
+long listing with files ordered by modification date: ls -lt +linux +list
+long listing with files ordered by modification date in reverse: ls -lt --reverse +linux +list +reverse
 list particular file type: ls *.txt +linux +list
 list particular unknown character: for example ?pam.txt would show nay files that start with any letter then pam: ls ?.txt +linux +list
+list long format display file size in human readable format rather than just bytes ls -h +file +size +linux +list
 
 list any filename any extension something x something, so either txt or exe combine wildcards ls astrix.?x? +list +wildcard +linux +terminal
 
