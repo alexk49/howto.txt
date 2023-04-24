@@ -1,9 +1,29 @@
 # How to do things
 
-## how to vim 
+## howto find howtos / helpers 
+
+curl cheat.sh/<command> useful for getting different options, for example curl cheat.sh/grep for different options with grep +cheatsheat +curl +linux
+ctrl+r to search through bash history +linux +terminal
+--help switch write a command then help +linux +terminal
+apropos find relevant manual(man) pages by searching through names and descriptions +linux +terminal 
+man -K search manul pages +linux +terminal 
+history | grep -i "search term" search your bash history +linux +terminal +history 
+
+## test seperators
+
+=001 command =002 text explanation =003 +tags 
+$a command $b text explanation $c +tags 
+^_^ command ^_^ text explanation ^_^ +tags 
+<cmd>command</cmd><text>text</text><tags>+tags @tags</tags>
+$ command /* text explanation */ +tags @tags 
+command: command description: text explanation +tags
+command: cat filename description: display file text explanation +tags
+above works best with: grep -E 'command:.*cat' howto/howto.txt or grep -E 'description:.*file' howto/howto.txt
+ 
+## vim 
 
 ### copy and paste
-paste "*p in normal mode +paste +vim
+[ "*p ] /* in normal mode */ +paste +vim
 copy "*y in normal mode +copy +vim
 
 ### find and replace
@@ -205,6 +225,8 @@ ignore case in search: grep -i expression * +grep +search +linux
 
 search for word that does not appear - invert grep - so line number that does not contain string: grep -v "string you do not want" "file_to_search" +grep +search +linux +terminal
 search for not done tasks that are due today: grep -v "x " todo.txt | grep due:2023-03-30 +todo +grep +search +linux +terminal
+
+search for two patterns at once: grep -E 'expr1.*expr2|expr2.*expr1' filetosearch
 
 ### tab
 
