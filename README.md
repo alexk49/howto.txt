@@ -25,3 +25,27 @@ or:
 grep "hidden" howto.txt 
 
 And be included in numerous more searches with ease. 
+
+## Tips and tricks
+
+For ease of create a shell script called howto.sh: 
+
+```bash
+#!/bin/bash
+
+for arg in "$@"; do
+   grep "$arg" 'path/to/your/howto.txt'
+done
+```
+
+And, add an alias to your .bashrc:
+```
+alias ht='path/to/your/howto.sh'
+```
+
+I use ht as in "howto" but you can obviously use whatever you woud like. 
+
+This then allows searching the file with:
+
+ht "list hidden"
+
