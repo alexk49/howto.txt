@@ -14,11 +14,16 @@ To substitute all occurrences in the file type :%s/old/new/g +find +replace +sub
 To ask for confirmation each time add 'c' :%s/old/new/gc +find +replace +substitute +vim 
 
 ### search 
+use find to search for files within your set path :find filename +search +open +edit +vim  
 search for a keyword /search-word once highlighted and cursor other it, press enter and then press n for next and N for previous +search +vim
 unhighlight or clear highlighted search results :noh +search +vim
+search within a file you don't have open - internal grep, to search for particular pattern :vim /pattern/ file +search +grep +vim +internal
+external grep, uses the terminal grep :grep -R "pattern" file/location
 
 ### basics
 
+open a file with :edit filename or e: filename +vim +open +edit
+open specific file by searching recursively within sub-folders :edit **/*.md<tab>
 esc is command mode +command +vim
 to exit :q! exits without saving +exit +vim
 save and exit :wq to exit and save +exit +save +vim
@@ -30,6 +35,17 @@ h goes left +movement +vim
 j goes down +movement +vim
 k goes up +movement +vim
 l goes right +movement +vim
+
+### quickfix window
+when you have a list of grep search results you get a quickfix window +quickfix +window
+open the current file in quickfix window :copen +quickfix +window +open
+close the current file in quickfix window :cclose +quickfix +window +open
+go to the next error :cnext +quickfix +window +open
+go to the previous erro :cprevious +quickfix +window +open
+go to the older error list :colder +quickfix +window +open
+go to the newer error list :cnewer +quickfix +window +open
+exit quickfix mode :ccl or :cclose
+execute a command on whole quickfix window, example shows find and replace all files in quickfix window and save update :cfdo %s/pizza/donut/g | update
 
 ### editing
 
@@ -59,6 +75,8 @@ go to previously edited buffer with ctrl-^ +buffers +jump +jumps +vim
 delete a buffer from buffer list :bdelete or bd +delete +buffers +buffer +vim
 delete a specific buffer by number from buffer list :bdelete 3 (where 3 is number of buffer)
 delete a specifc buffer by filename from buffer list :bdelete filename +delete +buffers +name +buffer +vim
+delete all buffers except current file :%bd | e# (e# opens current file) +buffers +delete +clear +vim
+run a update/run a command on all open buffers. example shows find and replace, and saving update :bufdo %s/pizza/donut/g | update 
 
 ### windows / split view
 get split view :split filename +split +view +vim 
@@ -94,6 +112,23 @@ go to previous tab: gT +tab +tabs +vim
 go to specifc tab by number 3gt (where 3 is tab number) +tab +tabs +number +vim
 
 open multiple tabs in vim from start up: vim -p file1.txt file2.example file3 +tab +tabs +open +vim 
+
+### netrw folder view
+
+open a folder in vim with: vim foldername +netrw +folder +open +vim
+starts netrw on current file location :Explore +netrw +folder +open +vim
+create a new file in netrw % +netrw +folder +create +file +vim
+create a new directory in netrw d +netrw +folder +create +directory +vim
+rename a file or directory in netrw R +netrw +rename +vim 
+delete a file or directory D +netrw +delete +vim
+
+### autocomplete 
+
+bring up autocomplete menu in vim ctrl-n +vim +autocomplete 
+scroll back and forth in autocomplete ctrl-n for next or ctrl-p for previous +vim +autocomplete 
+just autocomplete on current file ctrl-x ctrl-n +vim +autocomplete 
+insert file name ctrl-x ctrl-f +vim +autocomplete +files
+just autocomplete tags ctrl-x ctrl] +autocomplete +tags +vim
 
 ### surround plugin 
 
