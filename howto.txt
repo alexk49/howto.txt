@@ -1,4 +1,4 @@
-# How to do things
+# how to do things
 
 ## howto find howtos / helpers 
 
@@ -55,6 +55,29 @@ h goes left +movement +vim
 j goes down +movement +vim
 k goes up +movement +vim
 l goes right +movement +vim
+{ count paragraphs backwards +movement +objects +vim 
+( count sentences backward +movement +objects +vim 
+)count sentences forward +movement +objects +vim 
+motion: w   description: Move forward to the beginning of the next word +motions +vim
+motion: W   description: Move forward to the beginning of the next WORD +motions +vim
+e       description: Move forward one word to the end of the next word +motions +vim
+E       description: Move forward one word to the end of the next WORD +motions +vim
+b       description: Move backward to beginning of the previous word +motions +vim
+B       description: Move backward to beginning of the previous WORD +motions +vim 
+ge      description: Move backward to end of the previous word +motions +vim 
+gE      description: Move backward to end of the previous WORD +motions +vim
+0       description: Go to the first character in the current line +movement +vim +motions
+^       description: Go to the first nonblank char in the current line
+g_      description: Go to the last non-blank char in the current line
+$       description: Go to the last char in the current line
+n|      description: Go the column n in the current line
+gU      description: uppercase whole sentence +vim +uppercase
+gUiw    description: uppercase whole word +vim +uppercase
+
+f       description: find a character on a line, so ft for next occurence of t +vim +motions +;
+;       description: after finding a character on a line press ; to go to the next occurence +vim +motions +f 
+,       description: after finding a character on a line press , to go back to the next occurence +vim +motions +; +f
+F       description: find the next occurence on a line going backwards, so previous occurence +vim +motions 
 
 ### quickfix window
 when you have a list of grep search results you get a quickfix window +quickfix +window
@@ -78,10 +101,10 @@ change till character ct) to change until closing parenthesis, or ct" to delete 
 change words inside tag cit will make <p>words words</p> become <p></p> and enter insert mode inside tags +change +correct +tags +vim
 
 delete words in tag dit will make <p>words words</p> become <p></p> +delete +deleting +editing +tags +vim
-
 change words inside quotes ci" will make "words words" become "" and enter insert mode inside quotes +change +correct +quotes +vim
-
 delete words in tag dit will make "words words" become "" +delete +deleting +editing +quotes +vim
+
+command: dat description: delete entire tag and words in tag +vim +tags +delete
 
 ### buffers
 see all buffers in vim :buffers +buffers +vim +all
@@ -244,7 +267,7 @@ ignore case in search: grep -i expression * +grep +search +linux
 search for word that does not appear - invert grep - so line number that does not contain string: grep -v "string you do not want" "file_to_search" +grep +search +linux +terminal
 search for not done tasks that are due today: grep -v "x " todo.txt | grep due:2023-03-30 +todo +grep +search +linux +terminal
 
-search for two patterns at once: grep -E 'expr1.*expr2|expr2.*expr1' filetosearch
+grep -E 'expr1.*expr2|expr2.*expr1'    description: search for two patterns at once +filetosearch +multiple
 
 ### tab
 
