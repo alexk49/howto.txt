@@ -19,7 +19,10 @@ $ command /* text explanation */ +tags @tags
 command: command description: text explanation +tags
 command: cat filename description: display file text explanation +tags
 above works best with: grep -E 'command:.*cat' howto/howto.txt or grep -E 'description:.*file' howto/howto.txt
- 
+
+## powershell
+New-Item -Path .\.vim\ -ItemType SymbolicLink -Value .\vimfiles\ description: this creates a symbolic link between the two folders so they update with each other. +symbolic +links +powershell 
+
 ## vim 
 
 ### copy and paste
@@ -191,6 +194,7 @@ format an xml file / indent an xml file :%!xmllint --format % requires xmllint t
 
 ## Linux
 
+ln -s ../test.txt dir2/test.txt description: ln -s real_file link_file, -s stands for symbolic, this links the two files together so they update with each other. you can do the same with folders +symbolic +links +linux +terminal
 copy shift+insert to copy text in terminal as ctrl c is the kill command +copy +linux +terminal
 copy ctrl+insert to paste text in terminal as ctrl c is the kill command +paste +linux +terminal
 
