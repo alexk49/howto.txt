@@ -3,7 +3,7 @@
 howtofile = '/repos/howto/howto.txt'
 
 for arg in "$@"; do
-   grep "$arg" howtofile 
+   grep --color=auto -E $arg howtofile 
 done
 
 # search for commands
