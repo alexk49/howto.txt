@@ -8,6 +8,7 @@ ctrl+r to search through bash history +linux +terminal
 apropos find relevant manual(man) pages by searching through names and descriptions +linux +terminal 
 man -K search manul pages +linux +terminal 
 history | grep -i "search term" search your bash history +linux +terminal +history 
+:h motions
 
 ## test seperators
 
@@ -60,7 +61,7 @@ k goes up +movement +vim
 l goes right +movement +vim
 { count paragraphs backwards +movement +objects +vim 
 ( count sentences backward +movement +objects +vim 
-)count sentences forward +movement +objects +vim 
+) +scrolling +vim movementcount sentences forward +movement +objects +vim 
 motion: w   description: Move forward to the beginning of the next word +motions +vim
 motion: W   description: Move forward to the beginning of the next WORD +motions +vim
 e       description: Move forward one word to the end of the next word +motions +vim
@@ -76,11 +77,31 @@ $       description: Go to the last char in the current line
 n|      description: Go the column n in the current line
 gU      description: uppercase whole sentence +vim +uppercase
 gUiw    description: uppercase whole word +vim +uppercase
+50%     description: go to halfway through the file, this follows any number and percent +motions +vim +movement
 
 f       description: find a character on a line, so ft for next occurence of t +vim +motions +;
 ;       description: after finding a character on a line press ; to go to the next occurence +vim +motions +f 
 ,       description: after finding a character on a line press , to go back to the next occurence +vim +motions +; +f
 F       description: find the next occurence on a line going backwards, so previous occurence +vim +motions 
+
+### window movement
+H     decription: Go to top of screen +window +movement +vim
+M     Go to medium screen +window +movement +vim
+L     Go to bottom of screen +window +movement +vim
+nH    Go n line from top +window +movement +vim
+nL    Go n line from bottom +window +movement +vim
+
+### scrolling
+Ctrl-E    Scroll down a line +scrolling +vim +movement
+Ctrl-D    Scroll down half screen +scrolling +vim movement
+Ctrl-F    Scroll down whole screen +scrolling +vim movement
+Ctrl-Y    Scroll up a line +scrolling +vim movement
+Ctrl-U    Scroll up half screen +scrolling +vim movement
+Ctrl-B    Scroll up whole screen +scrolling +vim movement
+zt    Bring the current line near the top of your screen +scrolling +vim +movement
+zz    Bring the current line to the middle of your screen +scrolling +vim +movement
+zb    Bring the current line near the bottom of your screen +scroling +vim +movement
+
 
 ### quickfix window
 when you have a list of grep search results you get a quickfix window +quickfix +window
