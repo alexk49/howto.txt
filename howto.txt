@@ -4,11 +4,14 @@
 
 curl cheat.sh/<command> useful for getting different options, for example curl cheat.sh/grep for different options with grep +cheatsheat +curl +linux
 ctrl+r to search through bash history +linux +terminal
---help switch write a command then help +linux +terminal
-apropos find relevant manual(man) pages by searching through names and descriptions +linux +terminal 
-man -K search manul pages +linux +terminal 
-history | grep -i "search term" search your bash history +linux +terminal +history 
-:h motions
+--help      switch write a command then help +linux +terminal
+apropos     find relevant manual(man) pages by searching through names and descriptions +linux +terminal 
+man -K      search manul pages +linux +terminal 
+history | grep -i "search term"     search your bash history +linux +terminal +history 
+info        display a command's info entry +linux terminal +info +help
+whatis      display one-line manual descriptions +linux help +whatis +terminal
+
+:h motions +vim 
 
 ## test seperators
 
@@ -233,6 +236,9 @@ Cancels current line in terminal Ctrl+C +linux +cancel
 if file already exists then it will modify the timestamp without changing the contents. If the file does not exist, it will create a blank file: touch file-name +touch +linux +terminal +newfile
 
 file - determine file type +file +linux +terminal
+type    indicate how a command name is interpreted +type +linux +terminal
+which   display which executable programs will be executed +which +linux +terminal
+
 
 ### less
 view file less filetoview +view +less +linux +terminal
