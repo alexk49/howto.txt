@@ -87,6 +87,8 @@ f       description: find a character on a line, so ft for next occurence of t +
 ,       description: after finding a character on a line press , to go back to the next occurence +vim +motions +; +f
 F       description: find the next occurence on a line going backwards, so previous occurence +vim +motions 
 
+10i     enter insert mode and do something, then when you exit insert mode this will be done 10 times +vim +repeats +insert
+
 ### window movement
 H     decription: Go to top of screen +window +movement +vim
 M     Go to medium screen +window +movement +vim
@@ -119,6 +121,7 @@ execute a command on whole quickfix window, example shows find and replace all f
 
 ### editing
 
+.       repeat the last command +vim +dot
 press x to delete the character under the cursor +delete +deleting +editing +vim
 
 add to end of line shift + a (or A) will jump the cursor to the end of the line and allow you to append some text +append +editing +vim
