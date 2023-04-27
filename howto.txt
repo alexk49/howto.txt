@@ -226,15 +226,19 @@ copy shift+insert to copy text in terminal as ctrl c is the kill command +copy +
 copy ctrl+insert to paste text in terminal as ctrl c is the kill command +paste +linux +terminal
 
 Gives help on a command. For example, cd -- help will give you information/help text on the cd argument --help +linux +terminal help
-
 show you all previously entered commands (and keeps a very long log): history
-
 get full filepath of given program name: which program-name (eg python3) +terminal +linux
-
 clear all text on the terminal: clear +linux +clear
 Clears the current text in the terminal line: ctrl+u +linux +clear
 Deletes the last word you typed Ctrl+W +linux +delete 
 Cancels current line in terminal Ctrl+C +linux +cancel
+
+sort    sort lines of text +linux +sort 
+uniq    report or omit repeated lines 
+wc      print newline, word, and byte counts for each file
+head    output the first part of a file
+tail    output the past part of a file
+tee     read from standard input and write to standard output and files
 
 if file already exists then it will modify the timestamp without changing the contents. If the file does not exist, it will create a blank file: touch file-name +touch +linux +terminal +newfile
 
