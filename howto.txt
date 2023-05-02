@@ -13,7 +13,6 @@ whatis      display one-line manual descriptions +linux help +whatis +terminal
 
 :h motions +vim 
 
-
 ## powershell
 New-Item -Path .\.vim\ -ItemType SymbolicLink -Value .\vimfiles\        this creates a symbolic link between the two folders so they update with each other. +symbolic +links +powershell 
 
@@ -109,21 +108,20 @@ when you have a list of grep search results you get a quickfix window +quickfix 
 :cfdo %s/pizza/donut/g | update        execute a command on whole quickfix window, example shows find and replace all files in quickfix window and save update +vim +quickfix
 
 ### editing
-
 .       repeat the last command +vim +dot
 press x to delete the character under the cursor +delete +deleting +editing +vim
-
 A       add to end of line shift + a (or A) will jump the cursor to the end of the line and allow you to append some text +append +editing +vim
-
 ct)     change till character ct) to change until closing parenthesis, or ct" to delete until next quote +change +correct +till +until 
-
 cit     change words inside tag cit will make <p>words words</p> become <p></p> and enter insert mode inside tags +change +correct +tags +vim
-
 dit     delete words in tag dit will make <p>words words</p> become <p></p> +delete +deleting +editing +tags +vim
 ci      change words inside quotes ci" will make "words words" become "" and enter insert mode inside quotes +change +correct +quotes +vim
 dit     delete words in tag dit will make "words words" become "" +delete +deleting +editing +quotes +vim
+dat     delete entire tag and words in tag +vim +tags +delete
 
-command: dat description: delete entire tag and words in tag +vim +tags +delete
+### marcos
+qa      start recording a macro on register a +vim +macros +recording
+@a      execute a macro +vim +macros +execute
+:normal @a      execute a normal mode macro +vim +macros +normal
 
 ### buffers
 :buffers        see all buffers in vim +buffers +vim +all
@@ -142,18 +140,14 @@ ctrl-^      go to previously edited buffer with ctrl-^ +buffers +jump +jumps +vi
 
 ### windows / split view
 :split filename        get split view +split +view +vim 
-
 ctrl-w h        move the cursor to the left window ctrl-w h +windows +vim +split +view 
 ctrl-w j        move the cursor to the window below ctrl-w j +windows +vim +split +view
 ctrl-w k        move the cursor to the window upper ctrl-w k +windows +vim +split +view
 ctrl w l        move the cursor to the right window ctrl w l +windows +vim +split +view
-
 ctrl-w c        close current window in split view Ctrl-W c +windows +vim +split +view
 :q / :quit        close current window in split view +vim +quit
-
 ctrl-w v        open a new vertical split on current file +windows +vim +split +view
 ctrl-w s        open a new horizontal split on current file +windows +vim +split +view
-
 ctrl-w o        make current window only window on screen +windows +vim +view 
 
 :vs filename or vsplit filename     split window vertically for specifc file vs filename or vsplit filename +split +view +vertical +vim
@@ -168,29 +162,26 @@ ctrl-w o        make current window only window on screen +windows +vim +view
 :tabprevious        go to the previous tab +tab +tabs +vim
 :tablast        go to the last tab +tab +tabs +vim
 :tabfirst        go to the first tab +tab +tabs +vim 
-
 gt        go to next tab / get tab +tab +tabs +vim
 gT        go to previous tab+tab +tabs +vim 
-3gt     go to specifc tab by number 3gt (where 3 is tab number) +tab +tabs +number +vim
-
 vim -p file1.txt file2.example file3        open multiple tabs in vim from start up +tab +tabs +open +vim 
 
 ### netrw folder view
 
-open a folder in vim with: vim foldername +netrw +folder +open +vim
-starts netrw on current file location :Explore +netrw +folder +open +vim
-create a new file in netrw % +netrw +folder +create +file +vim
-create a new directory in netrw d +netrw +folder +create +directory +vim
-rename a file or directory in netrw R +netrw +rename +vim 
-delete a file or directory D +netrw +delete +vim
+vim foldername open a folder in vim +netrw +folder +open +vim
+:Explore        starts netrw on current file location +netrw +folder +open +vim
+%       create a new file in netrw % +netrw +folder +create +file +vim
+d       create a new directory in netrw d +netrw +folder +create +directory +vim
+R       rename a file or directory in netrw R +netrw +rename +vim 
+D       delete a file or directory D +netrw +delete +vim
 
 ### autocomplete 
 
-bring up autocomplete menu in vim ctrl-n +vim +autocomplete 
-scroll back and forth in autocomplete ctrl-n for next or ctrl-p for previous +vim +autocomplete 
-just autocomplete on current file ctrl-x ctrl-n +vim +autocomplete 
-insert file name ctrl-x ctrl-f +vim +autocomplete +files
-just autocomplete tags ctrl-x ctrl] +autocomplete +tags +vim
+ctrl-n      bring up autocomplete menu in vim ctrl-n +vim +autocomplete 
+ctrl-n or ctrl-p        scroll back and forth in autocomplete ctrl-n for next or ctrl-p for previous +vim +autocomplete 
+ctrl-x ctrl-n       just autocomplete on current file ctrl-x ctrl-n +vim +autocomplete 
+ctrl-x ctrl-f       insert file name ctrl-x ctrl-f +vim +autocomplete +files
+ctrl-x ctrl]        just autocomplete tags ctrl-x ctrl] +autocomplete +tags +vim
 
 ### registers
 
@@ -206,13 +197,13 @@ yss<html-tag>   add tags around a text: yss<html-tag>: yss will surround entire 
 
 yss) ys: add surroundings; s: entire line; ) character to surround line with)
 
-Surround text with tags in visual mode: S followed by surround character, eg. S" +tags +surround +visual +vim 
+S       surround text with tags in visual mode: S followed by surround character, eg. S" +tags +surround +visual +vim 
 
-surround one word: ysiw" (ys: add surroundings; iw: entire word, no matter where the cursor is as long as it's at the word you want to surround; ": character to surround text with) +tags +surround +vim
+ysiw"       surround one word: ysiw" (ys: add surroundings; iw: entire word, no matter where the cursor is as long as it's at the word you want to surround; ": character to surround text with) +tags +surround +vim
 
-edit current tag: cst<newtag> and this will replace the old tag. For example, cst<li> on the <p>hello world</p> becomes <li>hello world</li> +edit +editing +change +tags +surround +vim
+cst<newtag>     edit current tag: cst<newtag> and this will replace the old tag. For example, cst<li> on the <p>hello world</p> becomes <li>hello world</li> +edit +editing +change +tags +surround +vim
 
-format an xml file / indent an xml file :%!xmllint --format % requires xmllint to be installed 
+:%!xmllint --format %      format an xml file / indent an xml file requires xmllint to be installed 
 
 ## Linux
 clear       clear the prompt screen
@@ -243,7 +234,6 @@ if file already exists then it will modify the timestamp without changing the co
 file - determine file type +file +linux +terminal
 type    indicate how a command name is interpreted +type +linux +terminal
 which   display which executable programs will be executed +which +linux +terminal
-
 
 ### less
 view file less filetoview +view +less +linux +terminal
@@ -345,66 +335,53 @@ deletes given folder name: rmdir folder-name +delete +folder +linux
 ## Git
 
 ### basics
-check current status of commits git status +git +status +basics
-
-git add file_name.ext will add file to staging area: git add filename.ext +git +add +basics
-
-commit file with commit message: git commit -m "message for commit message" +commit +git +basics
-
-add all files in the current directory and all subsequent directories git add . +git +add +basics
-
-display list of commits: git log +git +tracking +log +status
-
-push your changes to the repo: git push / git push origin main +basics +git +push
-
-copying or cloning a git repositry, get clone link from git then git clone git@github.com:USER-NAME/REPOSITORY-NAME.git +git +clone +remote
+git status      check current status of commits git status +git +status +basics
+git add file_name.ext       will add file to staging area: git add filename.ext +git +add +basics
+git commit -m "message"     commit file with commit message: git commit -m "message for commit message" +commit +git +basics
+git add .       add all files in the current directory and all subsequent directories git add . +git +add +basics
+git log     display list of commits: git log +git +tracking +log +status
+git push        push your changes to the repo: git push / git push origin main +basics +git +push
+git clone git@github.com:USER-NAME/REPOSITORY-NAME.git        copying or cloning a git repositry, get clone link from git then git clone git@github.com:USER-NAME/REPOSITORY-NAME.git +git +clone +remote
 
 ## regex
 
 ### basics
-
-any character: . +regex +character
-0 or more characters .* +regex +character
-1 or more characters .+1 +regex +character
-optional character ? +regex +character
-start of input ^ +regex +character
-end of input $ +regex +character
+.       any character: . +regex +character
+.*      0 or more characters .* +regex +character
+.+1     1 or more characters .+1 +regex +character
+?       optional character ? +regex +character
+^       start of input ^ +regex +character
+$       end of input $ +regex +character
 
 ## todo.txt
 
 ### todo.txt basic syntax
 
 this is in order they should appear +order
-mark completion: x +todo +order
-mark priority: (A) +todo +order
-date format: yyyy-mm-dd completion date +todo +order +date
-date format: yyyy-mm-dd creation date +todo +order +date
-actual task text +todo +task
-sort by project: +project_tag +todo +project +order
-sort by @context_tag +todo +project +order
-due date format: due:yyyy-mm-dd due date +todo +date
+x       mark completion: x +todo +order
+(A)     mark priority: (A) +todo +order
+yyyy-mm-dd      date format: yyyy-mm-dd completion date +todo +order +date
+yyyy-mm-dd      date format: yyyy-mm-dd creation date +todo +order +date
+text        actual task text +todo +task
++tag        sort by project: +project_tag +todo +project +order
+@context        sort by @context_tag +todo +project +order
+due:yyyy-mm-dd      due date format: due:yyyy-mm-dd due date +todo +date
 
 ### todo.txt basic commands
 
 set up first time use: https://github.com/todotxt/todo.txt-cli/wiki/Quick-Start-Guide +todo.txt +setup
 set up first time use: https://github.com/todotxt/todo.txt-cli/wiki/Tips-and-Tricks +todo.txt +setup
 
-add new task: td add "task to add +project @context due:yyyy-mm-dd" +todo.txt +new +task
-
-append to a task td append ITEM# "text to append" +todo.txt +append +add 
-
-archive finished tasks / move tasks marked as complete to done.txt: td archive +todo.txt +archive +finish
-
-delete task on particular line number: td del ITEM# or td rm ITEM# +todo.txt +delete
-
-mark task as done / mark task as complete: td do ITEM# +todo.txt +complete +done
-
-list tasks that contain particular term: td list "search term" +todo.txt +list +search
+td add "task to add +project @context due:yyyy-mm-dd"      add new task: td add "task to add +project @context due:yyyy-mm-dd" +todo.txt +new +task
+ITEM# "Text to append"      append to a task td append ITEM# "text to append" +todo.txt +append +add 
+td archive      archive finished tasks / move tasks marked as complete to done.txt: td archive +todo.txt +archive +finish
+td del ITEM#        delete task on particular line number: td del ITEM# or td rm ITEM# +todo.txt +delete
+td do ITEM#         mark task as done / mark task as complete: td do ITEM# +todo.txt +complete +done
+td list         list tasks that contain particular term: td list "search term" +todo.txt +list +search
 
 ### ASCI escape characters
-
-\a      Bell (an alert that causes the computer to beep)
-\b      backspace
-\n      Newline
-\r      carriage return
-\t      tab
+\a      Bell (an alert that causes the computer to beep) +asci +escape +alert
+\b      backspace +asci +escape +backspace
+\n      Newline +asci +escape +Newline
+\r      carriage return +asci +escape +carriage
+\t      tab +asci +escape +tab
