@@ -30,33 +30,32 @@ New-Item -Path .\.vim\ -ItemType SymbolicLink -Value .\vimfiles\        this cre
 ## vim 
 
 ### copy and paste
-[ "*p ] /* in normal mode */ +paste +vim
-copy "*y in normal mode +copy +vim
+[ "*p ]     in normal mode +paste +vim
+copy "*y    in normal mode +copy +vim
 
 ### find and replace
-To substitute new for the first old in a line type :s/old/new +find +replace +substitute +vim 
-To substitute new for all 'old's on a line type :s/old/new/g +find +replace +substitute +vim 
-To substitute phrases between two line #'s type :#,#s/old/new/g +find +replace +substitute +vim 
-To substitute all occurrences in the file type :%s/old/new/g +find +replace +substitute +vim 
-To ask for confirmation each time add 'c' :%s/old/new/gc +find +replace +substitute +vim 
-
+:s/old/new     to substitute new for the first old in a line type +find +replace +substitute +vim 
+:s/old/new/g   to substitute new for all 'old's on a line type +find +replace +substitute +vim 
+:#,#s/old/new/g        To substitute phrases between two line #'s type +find +replace +substitute +vim 
+:%s/old/new/g        To substitute all occurrences in the file type +find +replace +substitute +vim 
+:%s/old/new/gc        To ask for confirmation each time add 'c' +find +replace +substitute +vim 
+        
 ### search 
-use find to search for files within your set path :find filename +search +open +edit +vim  
-search for a keyword /search-word once highlighted and cursor other it, press enter and then press n for next and N for previous +search +vim
-unhighlight or clear highlighted search results :noh +search +vim
-search within a file you don't have open - internal grep, to search for particular pattern :vim /pattern/ file +search +grep +vim +internal
-external grep, uses the terminal grep :grep -R "pattern" file/location
+:find filename        use find to search for files within your set path +search +open +edit +vim  
+        search for a keyword /search-word once highlighted and cursor other it, press enter and then press n for next and N for previous +search +vim
+:noh        unhighlight or clear highlighted search results +search +vim
+:vim /pattern/ file        search within a file you don't have open - internal grep, to search for particular pattern +search +grep +vim +internal
+:grep - R "pattern"        external grep, uses the terminal grep :grep -R "pattern" file/location
 
 ### basics
 
-open a file with :edit filename or e: filename +vim +open +edit
-open specific file by searching recursively within sub-folders :edit **/*.md<tab>
-esc is command mode +command +vim
-to exit :q! exits without saving +exit +vim
-save and exit :wq to exit and save +exit +save +vim
-quit all buffers / quit and close all open buffers :qall +exit +buffers +vim
-quit wll buffers without saving :qall! +exit +buffers +vim
-save and quit all buffers :wqall +exit +buffers +vim
+:edit filename or e: filename        open a file with +vim +open +edit
+:edit **/*.md<tab>        open specific file by searching recursively within sub-folders +vim +search
+:q! exits without saving        to exit +exit +vim
+:wq to exit and save        save and exit +exit +save +vim
+:qall        quit all buffers / quit and close all open buffers +exit +buffers +vim
+:qall!        quit wll buffers without saving +exit +buffers +vim
+:wqall        save and quit all buffers +exit +buffers +vim
 
 h goes left +movement +vim
 j goes down +movement +vim
@@ -110,81 +109,81 @@ zb    Bring the current line near the bottom of your screen +scroling +vim +move
 
 ### quickfix window
 when you have a list of grep search results you get a quickfix window +quickfix +window
-open the current file in quickfix window :copen +quickfix +window +open
-close the current file in quickfix window :cclose +quickfix +window +open
-go to the next error :cnext +quickfix +window +open
-go to the previous erro :cprevious +quickfix +window +open
-go to the older error list :colder +quickfix +window +open
-go to the newer error list :cnewer +quickfix +window +open
-exit quickfix mode :ccl or :cclose
-execute a command on whole quickfix window, example shows find and replace all files in quickfix window and save update :cfdo %s/pizza/donut/g | update
+:copen        open the current file in quickfix window +quickfix +window +open
+:cclose        close the current file in quickfix window +quickfix +window +open
+:cnext        go to the next error +quickfix +window +open
+:cprevious        go to the previous erro +quickfix +window +open
+:colder        go to the older error list +quickfix +window +open
+:cnewer        go to the newer error list +quickfix +window +open
+:ccl or :cclose     exit quickfix mode
+:cfdo %s/pizza/donut/g | update        execute a command on whole quickfix window, example shows find and replace all files in quickfix window and save update +vim +quickfix
 
 ### editing
 
 .       repeat the last command +vim +dot
 press x to delete the character under the cursor +delete +deleting +editing +vim
 
-add to end of line shift + a (or A) will jump the cursor to the end of the line and allow you to append some text +append +editing +vim
+A       add to end of line shift + a (or A) will jump the cursor to the end of the line and allow you to append some text +append +editing +vim
 
-change till character ct) to change until closing parenthesis, or ct" to delete until next quote +change +correct +till +until 
+ct)     change till character ct) to change until closing parenthesis, or ct" to delete until next quote +change +correct +till +until 
 
-change words inside tag cit will make <p>words words</p> become <p></p> and enter insert mode inside tags +change +correct +tags +vim
+cit     change words inside tag cit will make <p>words words</p> become <p></p> and enter insert mode inside tags +change +correct +tags +vim
 
-delete words in tag dit will make <p>words words</p> become <p></p> +delete +deleting +editing +tags +vim
-change words inside quotes ci" will make "words words" become "" and enter insert mode inside quotes +change +correct +quotes +vim
-delete words in tag dit will make "words words" become "" +delete +deleting +editing +quotes +vim
+dit     delete words in tag dit will make <p>words words</p> become <p></p> +delete +deleting +editing +tags +vim
+ci      change words inside quotes ci" will make "words words" become "" and enter insert mode inside quotes +change +correct +quotes +vim
+dit     delete words in tag dit will make "words words" become "" +delete +deleting +editing +quotes +vim
 
 command: dat description: delete entire tag and words in tag +vim +tags +delete
 
 ### buffers
-see all buffers in vim :buffers +buffers +vim +all
-go to next buffer :bnext or bn +buffers +vim +next
-go to previous buffer :bprevious or bp +buffers +vim +previous
-go to specific buffer by name :buffer filename (can be autocompleted with tab) +buffers +vim +name
-go to specifc buffer by number: buffer number where number is the buffer number you want +buffers +vim +number
-jump to the older position in the jump list: Ctrl-o +buffers +vim +jumps +jump
-jump to newer position in buffer list: ctrl-i +buffers +jumps +jump +vim
-go to previously edited buffer with ctrl-^ +buffers +jump +jumps +vim
-delete a buffer from buffer list :bdelete or bd +delete +buffers +buffer +vim
-delete a specific buffer by number from buffer list :bdelete 3 (where 3 is number of buffer)
-delete a specifc buffer by filename from buffer list :bdelete filename +delete +buffers +name +buffer +vim
-delete all buffers except current file :%bd | e# (e# opens current file) +buffers +delete +clear +vim
-run a update/run a command on all open buffers. example shows find and replace, and saving update :bufdo %s/pizza/donut/g | update 
+:buffers        see all buffers in vim +buffers +vim +all
+:bnext or bn        go to next buffer +buffers +vim +next
+:bprevious or bp        go to previous buffer +buffers +vim +previous
+:buffer filename (can be autocompleted with tab)        go to specific buffer by name +buffers +vim +name
+: buffer number where number is the buffer number you want        go to specifc buffer by number+buffers +vim +number
+: Ctrl-o        jump to the older position in the jump list+buffers +vim +jumps +jump
+: ctrl-i        jump to newer position in buffer list+buffers +jumps +jump +vim
+ctrl-^      go to previously edited buffer with ctrl-^ +buffers +jump +jumps +vim
+:bdelete or bd        delete a buffer from buffer list +delete +buffers +buffer +vim
+:bdelete 3 (where 3 is number of buffer)        delete a specific buffer by number from buffer list +vim +buffers
+:bdelete filename        delete a specifc buffer by filename from buffer list +delete +buffers +name +buffer +vim
+:%bd | e# (e# opens current file)        delete all buffers except current file +buffers +delete +clear +vim
+:bufdo %s/pizza/donut/g | update        run a update/run a command on all open buffers. example shows find and replace, and saving update +vim +buffers
 
 ### windows / split view
-get split view :split filename +split +view +vim 
+:split filename        get split view +split +view +vim 
 
-move the cursor to the left window ctrl-w h +windows +vim +split +view 
-move the cursor to the window below ctrl-w j +windows +vim +split +view
-move the cursor to the window upper ctrl-w k +windows +vim +split +view
-move the cursor to the right window ctrl w l +windows +vim +split +view
+ctrl-w h        move the cursor to the left window ctrl-w h +windows +vim +split +view 
+ctrl-w j        move the cursor to the window below ctrl-w j +windows +vim +split +view
+ctrl-w k        move the cursor to the window upper ctrl-w k +windows +vim +split +view
+ctrl w l        move the cursor to the right window ctrl w l +windows +vim +split +view
 
-close current window in split view Ctrl-W c +windows +vim +split +view
-close current window in split view :q / :quit
+ctrl-w c        close current window in split view Ctrl-W c +windows +vim +split +view
+:q / :quit        close current window in split view +vim +quit
 
-open a new vertical split on current file: ctrl-w v +windows +vim +split +view
-open a new horizontal split on current file: ctrl-w s +windows +vim +split +view
+ctrl-w v        open a new vertical split on current file +windows +vim +split +view
+ctrl-w s        open a new horizontal split on current file +windows +vim +split +view
 
-make current window only window on screen: ctrl-w o +windows +vim +view 
+ctrl-w o        make current window only window on screen +windows +vim +view 
 
-split window vertically for specifc file vs filename or vsplit filename +split +view +vertical +vim
-open specific buffer in split view :vs buffernumber (for example :vs b3 would vertical split open buffer 3) 
-split window horizontally :split filename +split +view +horizontal +vim 
-create new window :new filename +windows +vim +view
+:vs filename or vsplit filename     split window vertically for specifc file vs filename or vsplit filename +split +view +vertical +vim
+:vs buffernumber        open specific buffer in split view :vs buffernumber (for example :vs b3 would vertical split open buffer 3) 
+:split filename        split window horizontally +split +view +horizontal +vim 
+:new filename        create new window +windows +vim +view
 
 ### tabs
-open file in a new tab :tabnew filename +tab +tabs +vim
-close the current tab :tabclose (or :q on tab) +tab +tabs +vim
-go to the next tab :tabnext +tab +tabs +vim
-go to the previous tab :tabprevious +tab +tabs +vim
-go to the last tab :tablast +tab +tabs +vim
-go to the first tab :tabfirst +tab +tabs +vim 
+:tabnew filename        open file in a new tab +tab +tabs +vim
+:tabclose (or :q on tab)        close the current tab +tab +tabs +vim
+:tabnext        go to the next tab +tab +tabs +vim
+:tabprevious        go to the previous tab +tab +tabs +vim
+:tablast        go to the last tab +tab +tabs +vim
+:tabfirst        go to the first tab +tab +tabs +vim 
 
-go to next tab / get tab: gt +tab +tabs +vim
-go to previous tab: gT +tab +tabs +vim 
-go to specifc tab by number 3gt (where 3 is tab number) +tab +tabs +number +vim
+gt        go to next tab / get tab +tab +tabs +vim
+gT        go to previous tab+tab +tabs +vim 
+3gt     go to specifc tab by number 3gt (where 3 is tab number) +tab +tabs +number +vim
 
-open multiple tabs in vim from start up: vim -p file1.txt file2.example file3 +tab +tabs +open +vim 
+vim -p file1.txt file2.example file3        open multiple tabs in vim from start up +tab +tabs +open +vim 
 
 ### netrw folder view
 
