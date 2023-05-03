@@ -1,7 +1,6 @@
 # how to do things
 
 ## howto find howtos / helpers 
-
 curl    cheat.sh/<command> useful for getting different options, for example curl cheat.sh/grep for different options with grep +cheatsheat +curl +linux
 ctrl+r      to search through bash history +linux +terminal
 --help      switch write a command then help +linux +terminal
@@ -10,7 +9,6 @@ man -K      search manul pages +linux +terminal
 history | grep -i "search term"     search your bash history +linux +terminal +history 
 info        display a command's info entry +linux terminal +info +help
 whatis      display one-line manual descriptions +linux help +whatis +terminal
-
 :h motions +vim 
 
 ## powershell
@@ -42,7 +40,7 @@ copy "*y    in normal mode +copy +vim
         
 ### search 
 :find filename        use find to search for files within your set path +search +open +edit +vim  
-        search for a keyword /search-word once highlighted and cursor other it, press enter and then press n for next and N for previous +search +vim
+/        search for a keyword /search-word once highlighted and cursor other it, press enter and then press n for next and N for previous +search +vim
 :noh        unhighlight or clear highlighted search results +search +vim
 :vim /pattern/ file        search within a file you don't have open - internal grep, to search for particular pattern +search +grep +vim +internal
 :grep - R "pattern"        external grep, uses the terminal grep :grep -R "pattern" file/location
@@ -79,12 +77,10 @@ n|      description: Go the column n in the current line
 gU      description: uppercase whole sentence +vim +uppercase
 gUiw    description: uppercase whole word +vim +uppercase
 50%     description: go to halfway through the file, this follows any number and percent +motions +vim +movement
-
 f       description: find a character on a line, so ft for next occurence of t +vim +motions +;
 ;       description: after finding a character on a line press ; to go to the next occurence +vim +motions +f 
 ,       description: after finding a character on a line press , to go back to the next occurence +vim +motions +; +f
 F       description: find the next occurence on a line going backwards, so previous occurence +vim +motions 
-
 10i     enter insert mode and do something, then when you exit insert mode this will be done 10 times +vim +repeats +insert
 
 ### window movement
@@ -104,7 +100,6 @@ Ctrl-B    Scroll up whole screen +scrolling +vim movement
 zt    Bring the current line near the top of your screen +scrolling +vim +movement
 zz    Bring the current line to the middle of your screen +scrolling +vim +movement
 zb    Bring the current line near the bottom of your screen +scroling +vim +movement
-
 
 ### quickfix window
 when you have a list of grep search results you get a quickfix window +quickfix +window
@@ -223,24 +218,20 @@ echo -e "example\t example"     -e allows you to actually echo the escape charac
 ln -s ../test.txt dir2/test.txt description: ln -s real_file link_file, -s stands for symbolic, this links the two files together so they update with each other. you can do the same with folders +symbolic +links +linux +terminal
 copy shift+insert to copy text in terminal as ctrl c is the kill command +copy +linux +terminal
 copy ctrl+insert to paste text in terminal as ctrl c is the kill command +paste +linux +terminal
-
-Gives help on a command. For example, cd -- help will give you information/help text on the cd argument --help +linux +terminal help
+command --help       Gives help on a command. For example, cd -- help will give you information/help text on the cd argument --help +linux +terminal help
 show you all previously entered commands (and keeps a very long log): history
 get full filepath of given program name: which program-name (eg python3) +terminal +linux
 clear all text on the terminal: clear +linux +clear
 Clears the current text in the terminal line: ctrl+u +linux +clear
 Deletes the last word you typed Ctrl+W +linux +delete 
 Cancels current line in terminal Ctrl+C +linux +cancel
-
 sort    sort lines of text +linux +sort 
 uniq    report or omit repeated lines 
 wc      print newline, word, and byte counts for each file
 head    output the first part of a file
 tail    output the past part of a file
 tee     read from standard input and write to standard output and files
-
-if file already exists then it will modify the timestamp without changing the contents. If the file does not exist, it will create a blank file: touch file-name +touch +linux +terminal +newfile
-
+touch filename      if file already exists then it will modify the timestamp without changing the contents. If the file does not exist, it will create a blank file: touch file-name +touch +linux +terminal +newfile
 file - determine file type +file +linux +terminal
 type    indicate how a command name is interpreted +type +linux +terminal
 which   display which executable programs will be executed +which +linux +terminal
@@ -268,31 +259,27 @@ print contents of file with indexing cat -n file-to-view +cat +print +linux +ter
 ### sed
 delete a line from the file by index value: sed -i 14d todo.txt (14d is index position and todo.txt is file) +cat +linux +sed +delete +terminal 
 add a string to the start of a line in a file (mark a todo.txt task as complete): sed -i '6s/^/x /' todo.txt (6s is index position and 'x ' makes sure a space appears) +cat +sed +add +linux +terminal
-
-write to file: echo "new line" >> file-to-add-to.ext +echo +linux +terminal 
-
+echo "new line" >> file-to-add-txt-to.ext       write to file: echo "new line" >> file-to-add-to.ext +echo +linux +terminal 
 archive done tasks: grep "^x " todo.txt >> done.txt and then this deletes them: sed -i.bak "/^x /d" todo.txt +grep +todo +sed +linux +terminal
 
 ### list
-list current directory: ls +linux +list 
-list hidden files: ls -a +linux +list +hidden
-long list all files including hidden files / list hidden files: ls -al +linux +list
-long listing / list with details: ls -l +linux +list
-long listing with files ordered by modification date: ls -lt +linux +list
-long listing with files ordered by modification date in reverse: ls -lt --reverse +linux +list +reverse
-list particular file type: ls *.txt +linux +list
-list particular unknown character: for example ?pam.txt would show nay files that start with any letter then pam: ls ?.txt +linux +list
-list long format display file size in human readable format rather than just bytes ls -h +file +size +linux +list
-
-list any filename any extension something x something, so either txt or exe combine wildcards ls astrix.?x? +list +wildcard +linux +terminal
-
-search for file in directory ls filename +list +linux +file
-
-quot shell: ctrl+d
-
+ls        list current directory: ls +linux +list 
+ls -a        list hidden files: ls -a +linux +list +hidden
+ls -al        long list all files including hidden files / list hidden files: ls -al +linux +list
+ls -l        long listing / list with details: ls -l +linux +list
+ls -lt        long listing with files ordered by modification date: ls -lt +linux +list
+ls -lt --reverse        long listing with files ordered by modification date in reverse: ls -lt --reverse +linux +list +reverse
+ls *.txt        list particular file type: ls *.txt +linux +list
+ls ?.txt        list particular unknown character: for example ?pam.txt would show nay files that start with any letter then pam: ls ?.txt        for example ?pam.txt would show nay files that start with any letter then pam: ls ?.txt        list particular unknown character: for example ?pam.txt would show nay files that start with any letter then pam: ls ?.txt +linux +list
+ls -h        list long format display file size in human readable format rather than just bytes: ls -h +file +size +linux +list
+ls astrix.?x?        list any filename any extension something x something, so either txt or exe combine wildcards: ls astrix.?x? +list +wildcard +linux +terminal
+ls filename     search for file in directory ls filename +list +linux +file
+ctrl+d      quit shell: ctrl+d
 run one off python command in linux terminal: python3 -c "print('hello example')" +linux +terminal +python +-c
-
 shutdown computer from terminal: shutdown now +linux +shutdown
+ctrl+l      clear screen +linux +clear
+ctrl+a      move cursor to start of screen +cursor +movements +linux
+ctrl+e      move cursor to end of screen +cursor +movements +linux
 
 ### web 
 connecting url / curl, simulates a get request and gets you the text and response data: curl -I -X GET http://whatever.com +linux +terminal +curl
