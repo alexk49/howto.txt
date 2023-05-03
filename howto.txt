@@ -17,6 +17,17 @@ whatis      display one-line manual descriptions +linux help +whatis +terminal
 New-Item -Path .\.vim\ -ItemType SymbolicLink -Value .\vimfiles\        this creates a symbolic link between the two folders so they update with each other. +symbolic +links +powershell 
 
 ## vim 
+:earlier 10s    Go to the state 10 seconds before
+:earlier 10m    Go to the state 10 minutes before
+:earlier 10h    Go to the state 10 hours before
+:earlier 10d    Go to the state 10 days before
+:later 10s    go to the state 10 seconds later
+:later 10m    go to the state 10 minutes later
+:later 10h    go to the state 10 hours later
+:later 10d    go to the state 10 days later
+:later 10     go to the newer state 10 times
+:later 10f    go to the state 10 saves later
+gx      open a url when curosr over a url
 
 ### copy and paste
 [ "*p ]     in normal mode +paste +vim
@@ -45,7 +56,6 @@ copy "*y    in normal mode +copy +vim
 :qall        quit all buffers / quit and close all open buffers +exit +buffers +vim
 :qall!        quit wll buffers without saving +exit +buffers +vim
 :wqall        save and quit all buffers +exit +buffers +vim
-
 h goes left +movement +vim
 j goes down +movement +vim
 k goes up +movement +vim
