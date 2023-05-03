@@ -280,6 +280,7 @@ shutdown computer from terminal: shutdown now +linux +shutdown
 ctrl+l      clear screen +linux +clear
 ctrl+a      move cursor to start of screen +cursor +movements +linux
 ctrl+e      move cursor to end of screen +cursor +movements +linux
+!linenumber     when searching history you can will get a line number for the command, you can then execute the command with !linenumber - for example !60 will execute line 60 in the bash history +linux +terminal +history
 
 ### web 
 connecting url / curl, simulates a get request and gets you the text and response data: curl -I -X GET http://whatever.com +linux +terminal +curl
