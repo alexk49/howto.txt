@@ -13,6 +13,7 @@ whatis      display one-line manual descriptions @linux help +whatis @terminal
 New-Item -Path .\.vim\ -ItemType SymbolicLink -Value .\vimfiles\        this creates a symbolic link between the two folders so they update with each other. +symbolic +links @powershell 
 
 # vim 
+:ctrl-f         search command history in vim +search +history @vim
 :earlier 10s    Go to the state 10 seconds before @vim +earlier
 :earlier 10m    Go to the state 10 minutes before
 :earlier 10h    Go to the state 10 hours before
@@ -163,7 +164,7 @@ ysiw"       surround one word: ysiw" (ys: add surroundings; iw: entire word, no 
 cst<newtag>     edit current tag: cst<newtag> and this will replace the old tag. For example, cst<li> on the <p>hello world</p> becomes <li>hello world</li> +edit +editing +change +tags +surround @vim
 :%!xmllint --format %      format an xml file / indent an xml file requires xmllint to be installed 
 
-## Linux
+# Linux
 clear       clear the prompt screen
 echo -e "example\t example"     -e allows you to actually echo the escape characters
 \$      \ or backslash is the escape character so \$ allows you to actually use the dollar sign. Other escape characters are $ ! & spaces and others @linux +escape +character
