@@ -8,7 +8,7 @@ It is particularly useful for the sort of terminal/vim commands you use just oft
 
 Simply, follow the format of:
 
-description of task: actual-instruction +tags +relevant +to +tasks
+actual-instruction      description of tasks +tags +relevant +to +tasks
 
 For example, you might need a reminder for some variation of the ls linux command. Then you would write: 
 
@@ -48,4 +48,3 @@ I use ht as in "howto" but you can obviously use whatever you woud like.
 This then allows searching the file with:
 
 ht "list hidden"
-
