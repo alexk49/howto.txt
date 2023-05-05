@@ -8,11 +8,19 @@ It is particularly useful for the sort of terminal/vim commands you use just oft
 
 Simply, follow the format of:
 
-actual-instruction      description of tasks +tags +relevant +to +tasks
+actual-instruction/command      description of tasks +tags +relevant +to +tasks @topic @tags
+
+## What is this madness?
+
+This is not a definitive reference for anything and has been built up over time. I know the information can be found through the help and manual pages etc. but I've found this serves as a quick reference for something I have already looked up and found useful but not yet memorised. 
+
+To be honest, one of the main motivators for making this is simply that I find the act of writing/typing something to be the best way for me to take the information in.
+
+## Basic search
 
 For example, you might need a reminder for some variation of the ls linux command. Then you would write: 
 
-list all files including hidden files / list hidden files: ls -al +list +hidden +linux +terminal 
+list all files including hidden files / list hidden files: ls -al +list +hidden @linux @terminal 
 
 The description is deliberately overly verbose and includes different variations of searches. 
 
@@ -24,27 +32,16 @@ or:
 
 grep "hidden" howto.txt 
 
+For a better search see the [howto-cli](https://github.com/alexk49/howto-cli)
+
+## Topic tag
+
+The topic tag should be used for the overarching subject. This should be something you anticipate having a lot of different commands/reminders for. For example, I use @vim and @linux as main topic tags.
+
+I found it useful for adding headers for the topics just to split the actual file up when adding to it.
+
 And be included in numerous more searches with ease. 
 
-## Tips and tricks
+## Howto-cli
 
-For ease of create a shell script called howto.sh: 
-
-```bash
-#!/bin/bash
-
-for arg in "$@"; do
-   grep "$arg" 'path/to/your/howto.txt'
-done
-```
-
-And, add an alias to your .bashrc:
-```
-alias ht='path/to/your/howto.sh'
-```
-
-I use ht as in "howto" but you can obviously use whatever you woud like. 
-
-This then allows searching the file with:
-
-ht "list hidden"
+For an easy search wrapper the [howto-cli](https://github.com/alexk49/howto-cli) can be used.
