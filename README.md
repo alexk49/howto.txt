@@ -18,7 +18,7 @@ To be honest, one of the main motivators for making this is simply that I find t
 
 ## Basic search
 
-For example, you might need a reminder for some variation of the ls linux command. Then you would write: 
+A basic example search would being needing a reminder for some variation of the ls linux command. Then you would write: 
 
 list all files including hidden files / list hidden files: ls -al +list +hidden @linux @terminal 
 
