@@ -1,6 +1,6 @@
 # howto-cli
 
-This is a simple script to allow better searching of the [howto.txt](github.com/alexk49/howto.txt) format.
+This is a simple script to allow better searching of the [howto.txt](https://github.com/alexk49/howto.txt) format.
 
 You may need to change the permissions of the script:
 ```
