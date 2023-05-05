@@ -1,19 +1,19 @@
 # howto find howtos / helpers 
-curl    cheat.sh/<command> useful for getting different options, for example curl cheat.sh/grep for different options with grep +cheatsheat +curl +linux
-ctrl+r      to search through bash history +linux +terminal
---help      switch write a command then help +linux +terminal
-apropos     find relevant manual(man) pages by searching through names and descriptions +linux +terminal 
-man -K      search manul pages +linux +terminal 
-history | grep -i "search term"     search your bash history +linux +terminal +history 
-info        display a command's info entry +linux terminal +info +help
-whatis      display one-line manual descriptions +linux help +whatis +terminal
-:h motions +vim 
+curl    cheat.sh/<command> useful for getting different options, for example curl cheat.sh/grep for different options with grep +cheatsheat +curl @linux
+ctrl+r      to search through bash history @linux @terminal
+--help      switch write a command then help @linux @terminal
+apropos     find relevant manual(man) pages by searching through names and descriptions @linux @terminal 
+man -K      search manul pages @linux @terminal 
+history | grep -i "search term"     search your bash history @linux @terminal +history 
+info        display a command's info entry @linux terminal +info +help
+whatis      display one-line manual descriptions @linux help +whatis @terminal
+:h motions @vim 
 
 # powershell
-New-Item -Path .\.vim\ -ItemType SymbolicLink -Value .\vimfiles\        this creates a symbolic link between the two folders so they update with each other. +symbolic +links +powershell 
+New-Item -Path .\.vim\ -ItemType SymbolicLink -Value .\vimfiles\        this creates a symbolic link between the two folders so they update with each other. +symbolic +links @powershell 
 
 # vim 
-:earlier 10s    Go to the state 10 seconds before
+:earlier 10s    Go to the state 10 seconds before @vim +earlier
 :earlier 10m    Go to the state 10 minutes before
 :earlier 10h    Go to the state 10 hours before
 :earlier 10d    Go to the state 10 days before
@@ -24,67 +24,67 @@ New-Item -Path .\.vim\ -ItemType SymbolicLink -Value .\vimfiles\        this cre
 :later 10     go to the newer state 10 times
 :later 10f    go to the state 10 saves later
 gx      open a url when curosr over a url
-[ "*p ]     in normal mode +paste +vim
-copy "*y    in normal mode +copy +vim
-:s/old/new     to substitute new for the first old in a line type +find +replace +substitute +vim 
-:s/old/new/g   to substitute new for all 'old's on a line type +find +replace +substitute +vim 
-:#,#s/old/new/g        To substitute phrases between two line #'s type +find +replace +substitute +vim 
-:%s/old/new/g        To substitute all occurrences in the file type +find +replace +substitute +vim 
-:%s/old/new/gc        To ask for confirmation each time add 'c' +find +replace +substitute +vim 
-:find filename        use find to search for files within your set path +search +open +edit +vim  
-/        search for a keyword /search-word once highlighted and cursor other it, press enter and then press n for next and N for previous +search +vim
-:noh        unhighlight or clear highlighted search results +search +vim
-:vim /pattern/ file        search within a file you don't have open - internal grep, to search for particular pattern +search +grep +vim +internal
+[ "*p ]     in normal mode +paste @vim
+copy "*y    in normal mode +copy @vim
+:s/old/new     to substitute new for the first old in a line type +find +replace +substitute @vim 
+:s/old/new/g   to substitute new for all 'old's on a line type +find +replace +substitute @vim 
+:#,#s/old/new/g        To substitute phrases between two line #'s type +find +replace +substitute @vim 
+:%s/old/new/g        To substitute all occurrences in the file type +find +replace +substitute @vim 
+:%s/old/new/gc        To ask for confirmation each time add 'c' +find +replace +substitute @vim 
+:find filename        use find to search for files within your set path +search +open +edit @vim  
+/        search for a keyword /search-word once highlighted and cursor other it, press enter and then press n for next and N for previous +search @vim
+:noh        unhighlight or clear highlighted search results +search @vim
+:vim /pattern/ file        search within a file you don't have open - internal grep, to search for particular pattern +search +grep @vim +internal
 :grep - R "pattern"        external grep, uses the terminal grep :grep -R "pattern" file/location
-:edit filename or e: filename        open a file with +vim +open +edit
-:edit **/*.md<tab>        open specific file by searching recursively within sub-folders +vim +search
-:q! exits without saving        to exit +exit +vim
-:wq to exit and save        save and exit +exit +save +vim
-:qall        quit all buffers / quit and close all open buffers +exit +buffers +vim
-:qall!        quit wll buffers without saving +exit +buffers +vim
-:wqall        save and quit all buffers +exit +buffers +vim
-h        goes left +movement +vim
-j        goes down +movement +vim
-k        goes up +movement +vim
-l        goes right +movement +vim
-{        count paragraphs backwards +movement +objects +vim 
-(        count sentences backward +movement +objects +vim 
-)        +scrolling +vim movementcount sentences forward +movement +objects +vim 
-motion: w       Move forward to the beginning of the next word +motions +vim
-motion: W       Move forward to the beginning of the next WORD +motions +vim
-e        Move forward one word to the end of the next word +motions +vim
-E        Move forward one word to the end of the next WORD +motions +vim
-b        Move backward to beginning of the previous word +motions +vim
-B        Move backward to beginning of the previous WORD +motions +vim 
-ge       Move backward to end of the previous word +motions +vim 
-gE       Move backward to end of the previous WORD +motions +vim
-0        Go to the first character in the current line +movement +vim +motions
+:edit filename or e: filename        open a file with @vim +open +edit
+:edit **/*.md<tab>        open specific file by searching recursively within sub-folders @vim +search
+:q! exits without saving        to exit +exit @vim
+:wq to exit and save        save and exit +exit +save @vim
+:qall        quit all buffers / quit and close all open buffers +exit +buffers @vim
+:qall!        quit wll buffers without saving +exit +buffers @vim
+:wqall        save and quit all buffers +exit +buffers @vim
+h        goes left +movement @vim
+j        goes down +movement @vim
+k        goes up +movement @vim
+l        goes right +movement @vim
+{        count paragraphs backwards +movement +objects @vim 
+(        count sentences backward +movement +objects @vim 
+)        +scrolling @vim movementcount sentences forward +movement +objects @vim 
+motion: w       Move forward to the beginning of the next word +motions @vim
+motion: W       Move forward to the beginning of the next WORD +motions @vim
+e        Move forward one word to the end of the next word +motions @vim
+E        Move forward one word to the end of the next WORD +motions @vim
+b        Move backward to beginning of the previous word +motions @vim
+B        Move backward to beginning of the previous WORD +motions @vim 
+ge       Move backward to end of the previous word +motions @vim 
+gE       Move backward to end of the previous WORD +motions @vim
+0        Go to the first character in the current line +movement @vim +motions
 ^        Go to the first nonblank char in the current line
 g_       Go to the last non-blank char in the current line
 $        Go to the last char in the current line
 n|       Go the column n in the current line
-gU       uppercase whole sentence +vim +uppercase
-gUiw     uppercase whole word +vim +uppercase
-50%      go to halfway through the file, this follows any number and percent +motions +vim +movement
-f        find a character on a line, so ft for next occurence of t +vim +motions +;
-;        after finding a character on a line press ; to go to the next occurence +vim +motions +f 
-,        after finding a character on a line press , to go back to the next occurence +vim +motions +; +f
-F        find the next occurence on a line going backwards, so previous occurence +vim +motions 
-10i     enter insert mode and do something, then when you exit insert mode this will be done 10 times +vim +repeats +insert
-H     Go to top of screen +window +movement +vim
-M     Go to medium screen +window +movement +vim
-L     Go to bottom of screen +window +movement +vim
-nH    Go n line from top +window +movement +vim
-nL    Go n line from bottom +window +movement +vim
-Ctrl-E    Scroll down a line +scrolling +vim +movement
-Ctrl-D    Scroll down half screen +scrolling +vim movement
-Ctrl-F    Scroll down whole screen +scrolling +vim movement
-Ctrl-Y    Scroll up a line +scrolling +vim movement
-Ctrl-U    Scroll up half screen +scrolling +vim movement
-Ctrl-B    Scroll up whole screen +scrolling +vim movement
-zt    Bring the current line near the top of your screen +scrolling +vim +movement
-zz    Bring the current line to the middle of your screen +scrolling +vim +movement
-zb    Bring the current line near the bottom of your screen +scroling +vim +movement
+gU       uppercase whole sentence @vim +uppercase
+gUiw     uppercase whole word @vim +uppercase
+50%      go to halfway through the file, this follows any number and percent +motions @vim +movement
+f        find a character on a line, so ft for next occurence of t @vim +motions +;
+;        after finding a character on a line press ; to go to the next occurence @vim +motions +f 
+,        after finding a character on a line press , to go back to the next occurence @vim +motions +; +f
+F        find the next occurence on a line going backwards, so previous occurence @vim +motions 
+10i     enter insert mode and do something, then when you exit insert mode this will be done 10 times @vim +repeats +insert
+H     Go to top of screen +window +movement @vim
+M     Go to medium screen +window +movement @vim
+L     Go to bottom of screen +window +movement @vim
+nH    Go n line from top +window +movement @vim
+nL    Go n line from bottom +window +movement @vim
+Ctrl-E    Scroll down a line +scrolling @vim +movement
+Ctrl-D    Scroll down half screen +scrolling @vim movement
+Ctrl-F    Scroll down whole screen +scrolling @vim movement
+Ctrl-Y    Scroll up a line +scrolling @vim movement
+Ctrl-U    Scroll up half screen +scrolling @vim movement
+Ctrl-B    Scroll up whole screen +scrolling @vim movement
+zt    Bring the current line near the top of your screen +scrolling @vim +movement
+zz    Bring the current line to the middle of your screen +scrolling @vim +movement
+zb    Bring the current line near the bottom of your screen +scroling @vim +movement
 when you have a list of grep search results you get a quickfix window +quickfix +window
 :copen        open the current file in quickfix window +quickfix +window +open
 :cclose        close the current file in quickfix window +quickfix +window +open
@@ -93,199 +93,199 @@ when you have a list of grep search results you get a quickfix window +quickfix 
 :colder        go to the older error list +quickfix +window +open
 :cnewer        go to the newer error list +quickfix +window +open
 :ccl or :cclose     exit quickfix mode
-:cfdo %s/pizza/donut/g | update        execute a command on whole quickfix window, example shows find and replace all files in quickfix window and save update +vim +quickfix
-.       repeat the last command +vim +dot
-press x to delete the character under the cursor +delete +deleting +editing +vim
-A       add to end of line shift + a (or A) will jump the cursor to the end of the line and allow you to append some text +append +editing +vim
+:cfdo %s/pizza/donut/g | update        execute a command on whole quickfix window, example shows find and replace all files in quickfix window and save update @vim +quickfix
+.       repeat the last command @vim +dot
+press x to delete the character under the cursor +delete +deleting +editing @vim
+A       add to end of line shift + a (or A) will jump the cursor to the end of the line and allow you to append some text +append +editing @vim
 ct)     change till character ct) to change until closing parenthesis, or ct" to delete until next quote +change +correct +till +until 
-cit     change words inside tag cit will make <p>words words</p> become <p></p> and enter insert mode inside tags +change +correct +tags +vim
-dit     delete words in tag dit will make <p>words words</p> become <p></p> +delete +deleting +editing +tags +vim
-ci      change words inside quotes ci" will make "words words" become "" and enter insert mode inside quotes +change +correct +quotes +vim
-dit     delete words in tag dit will make "words words" become "" +delete +deleting +editing +quotes +vim
-dat     delete entire tag and words in tag +vim +tags +delete
-qa      start recording a macro on register a +vim +macros +recording
-@a      execute a macro +vim +macros +execute
-:normal @a      execute a normal mode macro +vim +macros +normal
-:buffers        see all buffers in vim +buffers +vim +all
-:bnext or bn        go to next buffer +buffers +vim +next
-:bprevious or bp        go to previous buffer +buffers +vim +previous
-:buffer filename (can be autocompleted with tab)        go to specific buffer by name +buffers +vim +name
-: buffer number where number is the buffer number you want        go to specifc buffer by number+buffers +vim +number
-: Ctrl-o        jump to the older position in the jump list+buffers +vim +jumps +jump
-: ctrl-i        jump to newer position in buffer list+buffers +jumps +jump +vim
-ctrl-^      go to previously edited buffer with ctrl-^ +buffers +jump +jumps +vim
-:bdelete or bd        delete a buffer from buffer list +delete +buffers +buffer +vim
-:bdelete 3 (where 3 is number of buffer)        delete a specific buffer by number from buffer list +vim +buffers
-:bdelete filename        delete a specifc buffer by filename from buffer list +delete +buffers +name +buffer +vim
-:%bd | e# (e# opens current file)        delete all buffers except current file +buffers +delete +clear +vim
-:bufdo %s/pizza/donut/g | update        run a update/run a command on all open buffers. example shows find and replace, and saving update +vim +buffers
-:split filename        get split view +split +view +vim 
-ctrl-w h        move the cursor to the left window ctrl-w h +windows +vim +split +view 
-ctrl-w j        move the cursor to the window below ctrl-w j +windows +vim +split +view
-ctrl-w k        move the cursor to the window upper ctrl-w k +windows +vim +split +view
-ctrl w l        move the cursor to the right window ctrl w l +windows +vim +split +view
-ctrl-w c        close current window in split view Ctrl-W c +windows +vim +split +view
-:q / :quit        close current window in split view +vim +quit
-ctrl-w v        open a new vertical split on current file +windows +vim +split +view
-ctrl-w s        open a new horizontal split on current file +windows +vim +split +view
-ctrl-w o        make current window only window on screen +windows +vim +view 
-:vs filename or vsplit filename     split window vertically for specifc file vs filename or vsplit filename +split +view +vertical +vim
+cit     change words inside tag cit will make <p>words words</p> become <p></p> and enter insert mode inside tags +change +correct +tags @vim
+dit     delete words in tag dit will make <p>words words</p> become <p></p> +delete +deleting +editing +tags @vim
+ci      change words inside quotes ci" will make "words words" become "" and enter insert mode inside quotes +change +correct +quotes @vim
+dit     delete words in tag dit will make "words words" become "" +delete +deleting +editing +quotes @vim
+dat     delete entire tag and words in tag @vim +tags +delete
+qa      start recording a macro on register a @vim +macros +recording
+@a      execute a macro @vim +macros +execute
+:normal @a      execute a normal mode macro @vim +macros +normal
+:buffers        see all buffers in vim +buffers @vim +all
+:bnext or bn        go to next buffer +buffers @vim +next
+:bprevious or bp        go to previous buffer +buffers @vim +previous
+:buffer filename (can be autocompleted with tab)        go to specific buffer by name +buffers @vim +name
+: buffer number where number is the buffer number you want        go to specifc buffer by number+buffers @vim +number
+: Ctrl-o        jump to the older position in the jump list+buffers @vim +jumps +jump
+: ctrl-i        jump to newer position in buffer list+buffers +jumps +jump @vim
+ctrl-^      go to previously edited buffer with ctrl-^ +buffers +jump +jumps @vim
+:bdelete or bd        delete a buffer from buffer list +delete +buffers +buffer @vim
+:bdelete 3 (where 3 is number of buffer)        delete a specific buffer by number from buffer list @vim +buffers
+:bdelete filename        delete a specifc buffer by filename from buffer list +delete +buffers +name +buffer @vim
+:%bd | e# (e# opens current file)        delete all buffers except current file +buffers +delete +clear @vim
+:bufdo %s/pizza/donut/g | update        run a update/run a command on all open buffers. example shows find and replace, and saving update @vim +buffers
+:split filename        get split view +split +view @vim 
+ctrl-w h        move the cursor to the left window ctrl-w h +windows @vim +split +view 
+ctrl-w j        move the cursor to the window below ctrl-w j +windows @vim +split +view
+ctrl-w k        move the cursor to the window upper ctrl-w k +windows @vim +split +view
+ctrl w l        move the cursor to the right window ctrl w l +windows @vim +split +view
+ctrl-w c        close current window in split view Ctrl-W c +windows @vim +split +view
+:q / :quit        close current window in split view @vim +quit
+ctrl-w v        open a new vertical split on current file +windows @vim +split +view
+ctrl-w s        open a new horizontal split on current file +windows @vim +split +view
+ctrl-w o        make current window only window on screen +windows @vim +view 
+:vs filename or vsplit filename     split window vertically for specifc file vs filename or vsplit filename +split +view +vertical @vim
 :vs buffernumber        open specific buffer in split view :vs buffernumber (for example :vs b3 would vertical split open buffer 3) 
-:split filename        split window horizontally +split +view +horizontal +vim 
-:new filename        create new window +windows +vim +view
-:tabnew filename        open file in a new tab +tab +tabs +vim
-:tabclose (or :q on tab)        close the current tab +tab +tabs +vim
-:tabnext        go to the next tab +tab +tabs +vim
-:tabprevious        go to the previous tab +tab +tabs +vim
-:tablast        go to the last tab +tab +tabs +vim
-:tabfirst        go to the first tab +tab +tabs +vim 
-gt        go to next tab / get tab +tab +tabs +vim
-gT        go to previous tab+tab +tabs +vim 
-vim -p file1.txt file2.example file3        open multiple tabs in vim from start up +tab +tabs +open +vim 
-vim foldername      open a folder in vim +netrw +folder +open +vim
-:Explore        starts netrw on current file location +netrw +folder +open +vim
-%       create a new file in netrw % +netrw +folder +create +file +vim
-d       create a new directory in netrw d +netrw +folder +create +directory +vim
-R       rename a file or directory in netrw R +netrw +rename +vim 
-D       delete a file or directory D +netrw +delete +vim
-ctrl-n      bring up autocomplete menu in vim ctrl-n +vim +autocomplete 
-ctrl-n or ctrl-p        scroll back and forth in autocomplete ctrl-n for next or ctrl-p for previous +vim +autocomplete 
-ctrl-x ctrl-n       just autocomplete on current file ctrl-x ctrl-n +vim +autocomplete 
-ctrl-x ctrl-f       insert file name ctrl-x ctrl-f +vim +autocomplete +files
-ctrl-x ctrl]        just autocomplete tags ctrl-x ctrl] +autocomplete +tags +vim
+:split filename        split window horizontally +split +view +horizontal @vim 
+:new filename        create new window +windows @vim +view
+:tabnew filename        open file in a new tab +tab +tabs @vim
+:tabclose (or :q on tab)        close the current tab +tab +tabs @vim
+:tabnext        go to the next tab +tab +tabs @vim
+:tabprevious        go to the previous tab +tab +tabs @vim
+:tablast        go to the last tab +tab +tabs @vim
+:tabfirst        go to the first tab +tab +tabs @vim 
+gt        go to next tab / get tab +tab +tabs @vim
+gT        go to previous tab+tab +tabs @vim 
+vim -p file1.txt file2.example file3        open multiple tabs in vim from start up +tab +tabs +open @vim 
+vim foldername      open a folder in vim +netrw +folder +open @vim
+:Explore        starts netrw on current file location +netrw +folder +open @vim
+%       create a new file in netrw % +netrw +folder +create +file @vim
+d       create a new directory in netrw d +netrw +folder +create +directory @vim
+R       rename a file or directory in netrw R +netrw +rename @vim 
+D       delete a file or directory D +netrw +delete @vim
+ctrl-n      bring up autocomplete menu in vim ctrl-n @vim +autocomplete 
+ctrl-n or ctrl-p        scroll back and forth in autocomplete ctrl-n for next or ctrl-p for previous @vim +autocomplete 
+ctrl-x ctrl-n       just autocomplete on current file ctrl-x ctrl-n @vim +autocomplete 
+ctrl-x ctrl-f       insert file name ctrl-x ctrl-f @vim +autocomplete +files
+ctrl-x ctrl]        just autocomplete tags ctrl-x ctrl] +autocomplete +tags @vim
 ""      The unnamed register, if you set clipboard unnamed this defaults as global register
 "a-z    The named registers, these are specifically accessed 
 "0-9    The numbered registers, 0 is stored when you yank text automatically  
-yss<html-tag>   add tags around a text: yss<html-tag>: yss will surround entire line, so you can add tags with yss<p>. For example words words becomes <p>words words</p> +tags +surround +vim
-yss) ys: add surroundings; s: entire line; ) character to surround line with) +tags +surround +vim
-S       surround text with tags in visual mode: S followed by surround character, eg. S" +tags +surround +visual +vim 
-ysiw"       surround one word: ysiw" (ys: add surroundings; iw: entire word, no matter where the cursor is as long as it's at the word you want to surround; ": character to surround text with) +tags +surround +vim
-cst<newtag>     edit current tag: cst<newtag> and this will replace the old tag. For example, cst<li> on the <p>hello world</p> becomes <li>hello world</li> +edit +editing +change +tags +surround +vim
+yss<html-tag>   add tags around a text: yss<html-tag>: yss will surround entire line, so you can add tags with yss<p>. For example words words becomes <p>words words</p> +tags +surround @vim
+yss) ys: add surroundings; s: entire line; ) character to surround line with) +tags +surround @vim
+S       surround text with tags in visual mode: S followed by surround character, eg. S" +tags +surround +visual @vim 
+ysiw"       surround one word: ysiw" (ys: add surroundings; iw: entire word, no matter where the cursor is as long as it's at the word you want to surround; ": character to surround text with) +tags +surround @vim
+cst<newtag>     edit current tag: cst<newtag> and this will replace the old tag. For example, cst<li> on the <p>hello world</p> becomes <li>hello world</li> +edit +editing +change +tags +surround @vim
 :%!xmllint --format %      format an xml file / indent an xml file requires xmllint to be installed 
 
 ## Linux
 clear       clear the prompt screen
 echo -e "example\t example"     -e allows you to actually echo the escape characters
-\$      \ or backslash is the escape character so \$ allows you to actually use the dollar sign. Other escape characters are $ ! & spaces and others +linux +escape +character
-\\      use an actual backslash, this is the escape character for the escape character +linux +escape +character
-ln -s ../test.txt dir2/test.txt  ln -s real_file link_file, -s stands for symbolic, this links the two files together so they update with each other. you can do the same with folders +symbolic +links +linux +terminal
-shift+insert to copy text in terminal as ctrl c is the kill command +copy +linux +terminal
-ctrl+insert    to paste text in terminal as ctrl c is the kill command +paste +linux +terminal
-command --help       Gives help on a command. For example, cd -- help will give you information/help text on the cd argument --help +linux +terminal help
-history         show you all previously entered commands (and keeps a very long log) +linux +history +terminal
-which program-name (eg python3)         get full filepath of given program name +terminal +linux
-clear       clear all text on the terminal +linux +clear
-ctrl-u      Clears the current text in the terminal line +linux +clear
-Ctrl-W      Deletes the last word you typed +linux +delete 
-Ctrl+C      Cancels current line in terminal +linux +cancel
-sort    sort lines of text +linux +sort 
+\$      \ or backslash is the escape character so \$ allows you to actually use the dollar sign. Other escape characters are $ ! & spaces and others @linux +escape +character
+\\      use an actual backslash, this is the escape character for the escape character @linux +escape +character
+ln -s ../test.txt dir2/test.txt  ln -s real_file link_file, -s stands for symbolic, this links the two files together so they update with each other. you can do the same with folders +symbolic +links @linux @terminal
+shift+insert to copy text in terminal as ctrl c is the kill command +copy @linux @terminal
+ctrl+insert    to paste text in terminal as ctrl c is the kill command +paste @linux @terminal
+command --help       Gives help on a command. For example, cd -- help will give you information/help text on the cd argument --help @linux @terminal help
+history         show you all previously entered commands (and keeps a very long log) @linux +history @terminal
+which program-name (eg python3)         get full filepath of given program name @terminal @linux
+clear       clear all text on the terminal @linux +clear
+ctrl-u      Clears the current text in the terminal line @linux +clear
+Ctrl-W      Deletes the last word you typed @linux +delete 
+Ctrl+C      Cancels current line in terminal @linux +cancel
+sort    sort lines of text @linux +sort 
 uniq    report or omit repeated lines 
 wc      print newline, word, and byte counts for each file
 head    output the first part of a file
 tail    output the past part of a file
 tee     read from standard input and write to standard output and files
-touch filename      if file already exists then it will modify the timestamp without changing the contents. If the file does not exist, it will create a blank file: touch file-name +touch +linux +terminal +newfile
-file        determine file type +file +linux +terminal
-type       indicate how a command name is interpreted +type +linux +terminal
-which      display which executable programs will be executed +which +linux +terminal
-less filetoview         view file +view +less +linux +terminal
-q       exit file view from less +exit +less +linux +terminal
-page up     page up or b to scroll back one page in less +less +linux +terminal +navigation
-page down       page down or space to scroll forward one page +less +navigation +linux +terminal
-up      up arrow to scroll up one line +less +linux +terminal +navigation
-down       down arrow to scroll up one line +less +linux +terminal +navigation
-G // to move to end of text file +less +linux +terminal +navigation
-1G or g // move to beginning of file */ +less +linux +terminal +navigation
-/pattern /* search for occurence of pattern */ +less +linux +terminal +navigation
+touch filename      if file already exists then it will modify the timestamp without changing the contents. If the file does not exist, it will create a blank file: touch file-name +touch @linux @terminal +newfile
+file        determine file type +file @linux @terminal
+type       indicate how a command name is interpreted +type @linux @terminal
+which      display which executable programs will be executed +which @linux @terminal
+less filetoview         view file +view +less @linux @terminal
+q       exit file view from less +exit +less @linux @terminal
+page up     page up or b to scroll back one page in less +less @linux @terminal +navigation
+page down       page down or space to scroll forward one page +less +navigation @linux @terminal
+up      up arrow to scroll up one line +less @linux @terminal +navigation
+down       down arrow to scroll up one line +less @linux @terminal +navigation
+G // to move to end of text file +less @linux @terminal +navigation
+1G or g // move to beginning of file */ +less @linux @terminal +navigation
+/pattern /* search for occurence of pattern */ +less @linux @terminal +navigation
 echo {1..15}     this will print out every number between one and fifteen through brace expansion +brace +expansion
 echo $((2 + 2))      this will actually perform the operation +arthmetic +addition
 echo $(ls)      this would actually print/perform the ls command instead of echo "ls" +command +substitution
-cat file-to-view        print contents of file to terminal ++at +print +linux +terminal
-cat -n file-to-view         print contents of file with indexing +cat +print +linux +terminal
-sed -i 14d todo.txt (14d is index position and todo.txt is file)        delete a line from the file by index value +cat +linux +sed +delete +terminal 
-sed -i '6s/^/x /' todo.txt (6s is index position and 'x ' makes sure a space appears)       add a string to the start of a line in a file (mark a todo.txt task as complete) +cat +sed +add +linux +terminal
-echo "new line" >> file-to-add-txt-to.ext       write to file: echo "new line" >> file-to-add-to.ext +echo +linux +terminal 
-grep "^x " todo.txt >> done.txt and then this deletes them: sed -i.bak "/^x /d" todo.txt        archive done tasks +grep +todo +sed +linux +terminal
-ls        list current directory: ls +linux +list 
-ls -a        list hidden files: ls -a +linux +list +hidden
-ls -al        long list all files including hidden files / list hidden files: ls -al +linux +list
-ls -l        long listing / list with details: ls -l +linux +list
-ls -lt        long listing with files ordered by modification date: ls -lt +linux +list
-ls -lt --reverse        long listing with files ordered by modification date in reverse: ls -lt --reverse +linux +list +reverse
-ls *.txt        list particular file type: ls *.txt +linux +list
-ls ?.txt        list particular unknown character: for example ?pam.txt would show nay files that start with any letter then pam: ls ?.txt        for example ?pam.txt would show nay files that start with any letter then pam: ls ?.txt        list particular unknown character: for example ?pam.txt would show nay files that start with any letter then pam: ls ?.txt +linux +list
-ls -h        list long format display file size in human readable format rather than just bytes: ls -h +file +size +linux +list
-ls astrix.?x?        list any filename any extension something x something, so either txt or exe combine wildcards: ls astrix.?x? +list +wildcard +linux +terminal
-ls filename     search for file in directory ls filename +list +linux +file
+cat file-to-view        print contents of file to terminal ++at +print @linux @terminal
+cat -n file-to-view         print contents of file with indexing +cat +print @linux @terminal
+sed -i 14d todo.txt (14d is index position and todo.txt is file)        delete a line from the file by index value +cat @linux +sed +delete @terminal 
+sed -i '6s/^/x /' todo.txt (6s is index position and 'x ' makes sure a space appears)       add a string to the start of a line in a file (mark a todo.txt task as complete) +cat +sed +add @linux @terminal
+echo "new line" >> file-to-add-txt-to.ext       write to file: echo "new line" >> file-to-add-to.ext +echo @linux @terminal 
+grep "^x " todo.txt >> done.txt and then this deletes them: sed -i.bak "/^x /d" todo.txt        archive done tasks +grep @todo +sed @linux @terminal
+ls        list current directory: ls @linux +list 
+ls -a        list hidden files: ls -a @linux +list +hidden
+ls -al        long list all files including hidden files / list hidden files: ls -al @linux +list
+ls -l        long listing / list with details: ls -l @linux +list
+ls -lt        long listing with files ordered by modification date: ls -lt @linux +list
+ls -lt --reverse        long listing with files ordered by modification date in reverse: ls -lt --reverse @linux +list +reverse
+ls *.txt        list particular file type: ls *.txt @linux +list
+ls ?.txt        list particular unknown character: for example ?pam.txt would show nay files that start with any letter then pam: ls ?.txt        for example ?pam.txt would show nay files that start with any letter then pam: ls ?.txt        list particular unknown character: for example ?pam.txt would show nay files that start with any letter then pam: ls ?.txt @linux +list
+ls -h        list long format display file size in human readable format rather than just bytes: ls -h +file +size @linux +list
+ls astrix.?x?        list any filename any extension something x something, so either txt or exe combine wildcards: ls astrix.?x? +list +wildcard @linux @terminal
+ls filename     search for file in directory ls filename +list @linux +file
 ctrl+d      quit shell: ctrl+d
-run one off python command in linux terminal: python3 -c "print('hello example')" +linux +terminal +python +-c
-shutdown computer from terminal: shutdown now +linux +shutdown
-ctrl+l      clear screen +linux +clear
-ctrl+a      move cursor to start of screen +cursor +movements +linux
-ctrl+e      move cursor to end of screen +cursor +movements +linux
-!linenumber     when searching history you can will get a line number for the command, you can then execute the command with !linenumber - for example !60 will execute line 60 in the bash history +linux +terminal +history
-curl -I -X GET http://whatever.com connecting url       curl, simulates a get request and gets you the text and response data: +linux +terminal +curl
+run one off python command in linux terminal: python3 -c "print('hello example')" @linux @terminal +python +-c
+shutdown computer from terminal: shutdown now @linux +shutdown
+ctrl+l      clear screen @linux +clear
+ctrl+a      move cursor to start of screen +cursor +movements @linux
+ctrl+e      move cursor to end of screen +cursor +movements @linux
+!linenumber     when searching history you can will get a line number for the command, you can then execute the command with !linenumber - for example !60 will execute line 60 in the bash history @linux @terminal +history
+curl -I -X GET http://whatever.com connecting url       curl, simulates a get request and gets you the text and response data: @linux @terminal +curl
 grep: global regualr expression print - search 
-grep expression-to-look-for file-to-look-in.extension      searching within files  +grep +search +linux
-grep expression *       search whole folder  +grep +search +linux
-grep -i expression *        ignore case in search  +grep +search +linux
-grep -v "string you do not want" "file_to_search"       search for word that does not appear - invert grep - so line number that does not contain string: +grep +search +linux +terminal
-grep -v "x " todo.txt | grep due:2023-03-30     search for not done tasks that are due today:  +todo +grep +search +linux +terminal
+grep expression-to-look-for file-to-look-in.extension      searching within files  +grep +search @linux
+grep expression *       search whole folder  +grep +search @linux
+grep -i expression *        ignore case in search  +grep +search @linux
+grep -v "string you do not want" "file_to_search"       search for word that does not appear - invert grep - so line number that does not contain string: +grep +search @linux @terminal
+grep -v "x " todo.txt | grep due:2023-03-30     search for not done tasks that are due today:  @todo +grep +search @linux @terminal
 grep -E 'expr1.*expr2|expr2.*expr1'     search for two patterns at once +filetosearch +multiple
-to autocomplete press tab +linux +termianal +tab
-tab-tab     display all possible matches for autocompletion by pressing tab twice +linux +terminal +tab +autocomplete
+to autocomplete press tab @linux +termianal +tab
+tab-tab     display all possible matches for autocompletion by pressing tab twice @linux @terminal +tab +autocomplete
 get present working directory: pwd #flashcard
-find . -name "*.py"     search for file across all files, example searches for any python file +search +find +files +linux +terminal
-cp filename folder-you-want-to-copy-to         copy filename to the defined folder:  +copy +cp +linux +terminal
-cp filename new-file-name      this will copy filename and paste it with the given new file name +copy +cp +linux +terminal
-cp filename folder/new-file-name copies filename to the new filepath you give, with the new file name +copy +cp +linux terminal
-cp -r source-dir destintion         recursively copy everything in directory, including sub directories +cp +copy +recursive +linux +terminal +directory
-mv file-name-or-folder-name new-file-name-or-folder         move the given file name or folder, to the new given location +mv +rename +linux +terminal
-mv file-name filepath-with-new-file-name        move the given file-name to the new file path and rename it with the new given name +mv +rename +linux +termianl
-mv file-name new-file-name      renames file-name with new file name, if you don't change the directory you are just renaming it +linux +rename +mv 
-rm filename         deletes (removes) given filename +delete +file +linux +terminal
-rm -r foldername        delete folder and contents, delete entire folder +delete +folder +terminal +linux
-rmdir folder-name       deletes given folder name +delete +folder +linux
+find . -name "*.py"     search for file across all files, example searches for any python file +search +find +files @linux @terminal
+cp filename folder-you-want-to-copy-to         copy filename to the defined folder:  +copy +cp @linux @terminal
+cp filename new-file-name      this will copy filename and paste it with the given new file name +copy +cp @linux @terminal
+cp filename folder/new-file-name copies filename to the new filepath you give, with the new file name +copy +cp @linux terminal
+cp -r source-dir destintion         recursively copy everything in directory, including sub directories +cp +copy +recursive @linux @terminal +directory
+mv file-name-or-folder-name new-file-name-or-folder         move the given file name or folder, to the new given location +mv +rename @linux @terminal
+mv file-name filepath-with-new-file-name        move the given file-name to the new file path and rename it with the new given name +mv +rename @linux +termianl
+mv file-name new-file-name      renames file-name with new file name, if you don't change the directory you are just renaming it @linux +rename +mv 
+rm filename         deletes (removes) given filename +delete +file @linux @terminal
+rm -r foldername        delete folder and contents, delete entire folder +delete +folder @terminal @linux
+rmdir folder-name       deletes given folder name +delete +folder @linux
 
 # Git
-git status      check current status of commits git status +git +status +basics
-git add file_name.ext       will add file to staging area: git add filename.ext +git +add +basics
-git commit -m "message"     commit file with commit message: git commit -m "message for commit message" +commit +git +basics
-git add .       add all files in the current directory and all subsequent directories git add . +git +add +basics
-git log     display list of commits: git log +git +tracking +log +status
-git push        push your changes to the repo: git push / git push origin main +basics +git +push
-git clone git@github.com:USER-NAME/REPOSITORY-NAME.git        copying or cloning a git repositry, get clone link from git then git clone git@github.com:USER-NAME/REPOSITORY-NAME.git +git +clone +remote
+git status      check current status of commits git status @git +status +basics
+git add file_name.ext       will add file to staging area: git add filename.ext @git +add +basics
+git commit -m "message"     commit file with commit message: git commit -m "message for commit message" +commit @git +basics
+git add .       add all files in the current directory and all subsequent directories git add . @git +add +basics
+git log     display list of commits: git log @git +tracking +log +status
+git push        push your changes to the repo: git push / git push origin main +basics @git +push
+git clone git@github.com:USER-NAME/REPOSITORY-NAME.git        copying or cloning a git repositry, get clone link from git then git clone git@github.com:USER-NAME/REPOSITORY-NAME.git @git +clone +remote
 
 # regex
-.       any character: . +regex +character
-.*      0 or more characters .* +regex +character
-.+1     1 or more characters .+1 +regex +character
-?       optional character ? +regex +character
-^       start of input ^ +regex +character
-$       end of input $ +regex +character
+.       any character: . @regex +character
+.*      0 or more characters .* @regex +character
+.+1     1 or more characters .+1 @regex +character
+?       optional character ? @regex +character
+^       start of input ^ @regex +character
+$       end of input $ @regex +character
 
 # todo.txt
-this is in order they should appear +order +todo
-x       mark completion: x +todo +order
-(A)     mark priority: (A) +todo +order
-yyyy-mm-dd      date format: yyyy-mm-dd completion date +todo +order +date
-yyyy-mm-dd      date format: yyyy-mm-dd creation date +todo +order +date
-text        actual task text +todo +task
-+tag        sort by project: +project_tag +todo +project +order
-@context        sort by @context_tag +todo +project +order
-due:yyyy-mm-dd      due date format: due:yyyy-mm-dd due date +todo +date
-set up first time use: https://github.com/todotxt/todo.txt-cli/wiki/Quick-Start-Guide +todo.txt +setup
-set up first time use: https://github.com/todotxt/todo.txt-cli/wiki/Tips-and-Tricks +todo.txt +setup
-td add "task to add +project @context due:yyyy-mm-dd"      add new task: td add "task to add +project @context due:yyyy-mm-dd" +todo.txt +new +task
-ITEM# "Text to append"      append to a task td append ITEM# "text to append" +todo.txt +append +add 
-td archive      archive finished tasks / move tasks marked as complete to done.txt: td archive +todo.txt +archive +finish
-td del ITEM#        delete task on particular line number: td del ITEM# or td rm ITEM# +todo.txt +delete
-td do ITEM#         mark task as done / mark task as complete: td do ITEM# +todo.txt +complete +done
-td list         list tasks that contain particular term: td list "search term" +todo.txt +list +search
+this is in order they should appear +order @todo
+x       mark completion: x @todo +order
+(A)     mark priority: (A) @todo +order
+yyyy-mm-dd      date format: yyyy-mm-dd completion date @todo +order +date
+yyyy-mm-dd      date format: yyyy-mm-dd creation date @todo +order +date
+text        actual task text @todo +task
++tag        sort by project: +project_tag @todo +project +order
+@context        sort by @context_tag @todo +project +order
+due:yyyy-mm-dd      due date format: due:yyyy-mm-dd due date @todo +date
+set up first time use: https://github.com/todotxt/todo.txt-cli/wiki/Quick-Start-Guide @todo.txt +setup
+set up first time use: https://github.com/todotxt/todo.txt-cli/wiki/Tips-and-Tricks @todo.txt +setup
+td add "task to add +project @context due:yyyy-mm-dd"      add new task: td add "task to add +project @context due:yyyy-mm-dd" @todo.txt +new +task
+ITEM# "Text to append"      append to a task td append ITEM# "text to append" @todo.txt +append +add 
+td archive      archive finished tasks / move tasks marked as complete to done.txt: td archive @todo.txt +archive +finish
+td del ITEM#        delete task on particular line number: td del ITEM# or td rm ITEM# @todo.txt +delete
+td do ITEM#         mark task as done / mark task as complete: td do ITEM# @todo.txt +complete +done
+td list         list tasks that contain particular term: td list "search term" @todo.txt +list +search
 
 # ASCI escape characters
-\a      Bell (an alert that causes the computer to beep) +asci +escape +alert
-\b      backspace +asci +escape +backspace
-\n      Newline +asci +escape +Newline
-\r      carriage return +asci +escape +carriage
-\t      tab +asci +escape +tab
+\a      Bell (an alert that causes the computer to beep) @asci +escape +alert
+\b      backspace @asci +escape +backspace
+\n      Newline @asci +escape +Newline
+\r      carriage return @asci +escape +carriage
+\t      tab @asci +escape +tab
