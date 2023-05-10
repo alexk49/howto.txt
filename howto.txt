@@ -165,6 +165,38 @@ cst<newtag>     edit current tag: cst<newtag> and this will replace the old tag.
 :%!xmllint --format %      format an xml file / indent an xml file requires xmllint to be installed 
 
 # Linux
+xdg-open        open a file or url in the systems preferred application @linux +open +file +image +url @terminal
+u+x     add execute permission for the owner @linux +permissions +execute
+u-x     remove execute permission from the owner @linux +permissions +execute
++x      add execute permission for the owner, group and world. this is equvalent to a+x @linux +permissions +execute
+o-rw        remove the read and write permissions from anyone beside the owner and group owner @linux +permissions +read +write
+go=rw       set the group owner and anyone besides the owner to have read and write permissions. if either the group owner or the world previously had execute permission, it is removed @linux +read +write +permissions
+u+x,go=rx       add execute permission for the owner and set the permissions for the group and others to read and execute. Multiple specifications may be seperated by commas @linux +read +write +permissions
+umask
+7 rwx     octal to binary mapping @linux +permissions +octal +numbers
+6 rw-       octal to binary mapping @linux +permissions +octal +numbers
+5 r-x       octal to binary mapping @linux +permissions +octal +numbers
+4 r--       octal to binary mapping @linux +permissions +octal +numbers
+0 ---       octal to binary mapping @linux +permissions +octal +numbers
+id      display user identity @linux +id +user
+chmod   change a file's mode/permissions. this can be done with octal numbers or the letters @linux +file +mode +permissions
+-       regular file @linux +file +type
+d       directory file type @linux +file +type +folder
+l       symbolic link @linux +file +type +symbolic +link
+c       a character special file - this file type refers to a device that handles data as a stream of bytes such as a terminal or /dev/null @linux +file +type +special
+b       a block special file. this file type refers to a devices that handles data in blocks such as a hard drive or DVD drive @linux +file +type +block +special
+r       allows a file to be opened and read @linux +permissions eg rwx
+w       allows a file to be written to @linux +permissions +write rwx
+x       allows a file to be treated as a executable, for example scripts @linux +permissions +executable
+-rwx------      a regular file that is readable, writable, and executable by the file's owner. No-one else has access @linux +file +permissions
+-rw------       a regular file that is readable and writable by file owner @linux +file +permissions
+-rw-r--r--      a regular file that is readable and writable by the file's owner. Members of the file's owner group may read the file. This file is world-readable @linux +file +permissions
+-rwxr-xr-x      a regular file that is readable, writable and executable by the file's owner. the file may be read and executed by everybody else @linux +file +permissions
+-rw-rw----      regular file that is readable and writable by the file's owner and membbers of the file's group owner only @linux +file +permissions
+lrwxrwxrwx      a symbolic link. these all have dummy permissions. real permissions are in the real file @linux +file +permissions +sym +links
+drwxrwx---      a directory. the owner and the members of the owner group may enter the dir and create, rename and remove files within the dir @linux +dir +permissions
+drwxr-x---      a directory. the owner may enter the dir and create, rename, and delete files within the directory. members of the owner group may enter the dir but cannot create, delete or rename files
+rwxrwxrwx       owner, group, world order of file permissions @linux +file +permissions
 clear       clear the prompt screen
 echo -e "example\t example"     -e allows you to actually echo the escape characters
 \$      \ or backslash is the escape character so \$ allows you to actually use the dollar sign. Other escape characters are $ ! & spaces and others @linux +escape +character
