@@ -248,6 +248,7 @@ rm -r foldername        delete folder and contents, delete entire folder +delete
 rmdir folder-name       deletes given folder name +delete +folder @linux
 
 # Git
+git remote set-url origin new.git.url/here      this updates the given url, you can also edit the config in the .git folder
 git status      check current status of commits git status @git +status +basics
 git add file_name.ext       will add file to staging area: git add filename.ext @git +add +basics
 git commit -m "message"     commit file with commit message: git commit -m "message for commit message" +commit @git +basics
