@@ -165,6 +165,14 @@ cst<newtag>     edit current tag: cst<newtag> and this will replace the old tag.
 :%!xmllint --format %      format an xml file / indent an xml file requires xmllint to be installed 
 
 # Linux
+sudo usermod -a -G sudo username        add a specific user to the sudo group @linux +group +sudo
+sudo usermod -a -G groupname username       add a user to specific group @linux +group +add
+sudo chown :test /usr/local/share/test      example of changing ownership of the share test directory to the test group @linux +shared +share +files +ownership
+sudo groupadd groupname     add a new group, can be used to create shared directories @linux +add +group
+sudo useradd username       add a new user @linux +add +user
+sudo psswd username         set user password @linux +add +user
+chown [owner][:group]] file       change owner or group owner of a file/directory @linux +change +owner
+su or sudo su       open a super user prompt @linux +superuser +su
 xdg-open        open a file or url in the systems preferred application @linux +open +file +image +url @terminal
 u+x     add execute permission for the owner @linux +permissions +execute
 u-x     remove execute permission from the owner @linux +permissions +execute
@@ -323,3 +331,7 @@ td list         list tasks that contain particular term: td list "search term" @
 \n      Newline @asci +escape +Newline
 \r      carriage return @asci +escape +carriage
 \t      tab @asci +escape +tab
+
+# xpath
+//element      this means anywhere within the tree @xpath +anywhere
+//element/element2      this means the 2nd element must be a direct descendent of the previous one @xpath +elements
