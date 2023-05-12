@@ -335,3 +335,9 @@ td list         list tasks that contain particular term: td list "search term" @
 # xpath
 //element      this means anywhere within the tree @xpath +anywhere
 //element/element2      this means the 2nd element must be a direct descendent of the previous one @xpath +elements
+
+# dev tools
+f12     open dev tools @devtools +open
+ctrl-shift-c        open console @devtools +console
+ctrl-shift-p        open command center @devtools +command
+css overview tab        can see full color schemes and styles @devtools +css +overview
