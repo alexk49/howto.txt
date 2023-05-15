@@ -162,6 +162,10 @@ cst<newtag>     edit current tag: cst<newtag> and this will replace the old tag.
 :%!xmllint --format %      format an xml file / indent an xml file requires xmllint to be installed 
 
 # Linux
+export      export environment to subsequently executed programs @linux +export
+export PATH     the export command tells the shell to make the contents of PATH available to child processes of the shell @linux +PATH +export
+set         displays both the shell and environment variables, as well as any defined functions, sorted in alphabetical order can pipe to less set | less @linux +environment +variables +shell
+printenv        print out current environment variables, can be pipped to less with printenv | less, or can print specific variables like printenv USER @linux +environment +variables
 tload       draws a graph in the terminal showing the system load over time @linux +system +load
 pstree      outputs a process list in a tree like pattern showing the parent child relationship of current processes @linux +pstree +processes
 vmstat      outputs a snapshot of system resource usage. can be passed a timedealy for updates like vmstat 5 @linux +system +resource
