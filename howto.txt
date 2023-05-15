@@ -9,9 +9,6 @@ info        display a command's info entry @linux terminal +info +help
 whatis      display one-line manual descriptions @linux help +whatis @terminal
 :h motions @vim 
 
-# powershell
-New-Item -Path .\.vim\ -ItemType SymbolicLink -Value .\vimfiles\        this creates a symbolic link between the two folders so they update with each other. +symbolic +links @powershell 
-
 # vim 
 :ctrl-f         search command history in vim +search +history @vim
 :earlier 10s    Go to the state 10 seconds before @vim +earlier
@@ -165,6 +162,25 @@ cst<newtag>     edit current tag: cst<newtag> and this will replace the old tag.
 :%!xmllint --format %      format an xml file / indent an xml file requires xmllint to be installed 
 
 # Linux
+tload       draws a graph in the terminal showing the system load over time @linux +system +load
+pstree      outputs a process list in a tree like pattern showing the parent child relationship of current processes @linux +pstree +processes
+vmstat      outputs a snapshot of system resource usage. can be passed a timedealy for updates like vmstat 5 @linux +system +resource
+sudo reboot     restart the system @linux +restart +reboot
+sudo shutdown -h now        halt the system @linux +halt +shutdown
+sudo shutdown now       shutdown the system @linux +shutdown
+sudo shutdown -r now        restart the system @linux +shutdown +restart
+killall [-u user] [-signal] name ...        kill multiple processes at once @linux +killall +multiple +processes
+kill process-pid-or-job-spec        kill a particular process or terminate a program. you can kill by pid or job spec @linux +kill +end +process +terminate
+kill -1 process-pid-or-job-spec     hang up particular process @linux +kill
+kill -2 process-pid-or-job-spec     interupt particular process @linux +kill
+kill -9 process-pid-or-job-spec     kill a particular process, this is a last resort override when other things fail @linux +kill +override
+kill -15 process-pid-or-job-spec        terminate a process by sending a signal to the program. this is the default kill command setting        @linux +kill +terminate
+kill -18 process-pid-or-job-spec        this will continue the process given if it is paused @linux +continue 
+kill -19 process-pid-or-job-spec        stop the given process, or pause the process. it is handled by the terminal so can't be ignored @linux +kill +stop +pause
+ctrl-z      this pauses a foreground process and places it in the background @linux +process +background +foreground +stop +pause
+bg %1       run a process in the background, the % refers to a job spec @linux +background +run +jobs
+program-name &      the ampersand after a program launches that program in the background or as a background process, this can be useful for things like firefox or other gui programs @linux +background
+fg %1       return a background program to the foreground. the % refers to the job spec  @linux +program +jobs
 ps      view current processes in current terminal session @linux +processes +programs
 ps x        view all current process @linux +processes +programs
 top     display current running tasks, this is basically linux terminal version of windows task manager @linux +tasks
@@ -346,3 +362,14 @@ f12     open dev tools @devtools +open
 ctrl-shift-c        open console @devtools +console
 ctrl-shift-p        open command center @devtools +command
 css overview tab        can see full color schemes and styles @devtools +css +overview
+
+# yt-dlp youtube downloader
+.\yt-dlp.exe -x --extract-audio "url-of-video"
+
+# powershell
+cmd -c      run one off cmd command @powershell @cmd +windows
+New-Item -Path .\.vim\ -ItemType SymbolicLink -Value .\vimfiles\        this creates a symbolic link between the two folders so they update with each other. +symbolic +links @powershell 
+
+# cmd
+cmd /c "echo off | clip"        clear current clipboard entry @cmd +windows +clipboard
+
