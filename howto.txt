@@ -335,3 +335,6 @@ td list         list tasks that contain particular term: td list "search term" @
 # xpath
 //element      this means anywhere within the tree @xpath +anywhere
 //element/element2      this means the 2nd element must be a direct descendent of the previous one @xpath +elements
+
+# python
+python -m venv /path/to/new/virtual/environment         create virtual environment, if running in current dir then you can run python -m venv .venv (with .venv being the name of your virtual environment @python +virtual +environment
