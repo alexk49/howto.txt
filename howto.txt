@@ -162,6 +162,7 @@ cst<newtag>     edit current tag: cst<newtag> and this will replace the old tag.
 :%!xmllint --format %      format an xml file / indent an xml file requires xmllint to be installed 
 
 # Linux
+sed -n "/start-pattern/,/end-pattern/p" file_to_search      search a specific file for everthing between two patterns @linux +search +patterns
 export      export environment to subsequently executed programs @linux +export
 export PATH     the export command tells the shell to make the contents of PATH available to child processes of the shell @linux +PATH +export
 set         displays both the shell and environment variables, as well as any defined functions, sorted in alphabetical order can pipe to less set | less @linux +environment +variables +shell
@@ -297,6 +298,7 @@ grep expression *       search whole folder  +grep +search @linux
 grep -i expression *        ignore case in search  +grep +search @linux
 grep -v "string you do not want" "file_to_search"       search for word that does not appear - invert grep - so line number that does not contain string: +grep +search @linux @terminal
 grep -v "x " todo.txt | grep due:2023-03-30     search for not done tasks that are due today:  @todo +grep +search @linux @terminal
+grep .*    dot star is the wildcard expression for a grep search that will match anything @linux +grep +wildcard 
 grep -E 'expr1.*expr2|expr2.*expr1'     search for two patterns at once +filetosearch +multiple
 to autocomplete press tab @linux +termianal +tab
 tab-tab     display all possible matches for autocompletion by pressing tab twice @linux @terminal +tab +autocomplete
