@@ -165,6 +165,16 @@ cst<newtag>     edit current tag: cst<newtag> and this will replace the old tag.
 :%!xmllint --format %      format an xml file / indent an xml file requires xmllint to be installed 
 
 # Linux
+dpkg -l     list all packages installed on the system @linux +packages +installed
+dpkg -s package_name        check status of package and if it is installed on system @linux +package +status
+apt-cache show package_name
+dpkg -i package_file        install rpm file directly, this requires you to get the actual file and it won't install dependencies for you @linux +packages
+apt-get update; apt-get upgrade     fully update packages and package manager @linux +package +managers
+apt-get remove package_name     remove or install a pacakage @linux +uninstall +remove
+apt-get update      update package manager and packages @linux +ubuntu
+apt-get upgrade      update package manager @linux +ubuntu
+apt-cache search search_string      search package manager for string in package or description @linux +search +packages
+apt search search_string        search package manager for string in package or description @linux +search +packages
 sed -n "/start-pattern/,/end-pattern/p" file_to_search      search a specific file for everthing between two patterns @linux +search +patterns
 export      export environment to subsequently executed programs @linux +export
 export PATH     the export command tells the shell to make the contents of PATH available to child processes of the shell @linux +PATH +export
