@@ -10,6 +10,9 @@ whatis      display one-line manual descriptions @linux help +whatis @terminal
 :h motions @vim 
 
 # vim 
+:r filename     read specific file into cursor position. This will copy a whole file into your current file @vim +read +copy +file
+ex mode     means command mode in vim, can remember as execute @vim +command +execute +mode
+J       join the next line to the current line @vim +join +lines
 :ctrl-f         search command history in vim +search +history @vim
 :earlier 10s    Go to the state 10 seconds before @vim +earlier
 :earlier 10m    Go to the state 10 minutes before
