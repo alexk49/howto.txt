@@ -165,6 +165,10 @@ cst<newtag>     edit current tag: cst<newtag> and this will replace the old tag.
 :%!xmllint --format %      format an xml file / indent an xml file requires xmllint to be installed 
 
 # Linux
+sudo apt-get autoremove && sudo apt-get clean       removes and cleans no longer needed packages @linux +remove
+sudo apt-get clean       cleans the packages and install script in /var/cache/apt/archives/ @linux +remove +clean
+sudo apt-get autoclean      cleans obsolete deb-packages, less than clean @linux +remove +clean
+sudo apt/apt-get autoremove        removes orphaned packages which are not longer needed from the system, but does not purge them, use the --purge option together with the command for that @linux +remove +clean
 dpkg -l     list all packages installed on the system @linux +packages +installed
 dpkg -s package_name        check status of package and if it is installed on system @linux +package +status
 apt-cache show package_name
