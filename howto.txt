@@ -383,6 +383,8 @@ td list         list tasks that contain particular term: td list "search term" @
 # python
 python -m venv /path/to/new/virtual/environment         create virtual environment, if running in current dir then you can run python -m venv .venv (with .venv being the name of your virtual environment @python +virtual +environment
 pip freeze > requirements.txt       write current packages to requirements file +@python +pip +freeze +requirements
+pyinstaller --onefile path_to_file.py       convert script to single .exe which will be in dist folder @python +pyinstaller +convert +exe
+pyinstaller --onefile my_main.py my_functions.py file3.py file4.py      convert multiple files into one .exe which will be in dist folder @python +pyinstaller +convert +exe
 
 # dev tools
 f12     open dev tools @devtools +open
@@ -400,4 +402,5 @@ New-Item -Path .\.vim\ -ItemType SymbolicLink -Value .\vimfiles\        this cre
 # cmd
 cmd /c "echo off | clip"        clear current clipboard entry @cmd +windows +clipboard
 
->>>>>>> 10b99acd1e5370c8e14082a19525677638873376
+# prettier
+npx prettier --write file_or_fold_path      format everything with prettier @npm @npx @prettier +formatter +linter
