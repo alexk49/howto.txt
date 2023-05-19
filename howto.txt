@@ -298,7 +298,7 @@ ls -lt        long listing with files ordered by modification date: ls -lt @linu
 ls -lt --reverse        long listing with files ordered by modification date in reverse: ls -lt --reverse @linux +list +reverse
 ls *.txt        list particular file type: ls *.txt @linux +list
 ls ?.txt        list particular unknown character: for example ?pam.txt would show nay files that start with any letter then pam: ls ?.txt        for example ?pam.txt would show nay files that start with any letter then pam: ls ?.txt        list particular unknown character: for example ?pam.txt would show nay files that start with any letter then pam: ls ?.txt @linux +list
-ls -h        list long format display file size in human readable format rather than just bytes: ls -h +file +size @linux +list
+ll -h        list long format display file size in human readable format rather than just bytes: ll -h +file +size @linux +list
 ls astrix.?x?        list any filename any extension something x something, so either txt or exe combine wildcards: ls astrix.?x? +list +wildcard @linux @terminal
 ls filename     search for file in directory ls filename +list @linux +file
 ctrl+d      quit shell: ctrl+d
