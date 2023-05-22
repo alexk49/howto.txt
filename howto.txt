@@ -165,6 +165,16 @@ cst<newtag>     edit current tag: cst<newtag> and this will replace the old tag.
 :%!xmllint --format %      format an xml file / indent an xml file requires xmllint to be installed 
 
 # Linux
+netstat -r      show the network routing table @linux +network +routing +table
+netstat -ie     examine the network interfaces in our system @linux +network
+ssh     secure shell, open ssh client for remote logins @linux +ssh
+wget        non-interactive network downloader, used to download a file from a link @linux +download +get +request
+ftp     internet file transfer program (file transfer protocol) @linux +ftp +file +transfer +protocol
+ip      show/manipulate routing, devices, policy routing, and tunnels @linux +routing +routers +devices +ip 
+netstat     print network connections, routing tables, interface statistics, masquerade connections and multicast memberships @linux +networking +connections
+traceroute      print the route packets trace to a network host. shows different requests made for a site @linux +network +route +packets
+traceroute -T      print the route packets trace to a network host. shows different requests made for a site, the T sometimes shows ones that are hidden by astrixs with the normal command @linux +network +route +packets
+ping        send an internet control message protocol (ICMP) echo request to network host. check if network is working as expected @linux +network +ping
 sudo apt-get autoremove && sudo apt-get clean       removes and cleans no longer needed packages @linux +remove
 sudo apt-get clean       cleans the packages and install script in /var/cache/apt/archives/ @linux +remove +clean
 sudo apt-get autoclean      cleans obsolete deb-packages, less than clean @linux +remove +clean
