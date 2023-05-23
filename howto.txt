@@ -364,6 +364,12 @@ rm -r foldername        delete folder and contents, delete entire folder +delete
 rmdir folder-name       deletes given folder name +delete +folder @linux
 
 # Git
+git log --oneline       view the git log as just one line commit messages @git +log +oneline
+git diff        show differences between local and staged area @git +diff +differences
+git mv current_name new_name        rename files in git repo @git +rename +move +mv
+git restore filename        if you've made an uncommited change to a file and want to revert it to the lastest commit run git restore. @git +restore
+git restore --staged filename       unstage a staged file so it's not included in next commit @git +unstage
+git revert -n HEAD~3..HEAD      undo the last 3 commits and roll back completely, you then have to re-add and commit to update the repo @git +revert +commits
 git remote set-url origin new.git.url/here      this updates the given url, you can also edit the config in the .git folder
 git status      check current status of commits git status @git +status +basics
 git add file_name.ext       will add file to staging area: git add filename.ext @git +add +basics
