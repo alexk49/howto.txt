@@ -165,6 +165,27 @@ cst<newtag>     edit current tag: cst<newtag> and this will replace the old tag.
 :%!xmllint --format %      format an xml file / indent an xml file requires xmllint to be installed 
 
 # Linux
+find example -type f -name 'file-B' -exec touch '{}' ';'        this executes touch on the results of the find command. The -exec is execute the command is touch the {} is the symbolic representation of the paths, and the semi comma closes the command @linux +find +user +defind +actions +execute
+touch filename          this creates an empty file or modifies the time stamp to now @linux +touch
+stat {filename}        this lists all the times a file has been updated @linux +stat
+touch example/dir-{001..100}/file-{A..Z}    make empty files in directory 001 to 100 with files for A to Z @linux +expansion +touch +files
+mkdir -p example/dir-{001..100}     make directories in folder with numbering up to 100 @linux +dynamic +shell +expansion
+find ~ -iname '*.jpg' -print0       ensure that filenames with white space definitely get printed @linux +white space
+find ~ -type f -name 'foo*' -print | xargs ls -l        this outputs the find command and pipes it into xargs which constructs an arg list and executes it @linux +args +find
+xargs       accepts input from standard input and converts it into an argment list for a specified command @linux +xargs +args
+find ~ -type f -name '*.swp' -delete        this would search for all swp files and delete them. you can pass actions to find delete, ls (list) -print (the default) or -quit. obviously, be careful with delete! @linux +find +delete
+find ~ \( -type f -not -perm 0600 \) -or \( -type d -not -perm 0700 \)      files that don't have 0600 or 0700 permissions @linux +find +operators +search +permissions
+find ~ -name "*.jpg" -or -name "*.py"       you can chain searches together with -and -or -not operators @linux +find +and +or +not +chaining +searches
+find ~ -name "*.jpg"        search for wildcard patterns. example will return all jpgs
+find -iname pattern         search for case insensitive pattern @linux +find +case +insensitive
+find ~ -cmin -5     search for files that were last modified less than five minutes ago @linux +recently +modified
+find ~ -type f -name "*.jpg" -size +1M      search for jpg files that are more than 1 megabyte @linux +find +example +jpg
+find -type f        search for just regular files @linux +find +files
+find -type d        just search for directories in current folder @linux +find +directories
+find ~ -type d      just search for directories within home folder @linux +find +directories
+find ~ | wc -l      this returnsa count of the files with the homedirectory @linux +find +count
+find ~      this will give a complete recursive listing of your home directory @linux +find
+locate filename     find files by file name
 netstat -r      show the network routing table @linux +network +routing +table
 netstat -ie     examine the network interfaces in our system @linux +network
 ssh     secure shell, open ssh client for remote logins @linux +ssh
