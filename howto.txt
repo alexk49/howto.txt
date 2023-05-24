@@ -165,6 +165,24 @@ cst<newtag>     edit current tag: cst<newtag> and this will replace the old tag.
 :%!xmllint --format %      format an xml file / indent an xml file requires xmllint to be installed 
 
 # Linux
+sudo rysnc -av --delete --rsh=ssh dir-to-sync remote-sys:/backup        the --delete removes files that may have existed on the backup that no longer exist on the source. the --rsh=ssh instructs use of ssh as shell. and you specifiy the remote host path @linux +rsync +networks
+rsync -av org-dir-path/ path-to-sync-dir    the / after the org dir path means only the contents will be copied, this avoids a duplicate folder in the output @linux +rysnc
+rysync -av org-file path-to-sync-file       a is recursive archiving, and v is verbose. this syncs two directories @linux +sync +rsync
+rysnc options source destination        keeping dirs syncronised with another directory or network @linux +rsync +sync
+ls -l /folder/to/zip | zip output-zip-name.zip      pip command into zip @linux +pipe +zip
+unzip -l zip-file.zip file/path/in/zip/to/list       just list the contents of a file without extracting them @linux +list +zip
+unzip zip-file-name     unzip zip file @linux +zip +unzip
+zip -r zipfile input-file       recursively zip a folder @linux +zip +recursion +files
+zip options zipfile input-file     create a zip file @linux +zip +files
+tar xf path-to-tar      extract archive of tar file to current dir @linux +extract +archive
+tar tvf path-to-tar-file.tar        this gives a detailed list of contents of your tar file @linux +tar +list +contents +detailed
+tar tf path-to-tar-file.tar     this lists the contents of your tar file @linux +tar +list +contents
+tar cf output-file-name.tar file-to-archive     this creates a tar archive @linux +tar +archive
+bzip2 file-name     zip file with higher level of compression @linux +bzip 
+zcat path-to-zip-file | less        view the zip file contents @linux +gzip +zcat
+gzip -tv zip-file-name      check integrity of zip file for errors @linux +gzip +check +zip
+gunzip filename     unzip a zipped file @linux +gzip +unzip
+gzip filename       create a zip of the specified file @linux +gzip
 find example -type f -name 'file-B' -exec touch '{}' ';'        this executes touch on the results of the find command. The -exec is execute the command is touch the {} is the symbolic representation of the paths, and the semi comma closes the command @linux +find +user +defind +actions +execute
 touch filename          this creates an empty file or modifies the time stamp to now @linux +touch
 stat {filename}        this lists all the times a file has been updated @linux +stat
