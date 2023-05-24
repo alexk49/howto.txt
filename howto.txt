@@ -418,6 +418,7 @@ td list         list tasks that contain particular term: td list "search term" @
 //element/element2      this means the 2nd element must be a direct descendent of the previous one @xpath +elements
 
 # python
+jupytext --sync path-to-file.ipynb      this will sync your jupyter file with your python file, if they've been created via jupytext @python @jupyter +sync +jupytext
 #!/usr/bin/env python3      put this at the start of a python file so you can run it with ./pythonfilename.py in the linux terminal. This is called the shebang line @python @linux +shebang +line 
 python -m venv /path/to/new/virtual/environment         create virtual environment, if running in current dir then you can run python -m venv .venv (with .venv being the name of your virtual environment @python +virtual +environment
 pip freeze > requirements.txt       write current packages to requirements file +@python +pip +freeze +requirements
