@@ -443,6 +443,7 @@ td list         list tasks that contain particular term: td list "search term" @
 //element/element2      this means the 2nd element must be a direct descendent of the previous one @xpath +elements
 
 # python
+jupytext --sync path-to-file.ipynb      this will sync your jupyter file with your python file, if they've been created via jupytext @python @jupyter +sync +jupytext
 # fmt: off #fmt: on     add these comment blocks around code you want to be ignored by black @python +black +format +comment +ignore +fmt
 python -m black -l 120 script.py    sets max line length to 120, this can be changed to anything. black standard is 88. @python +black +line +length
 python -m black --diff script.py    preview changes black will make @python +preview +black +formatter
