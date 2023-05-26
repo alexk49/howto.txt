@@ -183,6 +183,8 @@ zcat path-to-zip-file | less        view the zip file contents @linux +gzip +zca
 gzip -tv zip-file-name      check integrity of zip file for errors @linux +gzip +check +zip
 gunzip filename     unzip a zipped file @linux +gzip +unzip
 gzip filename       create a zip of the specified file @linux +gzip
+locate --regex 'regex-pattern'      locate files based on given regex pattern @linux +locate +regex
+find . -regex 'regex-pattern'       find files based on given regex pattern @linux +find +regex
 find example -type f -name 'file-B' -exec touch '{}' ';'        this executes touch on the results of the find command. The -exec is execute the command is touch the {} is the symbolic representation of the paths, and the semi comma closes the command @linux +find +user +defind +actions +execute
 touch filename          this creates an empty file or modifies the time stamp to now @linux +touch
 stat {filename}        this lists all the times a file has been updated @linux +stat
@@ -398,11 +400,29 @@ git push        push your changes to the repo: git push / git push origin main +
 git clone git@github.com:USER-NAME/REPOSITORY-NAME.git        copying or cloning a git repositry, get clone link from git then git clone git@github.com:USER-NAME/REPOSITORY-NAME.git @git +clone +remote
 
 # regex regular expressions
+echo "(555) 123-4567" | grep -E '^\(?[0-9][0-9][0-9]\).[0-9]{3}-[0-9]{4}'       example regex matching phone number in given format @regex +phone +number +example
+{n}     match the preceding element exactly n times @regex +number +matches +exact +times
+{n,m}       match the preceding element if it occurs at least n times but not more than m times @regex +number +matches +range
+{n,}        match the preceding element if it occurs n or more times @regex +number +matches +or +more +times
+{,m}        match the preceding element if it occurs no more than m times @regex +no +more +than +n +times
+[:alnum:]       alphanumeric characters, a to z A-Z and 0-9 @regex +alphanumeric
+[:word:]        the same as alphanumeric @regex +alphanumeric
+[:alpha:]       the alphabetic characters a-z and A-Z @regex +alphabetic
+[:blank:]       space and tab characters
+[:cntrl:]       ASCII control codes @regex +ascii +control
+[:digit:]       the numerals 0-9 @regex +digits
+[:graph:]       the visible characters in ASCII @regex +graph
+[:lower:]       the lower case characters @regex +lower
+[:punct:]       the punctuation characters in ASCII @regex +punctuation
+[:print:]       printable characters @regex +printable
+[:space:]       the whitespace characters including space, tabe returns, newlines, vertical tab and form feed \t\e\n\v\f @regex +space
+[:upper:]       uppercase characters @regex +upper
+[:xdigit:]      characters used to express hexadecimal numbers. In ASCII equivalent to [0-9A-F-a-f] @regex +hexadecimal
 ^ $ . [ ] { } - ? * + ( ) | \       these are all the meta characters in regex. these have to be escaped with the backslash character. When putting these into the shell as a regex pattern they should be enclosed with quotes @regex +meta +characters
 .       any character: . for example grep -h '.zip' dirlist*.txt searches for anything containing zip @regex +character
 .*      0 or more characters .* @regex +character
 .+1     1 or more characters .+1 @regex +character
-?       optional character ? @regex +character
+?       optional character ?, match 0 or more times @regex +character
 ^       start of input ^ for example ^zip searches for anything that starts with zip @regex +character
 $       end of input $ for example zip$ searches for anything that ends with zip @regex +character
 ^$      this is a way to search for blank lines. as it signifies the start and end of input @regex +search +blank +lines
