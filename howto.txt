@@ -165,6 +165,14 @@ cst<newtag>     edit current tag: cst<newtag> and this will replace the old tag.
 :%!xmllint --format %      format an xml file / indent an xml file requires xmllint to be installed 
 
 # Linux
+sort example.txt | uniq     sort given file and then remove duplicates @linux +remove +duplicates +sort
+uniq filename       if file is sorted/in order then uniq will remove any duplicate lines @linux +remove +duplicates
+sort filename       display the contents of the file in sorted order, numbers first then alphabetical @linux +sort
+sort -o outputfile  file-to-sortfile        send results to a file rather than standard output @linux +sort +to +file
+sort -r filename        sort in reverse order, results descending rather than ascending @linux +sort +reverse
+sort file1 file2 file3 > final_sorted_list.txt      this would sort the contents of the other files into one bigger file sorted @linux +sort
+cat - A filename        display file and show hidden characters @linux +hidden +characters
+cat -s filename     display file with multiple blank lines removed @linux +cat +blank +lines
 sudo rysnc -av --delete --rsh=ssh dir-to-sync remote-sys:/backup        the --delete removes files that may have existed on the backup that no longer exist on the source. the --rsh=ssh instructs use of ssh as shell. and you specifiy the remote host path @linux +rsync +networks
 rsync -av org-dir-path/ path-to-sync-dir    the / after the org dir path means only the contents will be copied, this avoids a duplicate folder in the output @linux +rysnc
 rysync -av org-file path-to-sync-file       a is recursive archiving, and v is verbose. this syncs two directories @linux +sync +rsync
