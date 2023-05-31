@@ -165,6 +165,27 @@ cst<newtag>     edit current tag: cst<newtag> and this will replace the old tag.
 :%!xmllint --format %      format an xml file / indent an xml file requires xmllint to be installed 
 
 # Linux
+tr -d '/r' < dos_file > unix_file       this would remove the carriage return from the end of the given dos_file and output it into a unix file @linux +carriage +return +tr
+echo "aaabbbccc" | tr -s ab     tr can be used to remove repeated characters from strings @linux +repeats +tr
+echo "lowercase letters" | tr a-z A-Z       tr - transliterate or delete characters, the given command changes lowercase to uppercase. tr accepts ranges of characters in the same way as regex @linux +tr +range
+patch < patchfile.txt        this carries out the changes in the patchfile to the specified files @linux +patch
+diff -Naur file1.txt file2.txt > patchfile.txt      this writes the diff file to a seperate file that can be used by patch @linux +patch +diff
+diff file1.txt file2.txt        this is a more complex version of comm, and is used to detect differences between files @linux +differences +diff
+diff -c file1.txt file2.txt        this is used to detect differences between files. the -c (context) shows a more human readable format, and not a cryptic change log. the output begins with the names of two files and their timestamps, the first file is marked with asterisks and the second is marked with dashes. changes are often marked with line numbers. @linux +differences +diff
+comm -12 file1.txt file2.txt    this surpresses columns 1 and 2, so will only show the shared values between two files @linux +comparison +shared +values
+join        join lines of two files on a common field, for example an id value @linux +join
+comm file-1 file-2       compare two sorted files line by line. this produces output in three columns. First contains lines unique to the first file, the second column contains lines unique to the second file and the third column contains the lines shared @linux +comparison @linux +compare
+paste file-to-paste.txt file-to-paste-to.txt > output-file.txt     paste will allow you to merge lines in files, or add in columns etc. without redirecting it will just use std output @linux +paste
+cut         remove sections from files, works well with csv type files in particular @linux +cut
+cut -d ':' -f 1 /etc/passwd | head      this delimits the file by the given colon, and takes the first field and outputs it to head @linux +cut +delimiters
+sort example.txt | uniq     sort given file and then remove duplicates @linux +remove +duplicates +sort
+uniq filename       if file is sorted/in order then uniq will remove any duplicate lines @linux +remove +duplicates
+sort filename       display the contents of the file in sorted order, numbers first then alphabetical @linux +sort
+sort -o outputfile  file-to-sortfile        send results to a file rather than standard output @linux +sort +to +file
+sort -r filename        sort in reverse order, results descending rather than ascending @linux +sort +reverse
+sort file1 file2 file3 > final_sorted_list.txt      this would sort the contents of the other files into one bigger file sorted @linux +sort
+cat - A filename        display file and show hidden characters @linux +hidden +characters
+cat -s filename     display file with multiple blank lines removed @linux +cat +blank +lines
 sudo rysnc -av --delete --rsh=ssh dir-to-sync remote-sys:/backup        the --delete removes files that may have existed on the backup that no longer exist on the source. the --rsh=ssh instructs use of ssh as shell. and you specifiy the remote host path @linux +rsync +networks
 rsync -av org-dir-path/ path-to-sync-dir    the / after the org dir path means only the contents will be copied, this avoids a duplicate folder in the output @linux +rysnc
 rysync -av org-file path-to-sync-file       a is recursive archiving, and v is verbose. this syncs two directories @linux +sync +rsync
@@ -183,6 +204,8 @@ zcat path-to-zip-file | less        view the zip file contents @linux +gzip +zca
 gzip -tv zip-file-name      check integrity of zip file for errors @linux +gzip +check +zip
 gunzip filename     unzip a zipped file @linux +gzip +unzip
 gzip filename       create a zip of the specified file @linux +gzip
+locate --regex 'regex-pattern'      locate files based on given regex pattern @linux +locate +regex
+find . -regex 'regex-pattern'       find files based on given regex pattern @linux +find +regex
 find example -type f -name 'file-B' -exec touch '{}' ';'        this executes touch on the results of the find command. The -exec is execute the command is touch the {} is the symbolic representation of the paths, and the semi comma closes the command @linux +find +user +defind +actions +execute
 touch filename          this creates an empty file or modifies the time stamp to now @linux +touch
 stat {filename}        this lists all the times a file has been updated @linux +stat
@@ -397,13 +420,38 @@ git log     display list of commits: git log @git +tracking +log +status
 git push        push your changes to the repo: git push / git push origin main +basics @git +push
 git clone git@github.com:USER-NAME/REPOSITORY-NAME.git        copying or cloning a git repositry, get clone link from git then git clone git@github.com:USER-NAME/REPOSITORY-NAME.git @git +clone +remote
 
-# regex
-.       any character: . @regex +character
+# regex regular expressions
+echo "(555) 123-4567" | grep -E '^\(?[0-9][0-9][0-9]\).[0-9]{3}-[0-9]{4}'       example regex matching phone number in given format @regex +phone +number +example
+{n}     match the preceding element exactly n times @regex +number +matches +exact +times
+{n,m}       match the preceding element if it occurs at least n times but not more than m times @regex +number +matches +range
+{n,}        match the preceding element if it occurs n or more times @regex +number +matches +or +more +times
+{,m}        match the preceding element if it occurs no more than m times @regex +no +more +than +n +times
+[:alnum:]       alphanumeric characters, a to z A-Z and 0-9 @regex +alphanumeric
+[:word:]        the same as alphanumeric @regex +alphanumeric
+[:alpha:]       the alphabetic characters a-z and A-Z @regex +alphabetic
+[:blank:]       space and tab characters
+[:cntrl:]       ASCII control codes @regex +ascii +control
+[:digit:]       the numerals 0-9 @regex +digits
+[:graph:]       the visible characters in ASCII @regex +graph
+[:lower:]       the lower case characters @regex +lower
+[:punct:]       the punctuation characters in ASCII @regex +punctuation
+[:print:]       printable characters @regex +printable
+[:space:]       the whitespace characters including space, tabe returns, newlines, vertical tab and form feed \t\e\n\v\f @regex +space
+[:upper:]       uppercase characters @regex +upper
+[:xdigit:]      characters used to express hexadecimal numbers. In ASCII equivalent to [0-9A-F-a-f] @regex +hexadecimal
+^ $ . [ ] { } - ? * + ( ) | \       these are all the meta characters in regex. these have to be escaped with the backslash character. When putting these into the shell as a regex pattern they should be enclosed with quotes @regex +meta +characters
+.       any character: . for example grep -h '.zip' dirlist*.txt searches for anything containing zip @regex +character
 .*      0 or more characters .* @regex +character
 .+1     1 or more characters .+1 @regex +character
-?       optional character ? @regex +character
-^       start of input ^ @regex +character
-$       end of input $ @regex +character
+?       optional character ?, match 0 or more times @regex +character
+^       start of input ^ for example ^zip searches for anything that starts with zip @regex +character
+$       end of input $ for example zip$ searches for anything that ends with zip @regex +character
+^$      this is a way to search for blank lines. as it signifies the start and end of input @regex +search +blank +lines
+[bg]        this is bracket expression. will search for match either a b or a g. Whatever you put in the bracket expression will be matched. you might use grep -h '[bg]zip file.txt to search for bzip or gzip @regex +bracket +expression
+[^bg]       this negates the selected characters in the bracket expression meaning if the characters b or g appear at this point in the search they won't match @regex +bracket +expression +caret +negation
+^[A-Z]      search for anything that begins with an uppercase letter. The ^ means start with, the bracket expression means specific characters and the A-Z gives a range. @regex +capitals +letters +range
+^[A-Za-z0-9]    search for anything that starts with a letter or number, the ranges given are any capital letter, any lower case number or any digit @regex +ranges
+[-AZ]       this will actually hard match the dash character as well as A or Z @regex +dash
 
 # todo.txt
 this is in order they should appear +order @todo
