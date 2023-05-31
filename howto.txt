@@ -454,6 +454,7 @@ $       end of input $ for example zip$ searches for anything that ends with zip
 [-AZ]       this will actually hard match the dash character as well as A or Z @regex +dash
 
 # sed
+sed -i '/pattern-to-find/a ADDITION TO FILE AFTER PATTERn' file-to-add-to       the -i saves your changes to the current file @sed @linux +save +sed +changes
 sed 's/old-pattern/new-pattern/g' filename > changed.txt && mv changed.txt filename     update a file with the search and replace then save the changes to a new file, and then rename the changed file back to the original file @sed @linux +save +sed +changes
 sed 'pattern-to-search/a NEWLINE TO ADD AFTER PATTERN' file-to-add-to > output-file     append to a file after a particular pattern @sed @linux +append +search
 
