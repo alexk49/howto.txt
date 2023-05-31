@@ -165,6 +165,19 @@ cst<newtag>     edit current tag: cst<newtag> and this will replace the old tag.
 :%!xmllint --format %      format an xml file / indent an xml file requires xmllint to be installed 
 
 # Linux
+tr -d '/r' < dos_file > unix_file       this would remove the carriage return from the end of the given dos_file and output it into a unix file @linux +carriage +return +tr
+echo "aaabbbccc" | tr -s ab     tr can be used to remove repeated characters from strings @linux +repeats +tr
+echo "lowercase letters" | tr a-z A-Z       tr - transliterate or delete characters, the given command changes lowercase to uppercase. tr accepts ranges of characters in the same way as regex @linux +tr +range
+patch < patchfile.txt        this carries out the changes in the patchfile to the specified files @linux +patch
+diff -Naur file1.txt file2.txt > patchfile.txt      this writes the diff file to a seperate file that can be used by patch @linux +patch +diff
+diff file1.txt file2.txt        this is a more complex version of comm, and is used to detect differences between files @linux +differences +diff
+diff -c file1.txt file2.txt        this is used to detect differences between files. the -c (context) shows a more human readable format, and not a cryptic change log. the output begins with the names of two files and their timestamps, the first file is marked with asterisks and the second is marked with dashes. changes are often marked with line numbers. @linux +differences +diff
+comm -12 file1.txt file2.txt    this surpresses columns 1 and 2, so will only show the shared values between two files @linux +comparison +shared +values
+join        join lines of two files on a common field, for example an id value @linux +join
+comm file-1 file-2       compare two sorted files line by line. this produces output in three columns. First contains lines unique to the first file, the second column contains lines unique to the second file and the third column contains the lines shared @linux +comparison @linux +compare
+paste file-to-paste.txt file-to-paste-to.txt > output-file.txt     paste will allow you to merge lines in files, or add in columns etc. without redirecting it will just use std output @linux +paste
+cut         remove sections from files, works well with csv type files in particular @linux +cut
+cut -d ':' -f 1 /etc/passwd | head      this delimits the file by the given colon, and takes the first field and outputs it to head @linux +cut +delimiters
 sort example.txt | uniq     sort given file and then remove duplicates @linux +remove +duplicates +sort
 uniq filename       if file is sorted/in order then uniq will remove any duplicate lines @linux +remove +duplicates
 sort filename       display the contents of the file in sorted order, numbers first then alphabetical @linux +sort
