@@ -453,6 +453,14 @@ $       end of input $ for example zip$ searches for anything that ends with zip
 ^[A-Za-z0-9]    search for anything that starts with a letter or number, the ranges given are any capital letter, any lower case number or any digit @regex +ranges
 [-AZ]       this will actually hard match the dash character as well as A or Z @regex +dash
 
+# sed
+sed 's/old-pattern/new-pattern/g' filename > changed.txt && mv changed.txt filename     update a file with the search and replace then save the changes to a new file, and then rename the changed file back to the original file @sed @linux +save +sed +changes
+sed 'pattern-to-search/a NEWLINE TO ADD AFTER PATTERN' file-to-add-to > output-file     append to a file after a particular pattern @sed @linux +append +search
+
+
+# awk
+awk '/pattern-to-search-for/ {print $0}' file-to-search this will search for the specified pattern and print the entire line where it's found @awk +search +pattern
+
 # todo.txt
 this is in order they should appear +order @todo
 x       mark completion: x @todo +order
