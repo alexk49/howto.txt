@@ -165,6 +165,13 @@ cst<newtag>     edit current tag: cst<newtag> and this will replace the old tag.
 :%!xmllint --format %      format an xml file / indent an xml file requires xmllint to be installed 
 
 # Linux
+sudo make install        once you have a compiled source file after running make on a Makefile you can run sudo make install to put it into your usual /usr/local/bin directory which is the place for most system programs you would regularly run @linux +install +make +source +code +compile
+make       if you have a valid Makefile in the dir then make will make the program @linux +make +compile +programs
+./configure        this will start the configuration of building source code, and once run is usually followed by make @linux +configure +compile +source +code
+tar tzvf tarfile | head        examine contents of tar file before extracting. this can be useful if the tar doesn't follow the expected format for folder listings etc. @linux +preview +tar +view
+tar xzf path-to.tar.gz        the .tar.gz is sometimes calle a tarball. this command uncompresses it @linux +tarball +.tar.gz +uncompress +extract
+wget https://ftp.gnu.org/gnu/diction/diction-1.11.tar.gz         an example of downloading the source code of a gnu program via https @linux +https +source +src +code
+ftp ftp.gnu.org        connecting to the ftp.gnu site, which can be used to download source code for lots of gnu programs @linux +ftp +download +source +code +src
 lprm job-number or cancel job-number        this will cancel or stop the specified printing job @linux +cancel +printer
 lpq        display the printer queue status @linux +printer +queue +status
 lptstat -a        this will list all the available names of printers on the system. the -s can be useful as well for more detailed info @linux +printers +list +system
