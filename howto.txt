@@ -165,6 +165,8 @@ cst<newtag>     edit current tag: cst<newtag> and this will replace the old tag.
 :%!xmllint --format %      format an xml file / indent an xml file requires xmllint to be installed 
 
 # Linux
+""     you can add multi line statements by wrapping them in quotes, the shell will keep reading the text it encounters until the closing quote @linux +quote +marks +multi +line
+        the back slash can be used to specifiy line continuation on the command line and/or in shell scripts. This can make scripts more readable @linux +shell +line +continuations
 chmod 700 file         change file permissions so that only the owner can execute it @linux +execute +permissions +script
 chmod 755 filename       change permissions on the file so anyone can execute it. generally done to set permissions for scripts @linux +bash +script +permissions
 sudo make install        once you have a compiled source file after running make on a Makefile you can run sudo make install to put it into your usual /usr/local/bin directory which is the place for most system programs you would regularly run @linux +install +make +source +code +compile
