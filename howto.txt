@@ -165,6 +165,8 @@ cst<newtag>     edit current tag: cst<newtag> and this will replace the old tag.
 :%!xmllint --format %      format an xml file / indent an xml file requires xmllint to be installed 
 
 # Linux
+chmod 700 file         change file permissions so that only the owner can execute it @linux +execute +permissions +script
+chmod 755 filename       change permissions on the file so anyone can execute it. generally done to set permissions for scripts @linux +bash +script +permissions
 sudo make install        once you have a compiled source file after running make on a Makefile you can run sudo make install to put it into your usual /usr/local/bin directory which is the place for most system programs you would regularly run @linux +install +make +source +code +compile
 make       if you have a valid Makefile in the dir then make will make the program @linux +make +compile +programs
 ./configure        this will start the configuration of building source code, and once run is usually followed by make @linux +configure +compile +source +code
