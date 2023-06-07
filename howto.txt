@@ -426,6 +426,8 @@ rm -r foldername        delete folder and contents, delete entire folder +delete
 rmdir folder-name       deletes given folder name +delete +folder @linux
 
 # Git
+git reset --hard HEAD^      this will undo local files changes and remove your last commit @git +reset +local +files +remove +commit
+git reset --hard      this will force the working directory back to the last commit and delete new/change files @git +reset +local +files
 git log --oneline       view the git log as just one line commit messages @git +log +oneline
 git diff        show differences between local and staged area @git +diff +differences
 git mv current_name new_name        rename files in git repo @git +rename +move +mv
