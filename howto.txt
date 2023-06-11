@@ -10,6 +10,9 @@ whatis      display one-line manual descriptions @linux help +whatis @terminal
 :h motions @vim 
 
 # vim 
+&       this is used to repeat the last command whilst in normal mode, useful with search / replace @vim +repeat +search +replace
+/\v\d{3}-\d{3}-\d{4}        an example of searching for a phone number in vim with regex. The \v is a "magic" character to avoid having to write out the escape characters @vim +search +regex +magic
+/hello\|hola        search for two patterns at once. You have to escape the | operator otherwise vim will search for the string | @vim +search +two +fields
 :r filename     read specific file into cursor position. This will copy a whole file into your current file @vim +read +copy +file
 ex mode     means command mode in vim, can remember as execute @vim +command +execute +mode
 J       join the next line to the current line @vim +join +lines
