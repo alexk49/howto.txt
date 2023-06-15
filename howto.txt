@@ -168,6 +168,7 @@ cst<newtag>     edit current tag: cst<newtag> and this will replace the old tag.
 :%!xmllint --format %      format an xml file / indent an xml file requires xmllint to be installed 
 
 # Linux
+zip a -r output.zip input_file        this creates a zip archive of the given file, and works with 7 zip on windows if you rename to zip @linux +7zip +zip +files
 ""     you can add multi line statements by wrapping them in quotes, the shell will keep reading the text it encounters until the closing quote @linux +quote +marks +multi +line
         the back slash can be used to specifiy line continuation on the command line and/or in shell scripts. This can make scripts more readable @linux +shell +line +continuations
 chmod 700 file         change file permissions so that only the owner can execute it @linux +execute +permissions +script
