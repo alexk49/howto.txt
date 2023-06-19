@@ -168,6 +168,7 @@ cst<newtag>     edit current tag: cst<newtag> and this will replace the old tag.
 :%!xmllint --format %      format an xml file / indent an xml file requires xmllint to be installed 
 
 # Linux
+for i in {A..D}; do echo D; done        this is a quick example of a one line for loop in bash using brace expansion @linux +bash +for +loop +brace +expansion
 set +x           put this in a bash script after enabling tracing for a particular block of code to then turn it off @linux +tracing +debug +trace
 set -x           put this in a bash script to enable tracing for a particular bock of code @linux +tracing +debug +trace
 #!/bin/bash -x         the -x added to the shebang line will execute the whole script in traceback mode, so you can see exactly what is executed outputted to the terminal @linux +trace +tracing +traceback +debug
