@@ -168,6 +168,9 @@ cst<newtag>     edit current tag: cst<newtag> and this will replace the old tag.
 :%!xmllint --format %      format an xml file / indent an xml file requires xmllint to be installed 
 
 # Linux
+date +"&Y%m%d"      this outputs the date stamp in the format that you specify - but it needs the plus to work. @linux +date +format
+(command1; command2; [command3;...])       this is the syntax of a sub shell command @linux +sub +shell
+{ command1; command2; [command3; ...] }        this is the syntax of a group command. this can be useful for combining results of numerous commands @linux +group command
 for i in {A..D}; do echo D; done        this is a quick example of a one line for loop in bash using brace expansion @linux +bash +for +loop +brace +expansion
 zip a -r output.zip input_file        this creates a zip archive of the given file, and works with 7 zip on windows if you rename to zip @linux +7zip +zip +files
 set +x           put this in a bash script after enabling tracing for a particular block of code to then turn it off @linux +tracing +debug +trace
