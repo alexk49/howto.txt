@@ -168,6 +168,7 @@ cst<newtag>     edit current tag: cst<newtag> and this will replace the old tag.
 :%!xmllint --format %      format an xml file / indent an xml file requires xmllint to be installed 
 
 # Linux
+grep -C 5 search-term paths        the -C tag stands for context and takes an int. this will then display the matched search term and 5 lines before and after the search term @linux +grep +context +lines
 find ~/* '**/test/*.py' -type f        this looks only in the home dir, for python files that are located within a subdirectory called test @linux +find +path
 updatedb      this is a way to update the database that locate uses, so can be used for frequently used files @linux +update +database +locate
 echo 0      this will return the error code of the last command you ran @linux +error +code
