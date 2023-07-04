@@ -172,7 +172,7 @@ ls -lh        list files with human readable file sizes @linux +ls +human readab
 grep -C 5 search-term paths        the -C tag stands for context and takes an int. this will then display the matched search term and 5 lines before and after the search term @linux +grep +context +lines
 find ~/* '**/test/*.py' -type f        this looks only in the home dir, for python files that are located within a subdirectory called test @linux +find +path
 updatedb      this is a way to update the database that locate uses, so can be used for frequently used files @linux +update +database +locate
-echo 0      this will return the error code of the last command you ran @linux +error +code
+echo $?      this will return the error code of the last command you ran @linux +error +code
 touch temp/file{1..9}.txt     this expands so you create file1.txt through to file9.txt @linux +expansion
 find . -name *.tmp -exec rm {} ;      this finds all tmp files and then executes rm on them to remove them
 date +"&Y%m%d"      this outputs the date stamp in the format that you specify - but it needs the plus to work. @linux +date +format
