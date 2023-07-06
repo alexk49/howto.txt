@@ -540,6 +540,9 @@ td list         list tasks that contain particular term: td list "search term" @
 //element/element2      this means the 2nd element must be a direct descendent of the previous one @xpath +elements
 
 # python
+letters.sort(key=str.lower)      letters being a list value, you want to sort in alpabetical order. The python sort sorts using unicode values, so assigning the key as str.lower makes it sort in alphabetical as opposed to unicode value @[ython +sort +alphabetical
+chr(97)       will return the unicode character for the given number @python +unicode +ascii
+ord('a')       will return the unicode number for the given character @python +unicode +ascii
 logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s -  %(levelname)s -  %(message)s')     basic logging config settings @python +logging +config
 logging.debug("Info: %s", variable_name)        standard way to encode a variable into a logging message using the % strings and variable name after @python +logging +variables
 jupytext --sync path-to-file.ipynb      this will sync your jupyter file with your python file, if they've been created via jupytext @python @jupyter +sync +jupytext
