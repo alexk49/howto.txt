@@ -168,6 +168,8 @@ cst<newtag>     edit current tag: cst<newtag> and this will replace the old tag.
 :%!xmllint --format %      format an xml file / indent an xml file requires xmllint to be installed 
 
 # Linux
+xargs       this takes lines of inputs and turns them into arguments @linux +xargs
+echo '1 + 2' | bc -l      this will pass the input to the bc calculator @linux +bc +calculate
 ls -lh        list files with human readable file sizes @linux +ls +human readable
 grep -C 5 search-term paths        the -C tag stands for context and takes an int. this will then display the matched search term and 5 lines before and after the search term @linux +grep +context +lines
 find ~/* '**/test/*.py' -type f        this looks only in the home dir, for python files that are located within a subdirectory called test @linux +find +path
