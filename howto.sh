@@ -17,24 +17,35 @@ if [ "$1" == "-a" ]; then
         echo "Append useage is: ht -a [where-to-add-text] [text-to-add]"
         exit 1
     fi
-    heading=$2
-    addition=$3
+    heading="$2"
+    addition="$3"
+
     echo "Adding $addition under heading: # $heading"
     sed -i -e "/\#[[:space:]]$heading/a $addition" $howtofilepath 
 else
-    # loop through passed on arguments as search
-    search_query=$1
+    
+    search_query="$1"
+    reverse_query="$1"
 
     seperator='.*'
 
     for arg in "$@"; do
         # if arg is first arg then do nothing
-        if [[ $arg == $search_query ]]; then
+        if [[ "$arg" == "$search_query" ]]; then
             continue
         fi
         # concatenate search query with seperator and new query string
-        search_query=$search_query$seperator$arg
+        search_query="$search_query$seperator$arg"
+        reverse_query="$arg$seperator$reverse_query"
     done
+
+    search_query="$search_query$seperator"
+    reverse_query="$reverse_query$seperator"
+
+    full_search_query="$search_query|$reverse_query"
+    echo "$full_search_query"
+    # /* after variable as otherwise it treats the /* as a literal path
+
     # search how to file with color highlighting
-    grep --color=auto -e $search_query $howtofilepath
+    grep --color=auto -E "$full_search_query" "$howtofilepath"
 fi
