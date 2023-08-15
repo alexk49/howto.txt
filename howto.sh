@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # hardcode filepath to howto.txt
-howtofilepath=$HOME'/repos/howto/howto.txt'
+howtofilepath="$HOME/notes/howto.txt"
 
 # check args
 if [ "$#" -eq 0 ]; then
