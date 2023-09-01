@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # hardcode filepath to howto.txt
-howtofilepath="$HOME/notes/howto.txt"
+howtofilepath="$HOME/notes/docs/howto.txt"
 
 # check args
 if [ "$#" -eq 0 ]; then
@@ -21,9 +21,9 @@ if [ "$1" == "-a" ]; then
     addition="$3"
 
     echo "Adding $addition under heading: # $heading"
-    sed -i -e "/\#[[:space:]]$heading/a $addition" $howtofilepath 
+    sed -i -e "/\#[[:space:]]$heading/a $addition" $howtofilepath
 else
-    
+
     search_query="$1"
     reverse_query="$1"
 
