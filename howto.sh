@@ -4,7 +4,7 @@
 howtofilepath="$HOME/notes/docs/howto.txt"
 
 # check args
-if [ "$#" -eq 0 ]; then
+if [[ "$#" -eq 0 ]]; then
     echo "Please enter an argument."
     echo "Usage howto [search, terms]"
     echo "Usage howto -a [where-to-add] [text-to-add]"
@@ -21,9 +21,9 @@ if [ "$1" == "-a" ]; then
     addition="$3"
 
     echo "Adding $addition under heading: # $heading"
-    sed -i -e "/\#[[:space:]]$heading/a $addition" $howtofilepath 
+    sed -i -e "/\#[[:space:]]$heading/a $addition" "$howtofilepath"
 else
-    
+
     search_query="$1"
     reverse_query="$1"
 
@@ -43,7 +43,6 @@ else
     reverse_query="$reverse_query$seperator"
 
     full_search_query="$search_query|$reverse_query"
-    echo "$full_search_query"
     # /* after variable as otherwise it treats the /* as a literal path
 
     # search how to file with color highlighting
