@@ -3,19 +3,38 @@
 # hardcode filepath to howto.txt
 howtofilepath="$HOME/notes/docs/howto.txt"
 
+EDITOR=vim; export EDITOR
+
+add_to_file () {
+    echo "adding $addition to $howtofilepath"
+    echo "$addition" >> "$howtofilepath"
+    return
+
+}
+
+edit_file () {
+    "$EDITOR" "$howtofilepath"
+    return 0
+}
+
+usage () {
+    echo "Usage howto [search, terms]"
+    echo "Add to file: howto -a [text-to-add]"
+    echo "Edit file: howto -e" 
+    exit 1
+}
+
 # check args
 if [[ "$#" -eq 0 ]]; then
     echo "Please enter an argument."
-    echo "Usage howto [search, terms]"
-    echo "Usage howto -a [where-to-add] [text-to-add]"
-    exit 1
+    usage
 fi
 
 if [[ "$1" == "-a" ]]; then
     addition="$2"
-
-    echo "Adding $addition under to $howtofilepath"
-    echo "$addition" >> "$howtofilepath"
+    add_to_file
+elif [[ "$1" == "-e" ]]; then
+    edit_file
 else
 
     search_query="$1"
