@@ -1,6 +1,10 @@
 # howto-cli
 
-This is a simple script to allow better searching of the [howto.txt](https://github.com/alexk49/howto.txt) format.
+The howto.txt is for people who like doing things but can't remember how.
+
+This is a simple script to allow better searching of the [howto.txt](https://github.com/alexk49/howto.txt) format. The basic format of the howto.txt file should be:
+
+actual-instruction/command description of tasks +tags +relevant +to +tasks @topic @tags
 
 ## Tips and tricks
 
