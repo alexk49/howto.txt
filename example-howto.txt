@@ -1,0 +1,664 @@
+$array = @("item1", "item2", "item3")       define an array in powershell @powershell +array
+@a      execute a macro @vim +macros +execute
+:normal @a      execute a normal mode macro @vim +macros +normal
+\a      Bell (an alert that causes the computer to beep) @asci +escape +alert
+\b      backspace @asci +escape +backspace
+\n      Newline @asci +escape +Newline
+\r      carriage return @asci +escape +carriage
+\t      tab @asci +escape +tab
+awk '/pattern-to-search-for/ {print $0}' file-to-search this will search for the specified pattern and print the entire line where it's found @awk +search +pattern
+for i in *.md; do mv 2023-08-10-jrnl.md 2023-08-10-jrnl.txt; done       bulk rename .md files to .txt files via a for loop @bash @terminal @linux +rename
+cmd /c "echo off | clip"        clear current clipboard entry @cmd +windows +clipboard
+for %i ("path1", "item2", "item3") do move %i dest-location     move multiple items at once @cmd +move
+@context        sort by @context_tag @todo +project +order
+td add "task to add +project @context due:yyyy-mm-dd"      add new task: td add "task to add +project @context due:yyyy-mm-dd" @todo.txt +new +task
+f12     open dev tools @devtools +open
+ctrl-shift-c        open console @devtools +console
+ctrl-shift-p        open command center @devtools +command
+css overview tab        can see full color schemes and styles @devtools +css +overview
+git remote set-url origin new.git.url/here      this updates the given url, you can also edit the config in the .git folder @git
+git revert HEAD^         this creates a new commit with a reverted commit to the previous commit - you can specify a particular commit id to revert to a particular commit @git +revert +recommit +undo +commit
+git reset --hard HEAD^      this will undo local files changes and remove your last commit @git +reset +local +files +remove +commit
+git reset --hard      this will force the working directory back to the last commit and delete new/change files @git +reset +local +files
+git log --oneline       view the git log as just one line commit messages @git +log +oneline
+git diff        show differences between local and staged area @git +diff +differences
+git mv current_name new_name        rename files in git repo @git +rename +move +mv
+git restore filename        if you've made an uncommited change to a file and want to revert it to the lastest commit run git restore. @git +restore
+git restore --staged filename       unstage a staged file so it's not included in next commit @git +unstage
+git revert -n HEAD~3..HEAD      undo the last 3 commits and roll back completely, you then have to re-add and commit to update the repo @git +revert +commits
+git status      check current status of commits git status @git +status +basics
+git add file_name.ext       will add file to staging area: git add filename.ext @git +add +basics
+git commit -m "message"     commit file with commit message: git commit -m "message for commit message" +commit @git +basics
+git add .       add all files in the current directory and all subsequent directories git add . @git +add +basics
+git log     display list of commits: git log @git +tracking +log +status
+git push        push your changes to the repo: git push / git push origin main +basics @git +push
+git clone git@github.com:USER-NAME/REPOSITORY-NAME.git        copying or cloning a git repositry, get clone link from git then git clone git@github.com:USER-NAME/REPOSITORY-NAME.git @git +clone +remote
+find . -name *.tmp -exec rm {} ;      this finds all tmp files and then executes rm on them to remove them @linux +find
+find ~ -name "*.jpg"        search for wildcard patterns. example will return all jpgs @linux +find
+locate filename     find files by file name @linux +locate
+apt-cache show package_name @linux +packages
+drwxr-x---      a directory. the owner may enter the dir and create, rename, and delete files within the directory. members of the owner group may enter the dir but cannot create, delete or rename files @linux
+clear       clear the prompt screen @linux
+echo -e "example\t example"     -e allows you to actually echo the escape characters @linux
+uniq    report or omit repeated lines @linux
+wc      print newline, word, and byte counts for each file @linux
+head    output the first part of a file @linux
+tail    output the past part of a file @linux
+tee     read from standard input and write to standard output and files @linux
+echo {1..15}     this will print out every number between one and fifteen through brace expansion +brace +expansion @linux
+echo $((2 + 2))      this will actually perform the operation +arthmetic +addition @linux
+echo $(ls)      this would actually print/perform the ls command instead of echo "ls" +command +substitution @linux
+ctrl+d      quit shell: ctrl+d @linux
+grep: global regular expression print - search @linux
+grep -E 'expr1.*expr2|expr2.*expr1'     search for two patterns at once +filetosearch +multiple @linux
+get present working directory: pwd @linux
+curl    cheat.sh/<command> useful for getting different options, for example curl cheat.sh/grep for different options with grep +cheatsheat +curl @linux
+ctrl+r      to search through bash history @linux @terminal
+--help      switch write a command then help @linux @terminal
+apropos     find relevant manual(man) pages by searching through names and descriptions @linux @terminal
+man -K      search manul pages @linux @terminal
+history | grep -i "search term"     search your bash history @linux @terminal +history
+info        display a command's info entry @linux terminal +info +help
+whatis      display one-line manual descriptions @linux help +whatis @terminal
+xargs       this takes lines of inputs and turns them into arguments @linux +xargs
+echo '1 + 2' | bc -l      this will pass the input to the bc calculator @linux +bc +calculate
+ls -lh        list files with human readable file sizes @linux +ls +human readable
+grep -C 5 search-term paths        the -C tag stands for context and takes an int. this will then display the matched search term and 5 lines before and after the search term @linux +grep +context +lines
+find ~/* '**/test/*.py' -type f        this looks only in the home dir, for python files that are located within a subdirectory called test @linux +find +path
+updatedb      this is a way to update the database that locate uses, so can be used for frequently used files @linux +update +database +locate
+echo $?      this will return the error code of the last command you ran @linux +error +code
+touch temp/file{1..9}.txt     this expands so you create file1.txt through to file9.txt @linux +expansion
+date +"&Y%m%d"      this outputs the date stamp in the format that you specify - but it needs the plus to work. @linux +date +format
+(command1; command2; [command3;...])       this is the syntax of a sub shell command @linux +sub +shell
+{ command1; command2; [command3; ...] }        this is the syntax of a group command. this can be useful for combining results of numerous commands @linux +group command
+for i in {A..D}; do echo D; done        this is a quick example of a one line for loop in bash using brace expansion @linux +bash +for +loop +brace +expansion
+zip a -r output.zip input_file        this creates a zip archive of the given file, and works with 7 zip on windows if you rename to zip @linux +7zip +zip +files
+set +x           put this in a bash script after enabling tracing for a particular block of code to then turn it off @linux +tracing +debug +trace
+set -x           put this in a bash script to enable tracing for a particular bock of code @linux +tracing +debug +trace
+#!/bin/bash -x         the -x added to the shebang line will execute the whole script in traceback mode, so you can see exactly what is executed outputted to the terminal @linux +trace +tracing +traceback +debug
+PS4='55 + '       the PS4 is prompt string 4, this is the variable that traces are written to (when executing with -x for debugging), the example command adds the line number to the output @linux +tracing +prompt
+""     you can add multi line statements by wrapping them in quotes, the shell will keep reading the text it encounters until the closing quote @linux +quote +marks +multi +line
+        the back slash can be used to specifiy line continuation on the command line and/or in shell scripts. This can make scripts more readable @linux +shell +line +continuations
+chmod 700 file         change file permissions so that only the owner can execute it @linux +execute +permissions +script
+chmod 755 filename       change permissions on the file so anyone can execute it. generally done to set permissions for scripts @linux +bash +script +permissions
+sudo make install        once you have a compiled source file after running make on a Makefile you can run sudo make install to put it into your usual /usr/local/bin directory which is the place for most system programs you would regularly run @linux +install +make +source +code +compile
+make       if you have a valid Makefile in the dir then make will make the program @linux +make +compile +programs
+./configure        this will start the configuration of building source code, and once run is usually followed by make @linux +configure +compile +source +code
+tar tzvf tarfile | head        examine contents of tar file before extracting. this can be useful if the tar doesn't follow the expected format for folder listings etc. @linux +preview +tar +view
+tar xzf path-to.tar.gz        the .tar.gz is sometimes calle a tarball. this command uncompresses it @linux +tarball +.tar.gz +uncompress +extract
+wget https://ftp.gnu.org/gnu/diction/diction-1.11.tar.gz         an example of downloading the source code of a gnu program via https @linux +https +source +src +code
+ftp ftp.gnu.org        connecting to the ftp.gnu site, which can be used to download source code for lots of gnu programs @linux +ftp +download +source +code +src
+lprm job-number or cancel job-number        this will cancel or stop the specified printing job @linux +cancel +printer
+lpq        display the printer queue status @linux +printer +queue +status
+lptstat -a        this will list all the available names of printers on the system. the -s can be useful as well for more detailed info @linux +printers +list +system
+printf string/s-to-print       print string to screen, can format in variables in the same way as C @linux +print +printf
+pr file        prepare text for printing / show text on page lengths @linux +printing +text +pages
+fmt input-file      a simple text formatter. can reformat text within the specified file @linux +reformat +text
+wrap input-file    wrap each line in specified file to specified length @linux +wrap +lines
+nl input-file    send file to standard input with numbered lines, like cat -n @linux +number +lines
+aspell -H check htmlfile.html       this will ignore the valid html tags as part of the spell check, and allow you to just check spelling on your html file @linux +spell +check +html
+aspell check text-file      this opens an interactive spell checker for your text file @linux +spell +check
+tr -d '/r' < dos_file > unix_file       this would remove the carriage return from the end of the given dos_file and output it into a unix file @linux +carriage +return +tr
+echo "aaabbbccc" | tr -s ab     tr can be used to remove repeated characters from strings @linux +repeats +tr
+echo "lowercase letters" | tr a-z A-Z       tr - transliterate or delete characters, the given command changes lowercase to uppercase. tr accepts ranges of characters in the same way as regex @linux +tr +range
+patch < patchfile.txt        this carries out the changes in the patchfile to the specified files @linux +patch
+diff -Naur file1.txt file2.txt > patchfile.txt      this writes the diff file to a seperate file that can be used by patch @linux +patch +diff
+diff file1.txt file2.txt        this is a more complex version of comm, and is used to detect differences between files @linux +differences +diff
+diff -c file1.txt file2.txt        this is used to detect differences between files. the -c (context) shows a more human readable format, and not a cryptic change log. the output begins with the names of two files and their timestamps, the first file is marked with asterisks and the second is marked with dashes. changes are often marked with line numbers. @linux +differences +diff
+comm -12 file1.txt file2.txt    this surpresses columns 1 and 2, so will only show the shared values between two files @linux +comparison +shared +values
+join        join lines of two files on a common field, for example an id value @linux +join
+comm file-1 file-2       compare two sorted files line by line. this produces output in three columns. First contains lines unique to the first file, the second column contains lines unique to the second file and the third column contains the lines shared @linux +comparison @linux +compare
+paste file-to-paste.txt file-to-paste-to.txt > output-file.txt     paste will allow you to merge lines in files, or add in columns etc. without redirecting it will just use std output @linux +paste
+cut         remove sections from files, works well with csv type files in particular @linux +cut
+cut -d ':' -f 1 /etc/passwd | head      this delimits the file by the given colon, and takes the first field and outputs it to head @linux +cut +delimiters
+sort example.txt | uniq     sort given file and then remove duplicates @linux +remove +duplicates +sort
+uniq filename       if file is sorted/in order then uniq will remove any duplicate lines @linux +remove +duplicates
+sort filename       display the contents of the file in sorted order, numbers first then alphabetical @linux +sort
+sort -o outputfile  file-to-sortfile        send results to a file rather than standard output @linux +sort +to +file
+sort -r filename        sort in reverse order, results descending rather than ascending @linux +sort +reverse
+sort file1 file2 file3 > final_sorted_list.txt      this would sort the contents of the other files into one bigger file sorted @linux +sort
+cat - A filename        display file and show hidden characters @linux +hidden +characters
+cat -s filename     display file with multiple blank lines removed @linux +cat +blank +lines
+sudo rysnc -av --delete --rsh=ssh dir-to-sync remote-sys:/backup        the --delete removes files that may have existed on the backup that no longer exist on the source. the --rsh=ssh instructs use of ssh as shell. and you specifiy the remote host path @linux +rsync +networks
+rsync -av org-dir-path/ path-to-sync-dir    the / after the org dir path means only the contents will be copied, this avoids a duplicate folder in the output @linux +rysnc
+rysync -av org-file path-to-sync-file       a is recursive archiving, and v is verbose. this syncs two directories @linux +sync +rsync
+rysnc options source destination        keeping dirs syncronised with another directory or network @linux +rsync +sync
+ls -l /folder/to/zip | zip output-zip-name.zip      pip command into zip @linux +pipe +zip
+unzip -l zip-file.zip file/path/in/zip/to/list       just list the contents of a file without extracting them @linux +list +zip
+unzip zip-file-name     unzip zip file @linux +zip +unzip
+zip -r zipfile input-file       recursively zip a folder @linux +zip +recursion +files
+zip options zipfile input-file     create a zip file @linux +zip +files
+tar xf path-to-tar      extract archive of tar file to current dir @linux +extract +archive
+tar tvf path-to-tar-file.tar        this gives a detailed list of contents of your tar file @linux +tar +list +contents +detailed
+tar tf path-to-tar-file.tar     this lists the contents of your tar file @linux +tar +list +contents
+tar cf output-file-name.tar file-to-archive     this creates a tar archive @linux +tar +archive
+bzip2 file-name     zip file with higher level of compression @linux +bzip
+zcat path-to-zip-file | less        view the zip file contents @linux +gzip +zcat
+gzip -tv zip-file-name      check integrity of zip file for errors @linux +gzip +check +zip
+gunzip filename     unzip a zipped file @linux +gzip +unzip
+gzip filename       create a zip of the specified file @linux +gzip
+locate --regex 'regex-pattern'      locate files based on given regex pattern @linux +locate +regex
+find . -regex 'regex-pattern'       find files based on given regex pattern @linux +find +regex
+find example -type f -name 'file-B' -exec touch '{}' ';'        this executes touch on the results of the find command. The -exec is execute the command is touch the {} is the symbolic representation of the paths, and the semi comma closes the command @linux +find +user +defind +actions +execute
+touch filename          this creates an empty file or modifies the time stamp to now @linux +touch
+stat {filename}        this lists all the times a file has been updated @linux +stat
+touch example/dir-{001..100}/file-{A..Z}    make empty files in directory 001 to 100 with files for A to Z @linux +expansion +touch +files
+mkdir -p example/dir-{001..100}     make directories in folder with numbering up to 100 @linux +dynamic +shell +expansion
+find ~ -iname '*.jpg' -print0       ensure that filenames with white space definitely get printed @linux +white space
+find ~ -type f -name 'foo*' -print | xargs ls -l        this outputs the find command and pipes it into xargs which constructs an arg list and executes it @linux +args +find
+xargs       accepts input from standard input and converts it into an argment list for a specified command @linux +xargs +args
+find ~ -type f -name '*.swp' -delete        this would search for all swp files and delete them. you can pass actions to find delete, ls (list) -print (the default) or -quit. obviously, be careful with delete! @linux +find +delete
+find ~ \( -type f -not -perm 0600 \) -or \( -type d -not -perm 0700 \)      files that don't have 0600 or 0700 permissions @linux +find +operators +search +permissions
+find ~ -name "*.jpg" -or -name "*.py"       you can chain searches together with -and -or -not operators @linux +find +and +or +not +chaining +searches
+find -iname pattern         search for case insensitive pattern @linux +find +case +insensitive
+find ~ -cmin -5     search for files that were last modified less than five minutes ago @linux +recently +modified
+find ~ -type f -name "*.jpg" -size +1M      search for jpg files that are more than 1 megabyte @linux +find +example +jpg
+find -type f        search for just regular files @linux +find +files
+find -type d        just search for directories in current folder @linux +find +directories
+find ~ -type d      just search for directories within home folder @linux +find +directories
+find ~ | wc -l      this returnsa count of the files with the homedirectory @linux +find +count
+find ~      this will give a complete recursive listing of your home directory @linux +find
+netstat -r      show the network routing table @linux +network +routing +table
+netstat -ie     examine the network interfaces in our system @linux +network
+ssh     secure shell, open ssh client for remote logins @linux +ssh
+wget        non-interactive network downloader, used to download a file from a link @linux +download +get +request
+ftp     internet file transfer program (file transfer protocol) @linux +ftp +file +transfer +protocol
+ip      show/manipulate routing, devices, policy routing, and tunnels @linux +routing +routers +devices +ip
+netstat     print network connections, routing tables, interface statistics, masquerade connections and multicast memberships @linux +networking +connections
+traceroute      print the route packets trace to a network host. shows different requests made for a site @linux +network +route +packets
+traceroute -T      print the route packets trace to a network host. shows different requests made for a site, the T sometimes shows ones that are hidden by astrixs with the normal command @linux +network +route +packets
+ping        send an internet control message protocol (ICMP) echo request to network host. check if network is working as expected @linux +network +ping
+sudo apt-get autoremove && sudo apt-get clean       removes and cleans no longer needed packages @linux +remove
+sudo apt-get clean       cleans the packages and install script in /var/cache/apt/archives/ @linux +remove +clean
+sudo apt-get autoclean      cleans obsolete deb-packages, less than clean @linux +remove +clean
+sudo apt/apt-get autoremove        removes orphaned packages which are not longer needed from the system, but does not purge them, use the --purge option together with the command for that @linux +remove +clean
+dpkg -l     list all packages installed on the system @linux +packages +installed
+dpkg -s package_name        check status of package and if it is installed on system @linux +package +status
+dpkg -i package_file        install rpm file directly, this requires you to get the actual file and it won't install dependencies for you @linux +packages
+apt-get update; apt-get upgrade     fully update packages and package manager @linux +package +managers
+apt-get remove package_name     remove or install a pacakage @linux +uninstall +remove
+apt-get update      update package manager and packages @linux +ubuntu
+apt-get upgrade      update package manager @linux +ubuntu
+apt-cache search search_string      search package manager for string in package or description @linux +search +packages
+apt search search_string        search package manager for string in package or description @linux +search +packages
+sed -n "/start-pattern/,/end-pattern/p" file_to_search      search a specific file for everthing between two patterns @linux +search +patterns
+export      export environment to subsequently executed programs @linux +export
+export PATH     the export command tells the shell to make the contents of PATH available to child processes of the shell @linux +PATH +export
+set         displays both the shell and environment variables, as well as any defined functions, sorted in alphabetical order can pipe to less set | less @linux +environment +variables +shell
+printenv        print out current environment variables, can be pipped to less with printenv | less, or can print specific variables like printenv USER @linux +environment +variables
+tload       draws a graph in the terminal showing the system load over time @linux +system +load
+pstree      outputs a process list in a tree like pattern showing the parent child relationship of current processes @linux +pstree +processes
+vmstat      outputs a snapshot of system resource usage. can be passed a timedealy for updates like vmstat 5 @linux +system +resource
+sudo reboot     restart the system @linux +restart +reboot
+sudo shutdown -h now        halt the system @linux +halt +shutdown
+sudo shutdown now       shutdown the system @linux +shutdown
+sudo shutdown -r now        restart the system @linux +shutdown +restart
+killall [-u user] [-signal] name ...        kill multiple processes at once @linux +killall +multiple +processes
+kill process-pid-or-job-spec        kill a particular process or terminate a program. you can kill by pid or job spec @linux +kill +end +process +terminate
+kill -1 process-pid-or-job-spec     hang up particular process @linux +kill
+kill -2 process-pid-or-job-spec     interupt particular process @linux +kill
+kill -9 process-pid-or-job-spec     kill a particular process, this is a last resort override when other things fail @linux +kill +override
+kill -15 process-pid-or-job-spec        terminate a process by sending a signal to the program. this is the default kill command setting        @linux +kill +terminate
+kill -18 process-pid-or-job-spec        this will continue the process given if it is paused @linux +continue
+kill -19 process-pid-or-job-spec        stop the given process, or pause the process. it is handled by the terminal so can't be ignored @linux +kill +stop +pause
+ctrl-z      this pauses a foreground process and places it in the background @linux +process +background +foreground +stop +pause
+bg %1       run a process in the background, the % refers to a job spec @linux +background +run +jobs
+program-name &      the ampersand after a program launches that program in the background or as a background process, this can be useful for things like firefox or other gui programs @linux +background
+fg %1       return a background program to the foreground. the % refers to the job spec  @linux +program +jobs
+ps      view current processes in current terminal session @linux +processes +programs
+ps x        view all current process @linux +processes +programs
+top     display current running tasks, this is basically linux terminal version of windows task manager @linux +tasks
+jobs        list active jobs @linux +jobs
+bg      place a job as a background process @linux +jobs +background
+sudo usermod -a -G sudo username        add a specific user to the sudo group @linux +group +sudo
+sudo usermod -a -G groupname username       add a user to specific group @linux +group +add
+sudo chown :test /usr/local/share/test      example of changing ownership of the share test directory to the test group @linux +shared +share +files +ownership
+sudo groupadd groupname     add a new group, can be used to create shared directories @linux +add +group
+sudo useradd username       add a new user @linux +add +user
+sudo psswd username         set user password @linux +add +user
+chown [owner][:group]] file       change owner or group owner of a file/directory @linux +change +owner
+su or sudo su       open a super user prompt @linux +superuser +su
+xdg-open        open a file or url in the systems preferred application @linux +open +file +image +url @terminal
+u+x     add execute permission for the owner @linux +permissions +execute
+u-x     remove execute permission from the owner @linux +permissions +execute
++x      add execute permission for the owner, group and world. this is equvalent to a+x @linux +permissions +execute
+o-rw        remove the read and write permissions from anyone beside the owner and group owner @linux +permissions +read +write
+go=rw       set the group owner and anyone besides the owner to have read and write permissions. if either the group owner or the world previously had execute permission, it is removed @linux +read +write +permissions
+u+x,go=rx       add execute permission for the owner and set the permissions for the group and others to read and execute. Multiple specifications may be seperated by commas @linux +read +write +permissions
+7 rwx     octal to binary mapping @linux +permissions +octal +numbers
+6 rw-       octal to binary mapping @linux +permissions +octal +numbers
+5 r-x       octal to binary mapping @linux +permissions +octal +numbers
+4 r--       octal to binary mapping @linux +permissions +octal +numbers
+0 ---       octal to binary mapping @linux +permissions +octal +numbers
+id      display user identity @linux +id +user
+chmod   change a file's mode/permissions. this can be done with octal numbers or the letters @linux +file +mode +permissions
+-       regular file @linux +file +type
+d       directory file type @linux +file +type +folder
+l       symbolic link @linux +file +type +symbolic +link
+c       a character special file - this file type refers to a device that handles data as a stream of bytes such as a terminal or /dev/null @linux +file +type +special
+b       a block special file. this file type refers to a devices that handles data in blocks such as a hard drive or DVD drive @linux +file +type +block +special
+r       allows a file to be opened and read @linux +permissions eg rwx
+w       allows a file to be written to @linux +permissions +write rwx
+x       allows a file to be treated as a executable, for example scripts @linux +permissions +executable
+-rwx------      a regular file that is readable, writable, and executable by the file's owner. No-one else has access @linux +file +permissions
+-rw------       a regular file that is readable and writable by file owner @linux +file +permissions
+-rw-r--r--      a regular file that is readable and writable by the file's owner. Members of the file's owner group may read the file. This file is world-readable @linux +file +permissions
+-rwxr-xr-x      a regular file that is readable, writable and executable by the file's owner. the file may be read and executed by everybody else @linux +file +permissions
+-rw-rw----      regular file that is readable and writable by the file's owner and membbers of the file's group owner only @linux +file +permissions
+lrwxrwxrwx      a symbolic link. these all have dummy permissions. real permissions are in the real file @linux +file +permissions +sym +links
+drwxrwx---      a directory. the owner and the members of the owner group may enter the dir and create, rename and remove files within the dir @linux +dir +permissions
+rwxrwxrwx       owner, group, world order of file permissions @linux +file +permissions
+\$      \ or backslash is the escape character so \$ allows you to actually use the dollar sign. Other escape characters are $ ! & spaces and others @linux +escape +character
+\\      use an actual backslash, this is the escape character for the escape character @linux +escape +character
+ln -s ../test.txt dir2/test.txt  ln -s real_file link_file, -s stands for symbolic, this links the two files together so they update with each other. you can do the same with folders +symbolic +links @linux @terminal
+shift+insert to copy text in terminal as ctrl c is the kill command +copy @linux @terminal
+ctrl+insert    to paste text in terminal as ctrl c is the kill command +paste @linux @terminal
+command --help       Gives help on a command. For example, cd -- help will give you information/help text on the cd argument --help @linux @terminal help
+history         show you all previously entered commands (and keeps a very long log) @linux +history @terminal
+clear       clear all text on the terminal @linux +clear
+ctrl-u      Clears the current text in the terminal line @linux +clear
+Ctrl-W      Deletes the last word you typed @linux +delete
+Ctrl+C      Cancels current line in terminal @linux +cancel
+sort    sort lines of text @linux +sort
+touch filename      if file already exists then it will modify the timestamp without changing the contents. If the file does not exist, it will create a blank file: touch file-name +touch @linux @terminal +newfile
+file        determine file type +file @linux @terminal
+type       indicate how a command name is interpreted +type @linux @terminal
+which      display which executable programs will be executed +which @linux @terminal
+less filetoview         view file +view +less @linux @terminal
+q       exit file view from less +exit +less @linux @terminal
+page up     page up or b to scroll back one page in less +less @linux @terminal +navigation
+page down       page down or space to scroll forward one page +less +navigation @linux @terminal
+up      up arrow to scroll up one line +less @linux @terminal +navigation
+down       down arrow to scroll up one line +less @linux @terminal +navigation
+G // to move to end of text file +less @linux @terminal +navigation
+1G or g // move to beginning of file */ +less @linux @terminal +navigation
+/pattern /* search for occurence of pattern */ +less @linux @terminal +navigation
+cat file-to-view        print contents of file to terminal ++at +print @linux @terminal
+cat -n file-to-view         print contents of file with indexing +cat +print @linux @terminal
+sed -i 14d todo.txt (14d is index position and todo.txt is file)        delete a line from the file by index value +cat @linux +sed +delete @terminal
+sed -i '6s/^/x /' todo.txt (6s is index position and 'x ' makes sure a space appears)       add a string to the start of a line in a file (mark a todo.txt task as complete) +cat +sed +add @linux @terminal
+echo "new line" >> file-to-add-txt-to.ext       write to file: echo "new line" >> file-to-add-to.ext +echo @linux @terminal
+ls        list current directory: ls @linux +list
+ls -a        list hidden files: ls -a @linux +list +hidden
+ls -al        long list all files including hidden files / list hidden files: ls -al @linux +list
+ls -l        long listing / list with details: ls -l @linux +list
+ls -lt        long listing with files ordered by modification date: ls -lt @linux +list
+ls -lt --reverse        long listing with files ordered by modification date in reverse: ls -lt --reverse @linux +list +reverse
+ls *.txt        list particular file type: ls *.txt @linux +list
+ls ?.txt        list particular unknown character: for example ?pam.txt would show nay files that start with any letter then pam: ls ?.txt        for example ?pam.txt would show nay files that start with any letter then pam: ls ?.txt        list particular unknown character: for example ?pam.txt would show nay files that start with any letter then pam: ls ?.txt @linux +list
+ll -h        list long format display file size in human readable format rather than just bytes: ll -h +file +size @linux +list
+ls astrix.?x?        list any filename any extension something x something, so either txt or exe combine wildcards: ls astrix.?x? +list +wildcard @linux @terminal
+ls filename     search for file in directory ls filename +list @linux +file
+run one off python command in linux terminal: python3 -c "print('hello example')" @linux @terminal @python +-c
+shutdown computer from terminal: shutdown now @linux +shutdown
+ctrl+l      clear screen @linux +clear
+ctrl+a      move cursor to start of screen +cursor +movements @linux
+ctrl+e      move cursor to end of screen +cursor +movements @linux
+!linenumber     when searching history you can will get a line number for the command, you can then execute the command with !linenumber - for example !60 will execute line 60 in the bash history @linux @terminal +history
+curl -I -X GET http://whatever.com connecting url       curl, simulates a get request and gets you the text and response data: @linux @terminal +curl
+grep expression-to-look-for file-to-look-in.extension      searching within files  +grep +search @linux
+grep expression *       search whole folder  +grep +search @linux
+grep -i expression *        ignore case in search  +grep +search @linux
+grep -v "string you do not want" "file_to_search"       search for word that does not appear - invert grep - so line number that does not contain string: +grep +search @linux @terminal
+grep .*    dot star is the wildcard expression for a grep search that will match anything @linux +grep +wildcard
+to autocomplete press tab @linux +termianal +tab
+tab-tab     display all possible matches for autocompletion by pressing tab twice @linux @terminal +tab +autocomplete
+find . -name "*.py"     search for file across all files, example searches for any python file +search +find +files @linux @terminal
+cp filename folder-you-want-to-copy-to         copy filename to the defined folder:  +copy +cp @linux @terminal
+cp filename new-file-name      this will copy filename and paste it with the given new file name +copy +cp @linux @terminal
+cp filename folder/new-file-name copies filename to the new filepath you give, with the new file name +copy +cp @linux terminal
+cp -r source-dir destintion         recursively copy everything in directory, including sub directories +cp +copy +recursive @linux @terminal +directory
+mv file-name-or-folder-name new-file-name-or-folder         move the given file name or folder, to the new given location +mv +rename @linux @terminal
+mv file-name filepath-with-new-file-name        move the given file-name to the new file path and rename it with the new given name +mv +rename @linux +termianl
+mv file-name new-file-name      renames file-name with new file name, if you don't change the directory you are just renaming it @linux +rename +mv
+rm filename         deletes (removes) given filename +delete +file @linux @terminal
+rmdir folder-name       deletes given folder name +delete +folder @linux
+sed -i s/old-pattern/new-pattern/g filename-to-change       this will sub the old to the new for your given file and save the changes @linux @sed
+npx prettier --write file_or_fold_path      format everything with prettier @npm @npx @prettier +formatter +linter
+pandoc markdownfile.md -s -o output.html        convert a markdown file to html using pandoc, useful for previewing +pandoc +preview +markdown @pandoc
+cmd -c      run one off cmd command @powershell @cmd +windows
+New-Item -Path .\.vim\ -ItemType SymbolicLink -Value .\vimfiles\        this creates a symbolic link between the two folders so they update with each other. +symbolic +links @powershell
+cmd.exe /c where file-name      Run cmd commands in powershell, in this case the where command @powershell +cmd
+dir -recurse        The switch -recurse will mean that the command is applied to all sub folders. It is the equivalent of /s in cmd @powershell
+New-Item filename       creates new file, alias is ni @powershell
+New-Item folder-name -ItemType Directory        Creates new folder, alias is ni @powershell
+ni "new-file-name"      Stands for New-Item, creates new file with given name @powershell
+Remove-Item folder-name     delete folder, with confirmation for deleting files inside folder @powershell
+Remove-Item file-name       delete filename @powershell
+gcm file-name       provides location of the given file .exe @powershell
+Get-Command file-name       provides location of the given file.exe, alias is gcm @powershell
+Compress-Archive -LiteralPath path-to-files -DestinationPath path-destination       Zip given path to given path, make sure the given path includes zip at the end.  @powershell
+Compress-Archive -LiteralPath path-to-folder -DestinationPath folder-path-destination       This will compress the folder you want to the given destination, always add zip at the end @powershell
+Compress-Archive -Path path-tofile/ASTRIX -DestinationPath destination-path.zip         Use the ASTRIX * wildcard character to convert all of the files in a given folder to the given location. Can do the same with ASTRIX.filetypeextension eg. .mrc, .txt @powershell
+Compress-Archive -Path path-tofile/ASTRIX.ASTRIX -DestinationPath destination-path.zip      Use the ASTRIX * wildcard character to convert all of the files in a given folder as well as all subfolders, to the given location @powershell
+Compress-Archive -Path path-to-files -Update -DestinationPath path-to-destination.zip       This will update the zip with newer versions of older files, and add files in the givne directory @powershell
+Expand-Archive -LiteralPath path-to-zip -DestinationPath path-to-destination        This will unzip folder to given location, by default if you leave out destination path, it will unzip in given location @powershell
+get-psdrive     This displays the local powershell drive types and names, for example  @powershell
+dir variable:       This will list your powershell variables, and can be repeated for other powershell drives @powershell
+psEdit powershellscriptname.ps1     This will open your pwsh script in the ise @powershell
+$variable = "item"          define a variable in powershell with the $ sign @powershell +variable
+Move-Item -Path ("path-to-item1","path-to-item2") -Destination path-to-dest         move multiple items at once @powershell +move +copy
+ls | Rename-Item -NewName {$_.name -replace "old-part-of-name","replacement-text"}       rename file names in powershell @powershell +rename
+Get-Help command-name           search help manuals for commands @powershell +help
+letters.sort(key=str.lower)      letters being a list value, you want to sort in alpabetical order. The python sort sorts using unicode values, so assigning the key as str.lower makes it sort in alphabetical as opposed to unicode value @python +sort +alphabetical
+import pdb; pdb.set_trace()             enter this line to start the python debugger at this point when the script is run @python +debugger
+ctrl-shift-c pair with light script                 pair a jupyter notebook file with a .py file @python +jupyter
+conda activate virtual-env-name         activate a jupyter virtual environment @python +jupyter
+pip freeze > requirements.txt       write current packages to requirements file @python +pip +freeze +requirements
+chr(97)       will return the unicode character for the given number @python +unicode +ascii
+ord('a')       will return the unicode number for the given character @python +unicode +ascii
+logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s -  %(levelname)s -  %(message)s')     basic logging config settings @python +logging +config
+logging.debug("Info: %s", variable_name)        standard way to encode a variable into a logging message using the % strings and variable name after @python +logging +variables
+jupytext --sync path-to-file.ipynb      this will sync your jupyter file with your python file, if they've been created via jupytext @python @jupyter +sync +jupytext
+python -m black -l 120 script.py    sets max line length to 120, this can be changed to anything. black standard is 88. @python +black +line +length
+python -m black --diff script.py    preview changes black will make @python +preview +black +formatter
+python -m black file-name.py        format code using black formatter @python +black +formatter
+#!/usr/bin/env python3      put this at the start of a python file so you can run it with ./pythonfilename.py in the linux terminal. This is called the shebang line @python @linux +shebang +line
+python -m venv /path/to/new/virtual/environment         create virtual environment, if running in current dir then you can run python -m venv .venv (with .venv being the name of your virtual environment @python +virtual +environment
+pyinstaller --onefile path_to_file.py       convert script to single .exe which will be in dist folder @python +pyinstaller +convert +exe
+pyinstaller --onefile my_main.py my_functions.py file3.py file4.py      convert multiple files into one .exe which will be in dist folder @python +pyinstaller +convert +exe
+[:blank:]       space and tab characters @regex
+echo "(555) 123-4567" | grep -E '^\(?[0-9][0-9][0-9]\).[0-9]{3}-[0-9]{4}'       example regex matching phone number in given format @regex +phone +number +example
+{n}     match the preceding element exactly n times @regex +number +matches +exact +times
+{n,m}       match the preceding element if it occurs at least n times but not more than m times @regex +number +matches +range
+{n,}        match the preceding element if it occurs n or more times @regex +number +matches +or +more +times
+{,m}        match the preceding element if it occurs no more than m times @regex +no +more +than +n +times
+[:alnum:]       alphanumeric characters, a to z A-Z and 0-9 @regex +alphanumeric
+[:word:]        the same as alphanumeric @regex +alphanumeric
+[:alpha:]       the alphabetic characters a-z and A-Z @regex +alphabetic
+[:cntrl:]       ASCII control codes @regex +ascii +control
+[:digit:]       the numerals 0-9 @regex +digits
+[:graph:]       the visible characters in ASCII @regex +graph
+[:lower:]       the lower case characters @regex +lower
+[:punct:]       the punctuation characters in ASCII @regex +punctuation
+[:print:]       printable characters @regex +printable
+[:space:]       the whitespace characters including space, tabe returns, newlines, vertical tab and form feed \t\e\n\v\f @regex +space
+[:upper:]       uppercase characters @regex +upper
+[:xdigit:]      characters used to express hexadecimal numbers. In ASCII equivalent to [0-9A-F-a-f] @regex +hexadecimal
+^ $ . [ ] { } - ? * + ( ) | \       these are all the meta characters in regex. these have to be escaped with the backslash character. When putting these into the shell as a regex pattern they should be enclosed with quotes @regex +meta +characters
+.       any character: . for example grep -h '.zip' dirlist*.txt searches for anything containing zip @regex +character
+.*      0 or more characters .* @regex +character
+.+1     1 or more characters .+1 @regex +character
+?       optional character ?, match 0 or more times @regex +character
+^       start of input ^ for example ^zip searches for anything that starts with zip @regex +character
+$       end of input $ for example zip$ searches for anything that ends with zip @regex +character
+^$      this is a way to search for blank lines. as it signifies the start and end of input @regex +search +blank +lines
+[bg]        this is bracket expression. will search for match either a b or a g. Whatever you put in the bracket expression will be matched. you might use grep -h '[bg]zip file.txt to search for bzip or gzip @regex +bracket +expression
+[^bg]       this negates the selected characters in the bracket expression meaning if the characters b or g appear at this point in the search they won't match @regex +bracket +expression +caret +negation
+^[A-Z]      search for anything that begins with an uppercase letter. The ^ means start with, the bracket expression means specific characters and the A-Z gives a range. @regex +capitals +letters +range
+^[A-Za-z0-9]    search for anything that starts with a letter or number, the ranges given are any capital letter, any lower case number or any digit @regex +ranges
+[-AZ]       this will actually hard match the dash character as well as A or Z @regex +dash
+sed -i 's/pattern-1/new-pattern-1/; s/pattern-2/new-pattern' inputfile      making two substitutions at once via sed @sed @linux +two +changes
+sed -f path-to-sed-script.sed input-file    this shows the basic syntax of running a sed script @sed @linux +script
+sed [options] [address/pattern/command] input-file      this shows the basic syntax of a sed command @sed @linux +syntax
+sed -i '/pattern-to-find/a ADDITION TO FILE AFTER PATTERn' file-to-add-to       the -i saves your changes to the current file @sed @linux +save +sed +changes
+sed 's/old-pattern/new-pattern/g' filename > changed.txt && mv changed.txt filename     update a file with the search and replace then save the changes to a new file, and then rename the changed file back to the original file @sed @linux +save +sed +changes
+sed 'pattern-to-search/a NEWLINE TO ADD AFTER PATTERN' file-to-add-to > output-file     append to a file after a particular pattern @sed @linux +append +search
+which program-name (eg python3)         get full filepath of given program name @terminal @linux
+rm -r foldername        delete folder and contents, delete entire folder +delete +folder @terminal @linux
+grep "^x " todo.txt >> done.txt and then this deletes them: sed -i.bak "/^x /d" todo.txt        archive done tasks +grep @todo +sed @linux @terminal
+grep -v "x " todo.txt | grep due:2023-03-30     search for not done tasks that are due today:  @todo +grep +search @linux @terminal
+this is in order they should appear +order @todo
+x       mark completion: x @todo +order
+(A)     mark priority: (A) @todo +order
+yyyy-mm-dd      date format: yyyy-mm-dd completion date @todo +order +date
+yyyy-mm-dd      date format: yyyy-mm-dd creation date @todo +order +date
+text        actual task text @todo +task
++tag        sort by project: +project_tag @todo +project +order
+due:yyyy-mm-dd      due date format: due:yyyy-mm-dd due date @todo +date
+set up first time use: https://github.com/todotxt/todo.txt-cli/wiki/Quick-Start-Guide @todo.txt +setup
+set up first time use: https://github.com/todotxt/todo.txt-cli/wiki/Tips-and-Tricks @todo.txt +setup
+ITEM# "Text to append"      append to a task td append ITEM# "text to append" @todo.txt +append +add
+td archive      archive finished tasks / move tasks marked as complete to done.txt: td archive @todo.txt +archive +finish
+td del ITEM#        delete task on particular line number: td del ITEM# or td rm ITEM# @todo.txt +delete
+td do ITEM#         mark task as done / mark task as complete: td do ITEM# @todo.txt +complete +done
+td list         list tasks that contain particular term: td list "search term" @todo.txt +list +search
+grip path-to-md-file.md -b         this will automatically load the file in a browser so you can preview the markdown file in github style +markdown +preview +grip @vim
+:earlier 10m    Go to the state 10 minutes before @vim +earlier
+:earlier 10h    Go to the state 10 hours before @vim +earlier
+:earlier 10d    Go to the state 10 days before @vim +earlier
+:later 10s    go to the state 10 seconds later @vim +earlier
+:later 10m    go to the state 10 minutes later @vim +earlier
+:later 10h    go to the state 10 hours later @vim +earlier
+:later 10d    go to the state 10 days later @vim +earlier
+:later 10     go to the newer state 10 times @vim +earlier
+:later 10f    go to the state 10 saves later @vim +earlier
+gx      open a url when curosr over a url @vim +url
+:grep - R "pattern"        external grep, uses the terminal grep :grep -R "pattern" file/location @vim +grep
+^        Go to the first nonblank char in the current line @vim +navigation
+g_       Go to the last non-blank char in the current line @vim +navigation
+$        Go to the last char in the current line @vim +navigation
+n|       Go the column n in the current line @vim +navigation
+when you have a list of grep search results you get a quickfix window +quickfix +window @vim
+:copen        open the current file in quickfix window +quickfix +window +open @vim
+:cclose        close the current file in quickfix window +quickfix +window +open @vim
+:cnext        go to the next error +quickfix +window +open @vim
+:cprevious        go to the previous erro +quickfix +window +open @vim
+:colder        go to the older error list +quickfix +window +open @vim
+:cnewer        go to the newer error list +quickfix +window +open @vim
+:ccl or :cclose     exit quickfix mode @vim
+ct)     change till character ct) to change until closing parenthesis, or ct" to delete until next quote +change +correct +till +until @vim
+:vs buffernumber        open specific buffer in split view :vs buffernumber (for example :vs b3 would vertical split open buffer 3) @vim
+""      The unnamed register, if you set clipboard unnamed this defaults as global register @vim +registers
+"a-z    The named registers, these are specifically accessed @vim +registers
+"0-9    The numbered registers, 0 is stored when you yank text automatically @vim +registers
+:%!xmllint --format %      format an xml file / indent an xml file requires xmllint to be installed @vim +xml +lint +xmllint
+:h motions @vim
+&       this is used to repeat the last command whilst in normal mode, useful with search / replace @vim +repeat +search +replace
+/\v\d{3}-\d{3}-\d{4}        an example of searching for a phone number in vim with regex. The \v is a "magic" character to avoid having to write out the escape characters @vim +search +regex +magic
+/hello\|hola        search for two patterns at once. You have to escape the | operator otherwise vim will search for the string | @vim +search +two +fields
+:r filename     read specific file into cursor position. This will copy a whole file into your current file @vim +read +copy +file
+ex mode     means command mode in vim, can remember as execute @vim +command +execute +mode
+J       join the next line to the current line @vim +join +lines
+:ctrl-f         search command history in vim +search +history @vim
+:earlier 10s    Go to the state 10 seconds before @vim +earlier
+[ "*p ]     in normal mode +paste @vim
+copy "*y    in normal mode +copy @vim
+:s/old/new     to substitute new for the first old in a line type +find +replace +substitute @vim
+:s/old/new/g   to substitute new for all 'old's on a line type +find +replace +substitute @vim
+:#,#s/old/new/g        To substitute phrases between two line #'s type +find +replace +substitute @vim
+:%s/old/new/g        To substitute all occurrences in the file type +find +replace +substitute @vim
+:%s/old/new/gc        To ask for confirmation each time add 'c' +find +replace +substitute @vim
+:find filename        use find to search for files within your set path +search +open +edit @vim
+/        search for a keyword /search-word once highlighted and cursor other it, press enter and then press n for next and N for previous +search @vim
+:noh        unhighlight or clear highlighted search results +search @vim
+:vim /pattern/ file        search within a file you don't have open - internal grep, to search for particular pattern +search +grep @vim +internal
+:edit filename or e: filename        open a file with @vim +open +edit
+:edit **/*.md<tab>        open specific file by searching recursively within sub-folders @vim +search
+:q! exits without saving        to exit +exit @vim
+:wq to exit and save        save and exit +exit +save @vim
+:qall        quit all buffers / quit and close all open buffers +exit +buffers @vim
+:qall!        quit wll buffers without saving +exit +buffers @vim
+:wqall        save and quit all buffers +exit +buffers @vim
+h        goes left +movement @vim
+j        goes down +movement @vim
+k        goes up +movement @vim
+l        goes right +movement @vim
+{        count paragraphs backwards +movement +objects @vim
+(        count sentences backward +movement +objects @vim
+)        +scrolling @vim movementcount sentences forward +movement +objects @vim
+motion: w       Move forward to the beginning of the next word +motions @vim
+motion: W       Move forward to the beginning of the next WORD +motions @vim
+e        Move forward one word to the end of the next word +motions @vim
+E        Move forward one word to the end of the next WORD +motions @vim
+b        Move backward to beginning of the previous word +motions @vim
+B        Move backward to beginning of the previous WORD +motions @vim
+ge       Move backward to end of the previous word +motions @vim
+gE       Move backward to end of the previous WORD +motions @vim
+0        Go to the first character in the current line +movement @vim +motions
+gU       uppercase whole sentence @vim +uppercase
+gUiw     uppercase whole word @vim +uppercase
+50%      go to halfway through the file, this follows any number and percent +motions @vim +movement
+f        find a character on a line, so ft for next occurence of t @vim +motions +;
+;        after finding a character on a line press ; to go to the next occurence @vim +motions +f
+,        after finding a character on a line press , to go back to the next occurence @vim +motions +; +f
+F        find the next occurence on a line going backwards, so previous occurence @vim +motions
+10i     enter insert mode and do something, then when you exit insert mode this will be done 10 times @vim +repeats +insert
+H     Go to top of screen +window +movement @vim
+M     Go to medium screen +window +movement @vim
+L     Go to bottom of screen +window +movement @vim
+nH    Go n line from top +window +movement @vim
+nL    Go n line from bottom +window +movement @vim
+Ctrl-E    Scroll down a line +scrolling @vim +movement
+Ctrl-D    Scroll down half screen +scrolling @vim movement
+Ctrl-F    Scroll down whole screen +scrolling @vim movement
+Ctrl-Y    Scroll up a line +scrolling @vim movement
+Ctrl-U    Scroll up half screen +scrolling @vim movement
+Ctrl-B    Scroll up whole screen +scrolling @vim movement
+zt    Bring the current line near the top of your screen +scrolling @vim +movement
+zz    Bring the current line to the middle of your screen +scrolling @vim +movement
+zb    Bring the current line near the bottom of your screen +scroling @vim +movement
+:cfdo %s/pizza/donut/g | update        execute a command on whole quickfix window, example shows find and replace all files in quickfix window and save update @vim +quickfix
+.       repeat the last command @vim +dot
+press x to delete the character under the cursor +delete +deleting +editing @vim
+A       add to end of line shift + a (or A) will jump the cursor to the end of the line and allow you to append some text +append +editing @vim
+cit     change words inside tag cit will make <p>words words</p> become <p></p> and enter insert mode inside tags +change +correct +tags @vim
+dit     delete words in tag dit will make <p>words words</p> become <p></p> +delete +deleting +editing +tags @vim
+ci      change words inside quotes ci" will make "words words" become "" and enter insert mode inside quotes +change +correct +quotes @vim
+dit     delete words in tag dit will make "words words" become "" +delete +deleting +editing +quotes @vim
+dat     delete entire tag and words in tag @vim +tags +delete
+qa      start recording a macro on register a @vim +macros +recording
+:buffers        see all buffers in vim +buffers @vim +all
+:bnext or bn        go to next buffer +buffers @vim +next
+:bprevious or bp        go to previous buffer +buffers @vim +previous
+:buffer filename (can be autocompleted with tab)        go to specific buffer by name +buffers @vim +name
+: buffer number where number is the buffer number you want        go to specifc buffer by number+buffers @vim +number
+: Ctrl-o        jump to the older position in the jump list+buffers @vim +jumps +jump
+: ctrl-i        jump to newer position in buffer list+buffers +jumps +jump @vim
+ctrl-^      go to previously edited buffer with ctrl-^ +buffers +jump +jumps @vim
+:bdelete or bd        delete a buffer from buffer list +delete +buffers +buffer @vim
+:bdelete 3 (where 3 is number of buffer)        delete a specific buffer by number from buffer list @vim +buffers
+:bdelete filename        delete a specifc buffer by filename from buffer list +delete +buffers +name +buffer @vim
+:%bd | e# (e# opens current file)        delete all buffers except current file +buffers +delete +clear @vim
+:bufdo %s/pizza/donut/g | update        run a update/run a command on all open buffers. example shows find and replace, and saving update @vim +buffers
+:split filename        get split view +split +view @vim
+ctrl-w h        move the cursor to the left window ctrl-w h +windows @vim +split +view
+ctrl-w j        move the cursor to the window below ctrl-w j +windows @vim +split +view
+ctrl-w k        move the cursor to the window upper ctrl-w k +windows @vim +split +view
+ctrl w l        move the cursor to the right window ctrl w l +windows @vim +split +view
+ctrl-w c        close current window in split view Ctrl-W c +windows @vim +split +view
+:q / :quit        close current window in split view @vim +quit
+ctrl-w v        open a new vertical split on current file +windows @vim +split +view
+ctrl-w s        open a new horizontal split on current file +windows @vim +split +view
+ctrl-w o        make current window only window on screen +windows @vim +view
+:vs filename or vsplit filename     split window vertically for specifc file vs filename or vsplit filename +split +view +vertical @vim
+:split filename        split window horizontally +split +view +horizontal @vim
+:new filename        create new window +windows @vim +view
+:tabnew filename        open file in a new tab +tab +tabs @vim
+:tabclose (or :q on tab)        close the current tab +tab +tabs @vim
+:tabnext        go to the next tab +tab +tabs @vim
+:tabprevious        go to the previous tab +tab +tabs @vim
+:tablast        go to the last tab +tab +tabs @vim
+:tabfirst        go to the first tab +tab +tabs @vim
+gt        go to next tab / get tab +tab +tabs @vim
+gT        go to previous tab+tab +tabs @vim
+vim -p file1.txt file2.example file3        open multiple tabs in vim from start up +tab +tabs +open @vim
+vim foldername      open a folder in vim +netrw +folder +open @vim
+:Explore        starts netrw on current file location +netrw +folder +open @vim
+%       create a new file in netrw % +netrw +folder +create +file @vim
+d       create a new directory in netrw d +netrw +folder +create +directory @vim
+R       rename a file or directory in netrw R +netrw +rename @vim
+D       delete a file or directory D +netrw +delete @vim
+ctrl-n      bring up autocomplete menu in vim ctrl-n @vim +autocomplete
+ctrl-n or ctrl-p        scroll back and forth in autocomplete ctrl-n for next or ctrl-p for previous @vim +autocomplete
+ctrl-x ctrl-n       just autocomplete on current file ctrl-x ctrl-n @vim +autocomplete
+ctrl-x ctrl-f       insert file name ctrl-x ctrl-f @vim +autocomplete +files
+ctrl-x ctrl]        just autocomplete tags ctrl-x ctrl] +autocomplete +tags @vim
+yss<html-tag>   add tags around a text: yss<html-tag>: yss will surround entire line, so you can add tags with yss<p>. For example words words becomes <p>words words</p> +tags +surround @vim
+yss) ys: add surroundings; s: entire line; ) character to surround line with) +tags +surround @vim
+S       surround text with tags in visual mode: S followed by surround character, eg. S" +tags +surround +visual @vim
+ysiw"       surround one word: ysiw" (ys: add surroundings; iw: entire word, no matter where the cursor is as long as it's at the word you want to surround; ": character to surround text with) +tags +surround @vim
+cst<newtag>     edit current tag: cst<newtag> and this will replace the old tag. For example, cst<li> on the <p>hello world</p> becomes <li>hello world</li> +edit +editing +change +tags +surround @vim
+html:5,,      this will generate boilerplate code in vim emmet @vim @emmet +boilerplate
+:!start %         on windows this will open the current html file in the buffer into a browser window, useful to preview the html @vim +preview +html
+<space>m       preview markdown file in current buffer as github rendering of markdown. Uses personal config of in ftplugin/markdown.vim and grip must be installed @vim +preview +markdown +grip
+<space>z      toggle zen mode or gojo view in vim @vim +gojo +zen
+,s@       sort todo.txt file by project in vim, with , being local leader @vim +todo.txt
+//element      this means anywhere within the tree @xpath +anywhere
+//element/element2      this means the 2nd element must be a direct descendent of the previous one @xpath +elements
+.\yt-dlp.exe -x --extract-audio "url-of-video" @yt-dlp +youtube +downloader
+python3 -m pip install --upgrade pip         upgrade pip on command line @python +pip
+standard --fix [path-to-js-files]     run npm standard fixers on javascript files
+npm update npm -g            update npm @npm +update
+Ctrl-a |   vertical split in tmux session @tmux +vertical split
+ctrl-a -    horizontal split in tmux session @tmux +horizontal split
+alt-arrowkey    navigate panes in tmux, eg. atl-right arrow key to go to right split @tmux +panes +navigation
+ctrl-d      close a pane in tmux @tmux +close
+ctrl-a [     to enter navigation mode in tmux, allows you to scroll up and down etc. You then press q to quit this mode @tmux +navigation +scroll
+ctrl-a c    create a new window in tmux @tmux +window
+ctrl-a n   go to next window, or ctrl-a p to go to previous window in tmux @tmux +windows +swap +navigation
+ctrl-a 1   go to first window, can replace 1 with any number window to go to that window @tmux +navigation
+ctrl-a d   deattach current session, and return to normal shell @tmux +deattach +session
+tmux ls     show current tmux sessions @tmux +sessions
+tmux attach -t 0      restart tmux session 0, number can be any number session or a name of the session @tmux +session +attach
+tmux new -s name-of-session      start a new session with the given session name @tmux +name +session
+tmux rename-session -t 0 new-name    renamed number session to given name for new session @tmux +rename
+ctrl-a z    toggle a pane to be on and off full screen @tmux +full +screen +pane
+ctrl-a ctrl-arrowkey   resize pane in direction of arrow key @tmux +resize
+pip install -r path/to/requirements.txt       install the contents of a requirements.txt file @python +pip +requirements.txt
+hostname -I       get internal IP address @linux +IP
+ssh-keygen -o -a 100 -t ed25519            create a new pair of ssh keys @ssh
+ip address      this will show status for each network adapter you have. Your IP will show under an entry called inet or inet6 @linux +ip
+ip a      this will show status for each network adapter you have. Your IP will show under an entry called inet or inet6 @linux +ip
+ifconfig     display all network connections, including connected, disconntected, and virtual. The labels UP, BROADCAST, RUNNING, MULTICAST will show your IP @linux +ip +address
+curl -s https://icanhazip.com              return public IP address in terminal +public +ip
+nmcli networking off; nmcli networking on        reset all networking on linux machine @linux +networking +reset
+ssh username@ip-address            ssh into remote machine, username is your username on the remote machine and ip address is the remote machines IP address outputted by hostname -I @linux +ssh
+ssh-copy-id <machine-to-copy-to>         copy your ssh key to another machine to allow ssh access @linux +ssh
+sudo systemctl restart sshd            restart ssh server on machine @linux +ssh
+sudo systemctl status ssh.service      check status of ssh on machine @linux +ssh
+ssh -p 2584 user@host             specifiy particular port for ssh @linux +ssh
+python3 -m http.server          start local http server @python +http +server
+git branch <new-branch-name>      create a new branch in git @git +branch
+git checkout <branch-name>      change branch to specific branch, eg. git checkout main to go to main branch @git +checkout +branch
+git checkout -b new-branch-name        create new branch and check it out in one command @git +checkout +branch +create
+git branch            this will show all the branches in your project, and your current one is starred @git +current +branch
+git branch --show-current     show current git branch @git +current +branch
+npm init -y       start a new package.json, the -y flag tells it to just use defaults @npm +package
+git help init               get help on the git help init command, this can be changed to git help <command> @git +help
+git cat-file -p <actual-commit-hash>      this will show you the actual contents of a particular commit @git +commit
+git commit -a       this will automatically commit changes to all files already being tracked by git @git +commit +all
+git checkout <commit-hash->     change your local file view to the status of the specified commit @git +checkout
+git log --all --graph --decorate         view git log history in graph view @git +log +graph +view
+git checkout main        short version of going to a particular commit, main will likely be the most recent commit @git +checkout
+git diff <hash-key-for-commit>             show git diff compared to a particular commit @git +diff
+git checkout <filename>       this resets a file to the state of the HEAD file @git +checkout +reset +restore
+git merge <branch-name>      this will merge HEAD branch with given branch name
+git mergetool       this will automatically open up vimdiff (unless configured otherwise), to work with merge conflicts
+git merge --continue          once you've resolved a merge conflict and added the file to staging, run this to continue the merge
+alt-shift-+           open new horizontal pane in windows terminal +windows +terminal
+alt shift -           open new vertical pane in windows terminal +windows +terminal
+npx @11ty/eleventy --serve          start test server with eleventy @eleventy +node
+git clone --shallow <repo-to-clone-url>            this won't give you the whole version history but will just give you the latest snapshot @git +clone +shallow +light
+git add -p <file-to-add>             this will let you edit your change quickly in an inbuilt git editor @git +add +edit
+git blame <path-to-file>         this can be used to find out who last editing a file, and look up the commit messages @git +blame
+git show <commit-hash>       after running git blame on a file, you can see the commit hashes for each line, git show will then you show you the specific commit message @git +show +blame +commit +hash
+git stash              this will save your local changes locally but revert your repo to the HEAD @git +stash
+git stash pop         reupdate your local files with your git stash, and bring back your stashed files @git +stash +revert
+git commit --amend         edit a commit contents/message @git +commit +change +amend +edit
+git init       creates a new .git directory @git +new
+git rebase        rebase set of patches onto a new base @git +rebase
+git remote           list all remotes associated with repo @git +remote
+git branch --set-upstream-to=<remote/remote branch>     set up correspondence between local and remote branch, you often have to do this after pushing to a new branch @git +branch +set
+git fetch        retrieve objects/references from a remote @git +fetch +retrieve
+git pull         same as git fetch; git merge this gets the objects from a repo and merges it with your local HEAD @git +pull +fetch +merge
+git reset HEAD <file>     unstage a file, useful if you need to make more changes after adding file @git +reset +undo +remove +from +staging
+git checkout -- <file>          discard changes @git +reset +checkout +undo
+git rebase -i     interactive rebasing @git +rebase +interactive
+git commit           this will open up your text editor to write the commit message @git +commit +text +editor
+alt shift arrows                use these to resize windows terminal panes +windows +terminal
+alt arrowkey           move focus between panes in windows terminal +windows +terminal
+python -m pdb script-to-debug.py         start the python debugger on a program @python +debug +pdb
+dW      delete until the next WORD. For example, using dW on array[1] = 5 will result in = 5 as it deletes until the next occurence of a WORD. This can be used to delete until the first non-whitespace character as well @vim +delete +non +whitespace +WORD
+s/%V/old-pattern/new-pattern          search and replace in vim limited to the visual mode selection @vim +visual +mode +saerch +replace
+:'<,'>s/old/new/g     find and replace on visual mode selection. the '<,'> comes up when you enter command mode from visual mode @vim +find +replace +visual +mode
+lsof         list all open files, you might need to run sudo lsof. this can be useful to track a find a particular process id @linux @terminal +lsof +list +open +files
+lsof         list all open files, you might need to run sudo lsof. this can be useful to track a find a particular process id @linux @terminal +lsof +list +open +files
+lsof | grep LISTEN      this will search through all running processes for LISTEN. A running server or a socket in use will display LISTEN in the entry @linux +listen
+curl ipinfo.io       get detailed ip info +ip +address +curl +ip +info
+python -m unittest discover -v      if run from your project root dir, this will search for all tests in a directory called tests and run them @python +unittest +run +all +tests
+for f in *.mrc; do printf '%s\n' yso_societyculture_092023_v2.mrc; done       checking if a file will rename with new provided suffix, example shows updated all .mrc files to _v2.mrc. The actual rename command would then be: for f in *.mrc; do mv $f ${f%.mrc}_v2.mrc; done @linux +rename +printf +check +bulk
+curl "https://academic.oup.com/jpids/issue/10/Supplement_1" | grep -oE "10.1093/jpids/piaa[0-9]{3}\.[0-9]{3}" | sort | uniq > dois_from_web_page.txt           get unique dois from a webpage and write to txt file @linux +dois +webpage
+curl url-to-get-dois-from | grep -oE 10.1093/[a-zA-Z]/[A-Za-z][0-9]{3}.[0-9]{3} | sort | uniq > dois_from_web_page.txt
+gf      when in vim, if you hoover over a filepath and press gf it will open that file +vim
+z=      in normal mode vim, open list of suggestions for misspelt word @vim +spell +corrections +suggestions
