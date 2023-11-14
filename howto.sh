@@ -17,8 +17,7 @@ add_to_file () {
     # add a new line to the howtofile
     echo "adding $addition to $howtofilepath"
     echo "$addition" >> "$howtofilepath"
-    return
-
+    return 0
 }
 
 edit_file () {
@@ -29,19 +28,22 @@ edit_file () {
 
 usage () {
 cat << _EOF_
-Usage howto [search, terms]
+Usage: howto.sh [search, terms]
 
-Add to file: howto -a [text-to-add]
-Edit file: howto -e
+howto.sh is set to work with a howto.txt file. The path to this should be set in the ht.cfg file.
 
-howto.sh is set to work with a howto.txt file
+Add to howto.txt file:
+howto -a [text-to-add]
+
+Edit howto.txt file:
+howto -e
 
 This file should consist of one line helpers.
+
 The convention for these should follow:
 
 actual-instruction/command      description of tasks +tags +relevant +to +tasks @topic @tags
 _EOF_
-exit 1
 }
 
 create_search_query () {
@@ -77,34 +79,40 @@ source_config () {
     else
         echo "No config file found. Please create config file named ht.cfg"
         echo "This file should be placed in the same directory as howto.sh"
-        echo "And, it should set the filepath to your howto.txt and the EDITOR variable for your choice of editor."
         example_config
-        exit
+        exit 1
     fi
 }
 
+run_main () {
+    ht_dir="$(dirname "$0")"
+    ht_config="$ht_dir/ht.cfg"
 
-ht_dir="$(dirname "$0")"
-ht_config="$ht_dir/ht.cfg"
+    source_config
 
-source_config
+    # check args
+    if [[ "$#" -eq 0 ]]; then
+        echo "Please enter an argument."
+        usage
+        exit 1
+    fi
 
-# check args
-if [[ "$#" -eq 0 ]]; then
-    echo "Please enter an argument."
-    usage
-fi
+    if [[ "$1" == "-a" ]]; then
+        addition="$2"
+        add_to_file
+    elif [[ "$1" == "-e" ]]; then
+        edit_file
+    elif [[ "$1" == "-h" || "$1" == "-help" ]]; then
+        usage
+    else
+        create_search_query "$@"
 
-if [[ "$1" == "-a" ]]; then
-    addition="$2"
-    add_to_file
-elif [[ "$1" == "-e" ]]; then
-    edit_file
-elif [[ "$1" == "-h" || "$1" == "-help" ]]; then
-    usage
-else
-    create_search_query "$@"
+        # search how to file with color highlighting
+        grep --color=auto -E "$full_search_query" "$howtofilepath"
+    fi
+}
 
-    # search how to file with color highlighting
-    grep --color=auto -E "$full_search_query" "$howtofilepath"
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]
+then
+  run_main "$@"
 fi
