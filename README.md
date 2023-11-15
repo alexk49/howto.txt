@@ -4,7 +4,7 @@ The howto.txt is for people who like doing things but can't remember how.
 
 It is heavily inspired by the [todo.txt](https://github.com/todotxt). Because of this some plugins that have be written for the todo.txt can be useful.
 
-It is particularly useful for the sort of terminal/vim commands you use just often enough to need regularly but not quite often enough to remember. 
+It is particularly useful for the sort of terminal/vim commands you use just often enough to need regularly but not quite often enough to remember.
 
 Simply, follow the format of:
 
@@ -12,7 +12,7 @@ actual-instruction/command      description of tasks +tags +relevant +to +tasks 
 
 The howto.sh is a simple script that provides a quick command line search of the howto.txt file.
 
-The provided howto.txt file is served as an example and the expected use case is that you would build one from scratch gradually. 
+The provided howto.txt file is served as an example and the expected use case is that you would build one from scratch gradually.
 
 ## What is this madness?
 
@@ -49,7 +49,7 @@ conda activate virtual-env-name         activate a jupyter virtual environment @
 python -m venv /path/to/new/virtual/environment         create virtual environment, if running in current dir then you can run python -m venv .venv (with .venv being the name of your virtual environment @python +virtual +environment
 ```
 
-## Usage 
+## Usage
 
 Search file:
 ```
@@ -69,3 +69,7 @@ ht -e
 ```
 
 If using vim, the [todo.txt plugin](https://github.com/freitass/todo.txt-vim) can make the file more user friendly in the editor.
+
+## Tests
+
+A basic test script written in bash has been made in /test. As the main script is short and simple a more robust framework for testing was not required, and not worth the extra dependencies. The test script will exit with the status code 1 if any tests fail.
